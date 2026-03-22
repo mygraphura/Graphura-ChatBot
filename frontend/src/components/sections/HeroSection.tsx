@@ -1,5 +1,5 @@
 //import React from 'react';
-//import Button from '../../components/ui/Button';
+import Button from '../../components/ui/Button';
 import GroupImage from "../../assets/Group.png"; 
 import RobotImage from "../../assets/Group 2087324067.png";    
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
                   </div>
 
                   {/* Join Now Button */}
-                  {/* <Button
+                  <Button
                     text="Join Now"
                     text_font_size="text-md"
                     text_font_family="Inter"
@@ -74,7 +74,7 @@ const HeroSection = () => {
                     size="md"
                     onClick={() => {}}
                     className="border-0 border-transparent"
-                  /> */}
+                  />
                 </div>
               </div>
             </div>
