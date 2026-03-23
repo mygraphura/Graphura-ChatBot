@@ -8,13 +8,13 @@ import GlowImage from '../../assets/Group 2087323989.png';
 const AboutSection = () => {
   return (
     <section className="w-full bg-black flex justify-center relative z-20">
-      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] py-[120px] -mt-[380px] relative overflow-hidden">
+      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] py-[120px] -mt-[300px] relative overflow-hidden">
 
        {/* ✅ Glow INSIDE the box */}
           <img
             src={GlowImage}
             alt=""
-            className="absolute right-[-100px] top-[10%] w-[800px] sm:w-[1000px] opacity-25 pointer-events-none z-0"
+            className="absolute right-[-100px] top-[10%] w-[800px] sm:w-[1000px] opacity-105 pointer-events-none z-0"
           />
 
       {/* CENTER CONTAINER */}
