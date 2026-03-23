@@ -1,6 +1,6 @@
 import Navbar from "../../components/layout/Navbar";
-import GroupImage from "../../assets/Group.png"; 
-import RobotImage from "../../assets/Group 2087324067.png";    
+import GroupImage from "../../assets/Group.png";
+import RobotImage from "../../assets/Group 2087324067.png";
 
 const HeroSection = () => {
   return (
@@ -10,8 +10,8 @@ const HeroSection = () => {
       <div className="relative w-full max-w-[1442px] min-h-[787px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[750px] overflow-hidden bg-black">
 
         {/* Background Image */}
-        <img 
-          src={GroupImage} 
+        <img
+          src={GroupImage}
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover opacity-90"
         />
@@ -25,34 +25,34 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Content */}
-<div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] px-10 sm:px-12 md:px-15 ">
+          <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] px-10 sm:px-12 md:px-15 ">
 
-  {/* 🤖 Robot (ON TOP) */}
-  <div className="absolute 
+            {/* 🤖 Robot (ON TOP) */}
+            <div className="absolute 
     left-[10%] sm:left-[8%] md:left-[1%] 
     bottom-[0%] sm:bottom-[5%] md:bottom-[20%] 
     z-20"
-  >
-    <img 
-      src={RobotImage}
-      alt="Robot"
-      className="w-[160px] sm:w-[220px] md:w-[280px] lg:w-[340px] xl:w-[380px] object-contain"
-    />
-  </div>
+            >
+              <img
+                src={RobotImage}
+                alt="Robot"
+                className="w-[160px] sm:w-[220px] md:w-[280px] lg:w-[340px] xl:w-[380px] object-contain"
+              />
+            </div>
 
-  {/* 📝 Text (BEHIND robot) */}
-  <div className="absolute 
+            {/* 📝 Text (BEHIND robot) */}
+            <div className="absolute 
     left-[20%] sm:left-[25%] md:left-[10%] lg:left-[18%] 
     bottom-[10%] sm:bottom-[15%] md:bottom-[32%] 
     z-10"
-  >
-    <h1 className="text-[32px] sm:text-[48px] md:text-[80px] lg:text-[110px] xl:text-[140px] 
+            >
+              <h1 className="text-[32px] sm:text-[48px] md:text-[80px] lg:text-[110px] xl:text-[140px] 
       font-bold text-white font-[Montserrat] leading-none tracking-tight">
-      GRAPHOBOT
-    </h1>
-  </div>
+                GRAPHOBOT
+              </h1>
+            </div>
 
-</div>
+          </div>
         </div>
       </div>
 

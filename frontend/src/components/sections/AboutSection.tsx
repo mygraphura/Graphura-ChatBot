@@ -1,4 +1,8 @@
 import Button from '../../components/ui/Button';
+import FeaturesSection from './FeaturesSection';
+import PricingSection from './PricingSection';
+import CTASection from './CTASection';
+import Footer from '../layout/Footer';
 
 const AboutSection = () => {
   return (
@@ -55,6 +59,12 @@ const AboutSection = () => {
           </div>
 
         </div>
+
+        {/* Integrated Sections */}
+        <FeaturesSection />
+        <PricingSection />
+        <CTASection />
+        <Footer />
       </div>
     </section>
   );
