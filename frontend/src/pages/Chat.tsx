@@ -67,7 +67,6 @@ const Chat = () => {
 
       {/* LEFT SIDEBAR */}
       <div className="w-[60px] bg-[#2a2a2a] flex flex-col justify-between py-4 items-center">
-
         {/* TOP */}
         <div className="w-8 h-8 bg-gray-500 rounded-full" />
 
