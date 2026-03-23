@@ -1,25 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import aboutHeroHead from "../assets/about-hero-head.png";
-import teamMarcus from "../assets/team-marcus.png";
-import teamElena from "../assets/team-elena.png";
-import teamJulian from "../assets/team-julian.png";
-
-const values = [
-  { icon: "❤️", title: "Radical Trust", desc: "Privacy is not a feature; it is the absolute foundation of our architecture." },
-  { icon: "🧠", title: "Cognitive Symbiosis", desc: "Enhancing human decision-making through intuitive, real-time feedback loops." },
-  { icon: "🌍", title: "Inclusive Growth", desc: "Democratizing high-level intelligence for every scale of ambition." },
-  { icon: "⚡", title: "Elegant Precision", desc: "Removing the friction between thought and execution through refined AI." },
-];
-
-const team = [
-  { name: "Kartik Yadav", role: "Developer", image: teamMarcus },
-  { name: "Mandira Datta", role: "Developer (Team Lead)", image: teamElena },
-  { name: "Shri Ram", role: "Design Director,CEO,etc.", image: teamJulian },
-];
-
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import aboutHeroHead from "@/assets/about-hero-head.png";
 import teamMarcus from "@/assets/team-marcus.png";
 import teamElena from "@/assets/team-elena.png";
@@ -42,22 +22,22 @@ const About = () => {
   return (
     <div className="relative min-h-screen bg-[#0f0f0f] text-white overflow-x-hidden z-10">
 
-      {/* GLOBAL BG */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+ {/* GLOBAL BG */}
+<div className="absolute inset-0 z-0 overflow-hidden">
 
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-black"></div>
+  {/* Base gradient */}
+  <div className="absolute inset-0 bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-black"></div>
 
-        {/* Glow 1 (top left soft) */}
-        <div className="absolute w-[600px] h-[600px] bg-gray-400/10 blur-[160px] rounded-full top-[-150px] left-[-150px]"></div>
+  {/* Glow 1 (top left soft) */}
+  <div className="absolute w-[600px] h-[600px] bg-gray-400/10 blur-[160px] rounded-full top-[-150px] left-[-150px]"></div>
 
-        {/* Glow 2 (bottom right soft) */}
-        <div className="absolute w-[500px] h-[500px] bg-gray-500/10 blur-[140px] rounded-full bottom-[-120px] right-[-120px]"></div>
+  {/* Glow 2 (bottom right soft) */}
+  <div className="absolute w-[500px] h-[500px] bg-gray-500/10 blur-[140px] rounded-full bottom-[-120px] right-[-120px]"></div>
 
-        {/* Center faint glow */}
-        <div className="absolute w-[400px] h-[400px] bg-gray-300/10 blur-[120px] rounded-full top-[40%] left-[40%]"></div>
+  {/* Center faint glow */}
+  <div className="absolute w-[400px] h-[400px] bg-gray-300/10 blur-[120px] rounded-full top-[40%] left-[40%]"></div>
 
-      </div>
+</div>
 
       {/* Navbar */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
@@ -163,7 +143,7 @@ const About = () => {
 
               {/* Underline */}
               <span className="absolute left-0 -bottom-2 w-full h-[3px] overflow-hidden">
-                <span className="block w-1/2 h-full bg-orange-500 animate-[slide_2s_linear_infinite]"></span>
+              <span className="block w-1/2 h-full bg-orange-500 animate-[slide_2s_linear_infinite]"></span>
               </span>
             </h2>
             <p className="text-[#a1a1a1] mb-4">
@@ -182,7 +162,7 @@ const About = () => {
           {values.map((v) => (
             <motion.div
               key={v.title}
-              className="
+                  className="
                   text-center group p-6 rounded-xl
                   bg-[#1a1a1a]/60 backdrop-blur-xl
                   border border-[#2f2f2f]
@@ -191,20 +171,20 @@ const About = () => {
                   transition-all duration-300
                   hover:shadow-[0_0_25px_rgba(255,115,0,0.15)]
                   "
-            >
-              <div className="text-3xl mb-4 group-hover:scale-110 transition duration-300">
-                {v.icon}
-              </div>
+                  >
+  <div className="text-3xl mb-4 group-hover:scale-110 transition duration-300">
+    {v.icon}
+  </div>
 
-              <h3 className="text-sm font-bold uppercase mb-2 tracking-wider">
-                {v.title}
-              </h3>
+  <h3 className="text-sm font-bold uppercase mb-2 tracking-wider">
+    {v.title}
+  </h3>
 
-              <p className="text-xs text-[#a1a1a1] leading-relaxed">
-                {v.desc}
-              </p>
-
-            </motion.div>
+  <p className="text-xs text-[#a1a1a1] leading-relaxed">
+    {v.desc}
+  </p>
+  
+</motion.div>
           ))}
         </div>
       </section>
@@ -287,4 +267,5 @@ const About = () => {
   );
 };
 
+export default About;
 export default About;
