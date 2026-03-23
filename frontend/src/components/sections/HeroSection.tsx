@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="w-full min-h-screen bg-black flex justify-center items-start px-4 pt-0">
 
       {/* CENTER BOX */}
-      <div className="relative w-full max-w-[1442px] min-h-[787px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[750px] overflow-hidden bg-black">
+      <div className="relative w-full max-w-[1442px] min-h-[789px] sm:min-h-[550px] md:min-h-[700px] lg:min-h-[750px] overflow-hidden bg-black">
 
         {/* Background Image */}
         <img
@@ -30,20 +30,20 @@ const HeroSection = () => {
             {/* 🤖 Robot (ON TOP) */}
             <div className="absolute 
     left-[10%] sm:left-[8%] md:left-[1%] 
-    bottom-[0%] sm:bottom-[5%] md:bottom-[20%] 
+    bottom-[0%] sm:bottom-[5%] md:bottom-[30%] 
     z-20"
             >
               <img
                 src={RobotImage}
                 alt="Robot"
-                className="w-[160px] sm:w-[220px] md:w-[280px] lg:w-[340px] xl:w-[380px] object-contain"
+                className="w-[150px] sm:w-[220px] md:w-[250px] lg:w-[340px] xl:w-[380px] object-contain"
               />
             </div>
 
             {/* 📝 Text (BEHIND robot) */}
             <div className="absolute 
     left-[20%] sm:left-[25%] md:left-[10%] lg:left-[18%] 
-    bottom-[10%] sm:bottom-[15%] md:bottom-[32%] 
+    bottom-[10%] sm:bottom-[15%] md:bottom-[42%] 
     z-10"
             >
               <h1 className="text-[32px] sm:text-[48px] md:text-[80px] lg:text-[110px] xl:text-[140px] 

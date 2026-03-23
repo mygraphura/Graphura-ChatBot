@@ -6,9 +6,6 @@ const FeaturesSection = () => {
   return (
     <section className="w-full py-[140px] flex justify-center relative">
 
-      {/* ORANGE GLOW BACKGROUND */}
-      <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-orange-500/20 blur-[120px] rounded-full z-0"></div>
-
       {/* CONTENT */}
       <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
 
