@@ -1,189 +1,130 @@
-import { useState } from 'react';
-import Button from '../../components/ui/Button';
+import { useState } from "react";
 
 const PricingSection = () => {
-  const [billingType, setBillingType] = useState('yearly');
-
-  const pricingPlans = [
-    {
-      name: 'Basic',
-      price: '$9.99',
-      features: [
-        'Unlimited transfer with priority processing',
-        'Unlimited transfer with priority processing'
-      ],
-      buttonVariant: 'secondary'
-    },
-    {
-      name: 'Standard', 
-      price: '$19.99',
-      badge: 'Best seller',
-      features: [
-        'Unlimited transfer with priority processing',
-        'Unlimited transfer with priority processing', 
-        'Unlimited transfer with priority processing'
-      ],
-      buttonVariant: 'primary'
-    },
-    {
-      name: 'Business',
-      price: '$49.99', 
-      features: [
-        'Unlimited transfer with priority processing',
-        'Unlimited transfer with priority processing',
-        'Unlimited transfer with priority processing',
-        'Unlimited transfer with priority processing'
-      ],
-      buttonVariant: 'secondary'
-    }
-  ];
+  const [isYearly, setIsYearly] = useState(true);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-[56px] -mt-[66px]">
-      <div className="w-full max-w-[1440px] mx-auto">
-        {/* Section Header */}
-        <div className="w-[80%] mx-auto flex flex-col gap-[90px] items-center mb-16">
-          <h2 className="text-[28px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-[36px] sm:leading-[52px] md:leading-[62px] lg:leading-14xl text-center text-text-white font-[Inter] w-full">
-            <span className="font-light">FROM QUESTION TO SOLUTION</span>
-            <span className="font-semibold"> UNLOCK THE FULL </span>
-            <span 
-              className="font-semibold"
-              style={{
-                background: 'linear-gradient(90deg, #ff6c0099 0%, #f2701099 50%, #fef1f199 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
-            >
-              POWER OF AI
-            </span>
-          </h2>
+    <section className="w-full py-[140px] flex justify-center relative">
 
-          {/* Billing Toggle */}
-          <div className="w-[34%] max-w-[400px]">
-            <div 
-              className="flex justify-between items-center bg-text-secondary rounded-8xl p-1"
-              style={{ boxShadow: '0px 4px 4px #0000003f' }}
+      <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <p className="text-white/60 text-lg mb-2">
+            FROM QUESTION TO SOLUTION
+          </p>
+          <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-white">
+            UNLOCK THE FULL <span className="text-orange-500">POWER OF AI</span>
+          </h2>
+        </div>
+
+        {/* Toggle */}
+        <div className="flex justify-center mb-16">
+          <div className="bg-[#1a1a1a] rounded-full p-1 flex">
+            
+            <button
+              onClick={() => setIsYearly(false)}
+              className={`px-6 py-2 rounded-full text-sm transition ${
+                !isYearly ? "bg-orange-500 text-white" : "text-white/60"
+              }`}
             >
-              <button
-                onClick={() => setBillingType('monthly')}
-                className={`px-6 py-3 text-6xl font-semibold leading-7xl font-[Montserrat] transition-colors ${
-                  billingType === 'monthly' ?'text-text-white' :'text-text-white'
-                }`}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingType('yearly')}
-                className={`px-8 py-4 text-6xl font-semibold leading-7xl font-[Montserrat] rounded-8xl transition-colors ${
-                  billingType === 'yearly' ?'text-text-white bg-accent-primary border border-text-white' :'text-text-white'
-                }`}
-              >
-                Yearly
-              </button>
-            </div>
+              Monthly
+            </button>
+
+            <button
+              onClick={() => setIsYearly(true)}
+              className={`px-6 py-2 rounded-full text-sm transition ${
+                isYearly ? "bg-orange-500 text-white" : "text-white/60"
+              }`}
+            >
+              Yearly
+            </button>
+
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-12 items-stretch w-[80%] mx-auto">
-          {pricingPlans?.map((plan, index) => (
-            <div 
-              key={plan?.name}
-              className="w-full lg:w-[326px] mx-auto"
-              style={{
-                background: 'linear-gradient(180deg, #713001 0%, #131313 100%)',
-                border: '1px solid #ffffffb2',
-                borderRadius: '30px',
-                boxShadow: '0px 4px 25px #888888ff'
-              }}
-            >
-              <div className="p-4">
-                {/* Plan Header */}
-                <div className="px-4 py-4 mb-4">
-                  {index === 1 ? (
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-8xl font-semibold leading-10xl text-text-white font-[Montserrat] mb-2">
-                          {plan?.name}
-                        </h3>
-                        <p className="text-10xl font-semibold leading-12xl text-text-white font-[Inter]">
-                          {plan?.price}
-                        </p>
-                      </div>
-                      <span className="bg-accent-primary text-text-white text-md font-semibold leading-lg font-[Inter] px-[10px] py-[2px] rounded-3xl">
-                        {plan?.badge}
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="px-4 mb-4">
-                      <h3 className="text-8xl font-semibold leading-10xl text-text-white font-[Montserrat] mb-2">
-                        {plan?.name}
-                      </h3>
-                      <p className="text-10xl font-semibold leading-12xl text-text-white font-[Inter]">
-                        {plan?.price}
-                      </p>
-                    </div>
-                  )}
+        {/* Cards */}
+        <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8">
 
-                  {/* Divider Line */}
-                  <div className="w-full h-[1px] bg-text-white mt-2 mb-12" />
-
-                  {/* Features */}
-                  <div className="px-6 flex flex-col gap-2 lg:gap-2">
-                    {plan?.features?.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start gap-[14px] mb-4 lg:mb-2">
-                        <img 
-                          src="/images/img_group_2087324030.png"
-                          alt="Check"
-                          className="w-[22px] h-[22px] flex-shrink-0"
-                        />
-                        <p className="text-2xl font-light leading-2xl text-text-white font-[Inter] flex-1">
-                          {feature}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Get Started Button */}
-                  <div 
-                    className="w-full rounded-circular px-1 py-1 mt-16 lg:mt-20 mb-4"
-                    style={{
-                      background: 'linear-gradient(90deg, #000000 0%, #000000 100%)',
-                      boxShadow: '0px 4px 100px #888888ff'
-                    }}
-                  >
-                    <div className="w-full flex justify-center">
-                      <Button
-                        text="Get Started"
-                        text_font_size="text-lg"
-                        text_font_family="Inter"
-                        text_font_weight="font-extrabold"
-                        text_line_height="leading-xl"
-                        text_color="text-text-white"
-                        fill_background_color={plan?.buttonVariant === 'primary' ? "bg-accent-primary" : "bg-secondary-background-slate"}
-                        border_border="1px solid #ffffff66"
-                        border_border_radius="rounded-7xl"
-                        border_border_image=""
-                        effect_box_shadow=""
-                        layout_align_self="auto"
-                        layout_width="auto"
-                        margin=""
-                        position="relative"
-                        layout_gap=""
-                        variant={plan?.buttonVariant}
-                        size="md"
-                        onClick={() => {}}
-                        padding="t-[10px] r-[34px] b-[10px] l-[34px]"
-                        className="w-auto"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+          {/* BASIC */}
+          <div className="w-[280px] bg-[#0d0d0d] rounded-[24px] border border-white/10 overflow-hidden flex flex-col">
+            
+            <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
+              <h3 className="text-white text-xl">Basic</h3>
+              <p className="text-white text-4xl font-semibold mt-2">
+                ${isYearly ? "9.99" : "12.99"}
+              </p>
             </div>
-          ))}
+
+            <div className="p-6 flex flex-col justify-between flex-1">
+              <ul className="space-y-3 text-white/70 text-sm">
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+              </ul>
+
+              <button className="mt-6 bg-[#2a2a2a] text-white py-2 rounded-full">
+                Get Started
+              </button>
+            </div>
+
+          </div>
+
+          {/* STANDARD (Highlighted) */}
+          <div className="w-[300px] bg-[#111] rounded-[24px] border border-orange-500/40 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative">
+
+            {/* Badge */}
+            <span className="absolute top-4 right-4 bg-orange-500 text-xs px-3 py-1 rounded-full">
+              Best seller
+            </span>
+
+            <div className="bg-gradient-to-b from-orange-600/50 to-transparent p-6">
+              <h3 className="text-white text-xl">Standard</h3>
+              <p className="text-white text-4xl font-semibold mt-2">
+                ${isYearly ? "19.99" : "24.99"}
+              </p>
+            </div>
+
+            <div className="p-6 flex flex-col justify-between flex-1">
+              <ul className="space-y-3 text-white/70 text-sm">
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+              </ul>
+
+              <button className="mt-6 bg-orange-500 text-white py-2 rounded-full">
+                Get Started
+              </button>
+            </div>
+
+          </div>
+
+          {/* BUSINESS */}
+          <div className="w-[280px] bg-[#0d0d0d] rounded-[24px] border border-white/10 overflow-hidden flex flex-col">
+            
+            <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
+              <h3 className="text-white text-xl">Business</h3>
+              <p className="text-white text-4xl font-semibold mt-2">
+                ${isYearly ? "49.99" : "59.99"}
+              </p>
+            </div>
+
+            <div className="p-6 flex flex-col justify-between flex-1">
+              <ul className="space-y-3 text-white/70 text-sm">
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Unlimited transfer with priority processing</li>
+              </ul>
+
+              <button className="mt-6 bg-[#2a2a2a] text-white py-2 rounded-full">
+                Get Started
+              </button>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
   );

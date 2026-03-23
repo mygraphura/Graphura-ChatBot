@@ -1,16 +1,32 @@
 import Button from '../../components/ui/Button';
+import FeaturesSection from './FeaturesSection';
+import PricingSection from './PricingSection';
+import CTASection from './CTASection';
+import Footer from '../layout/Footer';
+import GlowImage from '../../assets/Group 2087323989.png';
 
 const AboutSection = () => {
   return (
-    <section className="w-full  min-h-screen bg-black py-[120px] -mt-[340px] relative z-20 ">
+    <section className="w-full bg-black flex justify-center relative z-20">
+      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] py-[120px] -mt-[380px] relative overflow-hidden">
 
-      {/* CENTER CONTAINER (same as hero) */}
-      <div className="w-full max-w-[1515px] mx-auto px-4 sm:px-6 lg:px-8">
+       {/* ✅ Glow INSIDE the box */}
+          <img
+            src={GlowImage}
+            alt=""
+            className="absolute right-[-100px] top-[10%] w-[800px] sm:w-[1000px] opacity-25 pointer-events-none z-0"
+          />
 
-        {/* INNER BOX (THIS WAS MISSING) */}
-        <div className="bg-black  rounded-[24px] lg:-mt-[129px] px-6 sm:px-10 lg:px-14 py-40">
+      {/* CENTER CONTAINER */}
+      <div className="w-full relative px-4 sm:px-6 lg:px-8">
 
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+        {/* INNER BOX */}
+        <div className="relative bg-transparent rounded-[24px] lg:-mt-[129px] px-6 sm:px-10 lg:px-14 py-40 overflow-hidden">
+
+         
+
+          {/* CONTENT */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
 
             {/* LEFT SIDE */}
             <div className="w-full lg:w-[46%] flex flex-col gap-6">
@@ -26,7 +42,7 @@ const AboutSection = () => {
               </p>
 
               <p className="text-[16px] sm:text-[18px] md:text-[20px] text-white/80">
-                Making conversations faster, smarter, and available 
+                Making conversations faster, smarter, and available
                 <span className="text-orange-500"> 24/7</span>
               </p>
 
@@ -40,12 +56,10 @@ const AboutSection = () => {
             {/* RIGHT SIDE */}
             <div className="w-full lg:w-[54%] flex justify-center">
 
-              {/* MATCH HERO BOX SIZE */}
               <div className="w-full max-w-[600px] rounded-[20px] overflow-hidden border border-white/20">
 
-                {/* KEEP YOUR EXISTING CHAT UI HERE */}
                 <div className="bg-secondary-background-warm p-6 h-[450px] relative">
-                  {/* 👉 Paste your full chat UI here (unchanged) */}
+                  {/* Chat UI */}
                 </div>
 
               </div>
@@ -53,7 +67,13 @@ const AboutSection = () => {
             </div>
 
           </div>
+        </div>
 
+        {/* OTHER SECTIONS */}
+        <FeaturesSection />
+        <PricingSection />
+        <CTASection />
+          <Footer />
         </div>
       </div>
     </section>
