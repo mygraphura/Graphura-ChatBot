@@ -20,17 +20,17 @@ const HeroSection = () => {
         <div className="relative z-10 w-full h-full flex flex-col">
 
           {/* Navbar */}
-          <div className="w-full flex justify-center pt-4 sm:pt-6">
+          <div className="w-full flex justify-end pt-4 sm:pt-6">
             <Navbar />
           </div>
 
           {/* Hero Content */}
-<div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] px-4 sm:px-8 md:px-12">
+<div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] px-10 sm:px-12 md:px-15 ">
 
   {/* 🤖 Robot (ON TOP) */}
   <div className="absolute 
-    left-[5%] sm:left-[8%] md:left-[10%] 
-    bottom-[0%] sm:bottom-[5%] md:bottom-[8%] 
+    left-[10%] sm:left-[8%] md:left-[1%] 
+    bottom-[0%] sm:bottom-[5%] md:bottom-[20%] 
     z-20"
   >
     <img 
@@ -42,8 +42,8 @@ const HeroSection = () => {
 
   {/* 📝 Text (BEHIND robot) */}
   <div className="absolute 
-    left-[20%] sm:left-[25%] md:left-[30%] lg:left-[28%] 
-    bottom-[10%] sm:bottom-[15%] md:bottom-[18%] 
+    left-[20%] sm:left-[25%] md:left-[10%] lg:left-[18%] 
+    bottom-[10%] sm:bottom-[15%] md:bottom-[32%] 
     z-10"
   >
     <h1 className="text-[32px] sm:text-[48px] md:text-[80px] lg:text-[110px] xl:text-[140px] 
