@@ -11,6 +11,19 @@ interface Message {
   time: string;
 }
 
+
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import robot from "@/assets/robot-small.png";
+
+interface Message {
+  id: number;
+  text: string;
+  sender: "user" | "bot";
+  time: string;
+}
+
 const Chat = () => {
   const navigate = useNavigate();
 
@@ -67,52 +80,52 @@ const Chat = () => {
 
       {/* LEFT SIDEBAR */}
       <div className="w-[60px] bg-[#2a2a2a] flex flex-col justify-between py-4 items-center">
-
+        
         {/* TOP */}
         <div className="w-8 h-8 bg-gray-500 rounded-full" />
 
         {/* BOTTOM ICONS */}
         <div className="flex flex-col gap-4 mb-4">
 
-          <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
-            🗑️
-          </button>
+  <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
+    🗑️
+  </button>
 
-          <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
-            🌙
-          </button>
+  <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
+    🌙
+  </button>
 
-          <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
-            👤
-          </button>
+  <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
+    👤
+  </button>
 
-          <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
-            ↗️
-          </button>
+  <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
+    ↗️
+  </button>
 
-          <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
-            ⎋
-          </button>
+  <button className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#2f2f2f] hover:bg-orange-500 transition-all duration-200 hover:scale-110">
+    ⎋
+  </button>
 
-        </div>
+</div>
       </div>
 
       {/* MAIN AREA */}
       <div className="flex-1 flex flex-col">
 
         {/* 🔙 TOP BAR */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700">
 
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-full text-sm transition-all duration-200 hover:scale-105"
-          >
-            ← Back
-          </button>
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-full text-sm transition-all duration-200 hover:scale-105"
+        >
+        ← Back
+      </button>
 
-          <span className="text-sm text-gray-400">Chat</span>
+  <span className="text-sm text-gray-400">Chat</span>
 
-        </div>
+</div>
 
         {/* CHAT + INPUT */}
         <div className="flex-1 flex flex-col justify-between">
@@ -139,16 +152,18 @@ const Chat = () => {
                     key={msg.id}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`flex ${msg.sender === "user"
+                    className={`flex ${
+                      msg.sender === "user"
                         ? "justify-end"
                         : "justify-start"
-                      }`}
+                    }`}
                   >
                     <div
-                      className={`px-4 py-3 rounded-2xl text-sm max-w-[75%] ${msg.sender === "user"
+                      className={`px-4 py-3 rounded-2xl text-sm max-w-[75%] ${
+                        msg.sender === "user"
                           ? "bg-orange-500 text-white"
                           : "bg-[#2a2a2a]"
-                        }`}
+                      }`}
                     >
                       {msg.text}
                       <div className="text-[10px] mt-1 opacity-60 text-right">
@@ -215,3 +230,4 @@ const Chat = () => {
 };
 
 export default Chat;
+
