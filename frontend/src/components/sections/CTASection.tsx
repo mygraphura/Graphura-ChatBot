@@ -2,7 +2,7 @@
 
 const CallToActionSection = () => {
   return (
-    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-20">
+    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-20 bg-white">
       <div className="mx-[292px] max-w-[856px] w-full">
         <div 
           className="w-full h-[270px] rounded-9xl px-[56px] py-[66px] relative"

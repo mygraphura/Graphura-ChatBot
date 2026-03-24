@@ -1,152 +1,66 @@
 
-import Button from '../ui/Button';
 
 const Footer = () => {
   return (
-    <footer className="w-full mb-[6px]" role="contentinfo">
-      <div className="relative w-full">
-        {/* Main footer container with gradient borders */}
-        <div 
-          className="w-full h-[448px] relative"
-          style={{
-            borderTop: '2px solid transparent',
-            borderLeft: '2px solid transparent', 
-            borderRight: '2px solid transparent',
-            borderImage: 'linear-gradient(180deg, #ff6c00 0%, #ff6c0000 100%)',
-            borderRadius: '62px 62px 0px 0px'
-          }}
-        >
-          {/* Background image */}
-          <div className="absolute inset-0 ml-[20px]">
-            <img 
-              src="/images/img_image_w_full.png" 
-              alt="Footer background" 
-              className="w-full h-[186px] rounded-[60px] object-cover"
-            />
-            
-            {/* Join Now section with image and button */}
-            <div className="absolute top-[40px] right-[114px] flex items-start -mt-[146px]">
-              <img 
-                src="/images/img_image_8.png" 
-                alt="Join illustration" 
-                className="w-[170px] h-[318px] object-cover"
-              />
-              <Button
-                text="Join Now"
-                text_font_size="text-3xl"
-                text_font_family="Montserrat"
-                text_font_weight="font-medium"
-                text_line_height="leading-4xl"
-                text_color="text-button-text-primary"
-                fill_background_color="bg-accent-primary"
-                border_border_radius="rounded-7xl"
-                border_border_image=""
-                effect_box_shadow=""
-                layout_align_self="self-center"
-                layout_width="auto"
-                position="relative"
-                layout_gap="0"
-                variant="default"
-                size="md"
-                padding="t-[8px] r-[18px] b-[8px] l-[24px]"
-                margin="mt-[34px] -ml-[12px]"
-                className="self-center"
-                onClick={() => {}}
-              />
-            </div>
-          </div>
+    <footer className="relative w-full min-h-[500px] bg-[#050505] text-white overflow-hidden px-10 md:px-20 py-12 flex flex-col justify-between font-sans border-t border-orange-500/20">
+      
+      {/* --- Background Effects --- */}
+      {/* Top right orange glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/20 blur-[120px] rounded-full -mr-40 -mt-40 pointer-events-none" />
+      
+      {/* Diagonal Light Streaks (SVG Pattern) */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <svg width="100%" height="100%">
+          <defs>
+            <pattern id="diagonal-lines" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+              <line x1="0" y1="0" x2="0" y2="100" stroke="#ff7300" strokeWidth="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diagonal-lines)" />
+        </svg>
+      </div>
 
-          {/* Main content area */}
-          <div className="absolute inset-0 flex flex-col lg:flex-row w-full h-full overflow-x-auto lg:overflow-x-visible">
-            {/* Navigation and content section */}
-            <div className="flex flex-col w-full">
-              {/* Navigation menu */}
-              <nav 
-                className="w-full px-[122px] pt-[32px] pr-[56px] pb-[32px] ml-[12px] max-w-[1440px]"
-                style={{
-                  background: 'linear-gradient(0deg, #040404 0%, #040404 50%, #00000000 100%)'
-                }}
-                role="navigation"
-                aria-label="Footer navigation"
-              >
-                <ul className="flex flex-col space-y-4 mt-[48px]" role="menubar">
-                  <li role="none">
-                    <a 
-                      href="/" 
-                      className="text-5xl font-normal leading-6xl text-text-muted font-[Montserrat] hover:text-accent-primary transition-colors"
-                      role="menuitem"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li role="none">
-                    <a 
-                      href="/about" 
-                      className="text-5xl font-normal leading-6xl text-text-muted font-[Montserrat] hover:text-accent-primary transition-colors"
-                      role="menuitem"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li role="none">
-                    <a 
-                      href="/pricing" 
-                      className="text-5xl font-normal leading-6xl text-text-muted font-[Montserrat] hover:text-accent-primary transition-colors"
-                      role="menuitem"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li role="none">
-                    <a 
-                      href="/contact" 
-                      className="text-5xl font-normal leading-6xl text-text-muted font-[Montserrat] hover:text-accent-primary transition-colors"
-                      role="menuitem"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                  <li role="none">
-                    <a 
-                      href="/live-chats" 
-                      className="text-5xl font-normal leading-6xl text-text-muted font-[Montserrat] hover:text-accent-primary transition-colors"
-                      role="menuitem"
-                    >
-                      Live Chats
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+      {/* --- Top Section --- */}
+      <div className="relative z-10 flex justify-between items-start">
+        {/* Navigation Links */}
+        <nav className="flex flex-col space-y-4 text-gray-400 font-medium">
+          <a href="#" className="hover:text-white transition-colors">Home</a>
+          <a href="#" className="hover:text-white transition-colors">About</a>
+          <a href="#" className="hover:text-white transition-colors">Pricing</a>
+          <a href="#" className="hover:text-white transition-colors">Contact</a>
+          <a href="#" className="hover:text-white transition-colors">Live Chats</a>
+        </nav>
 
-              {/* Footer bottom section */}
-              <div className="w-full bg-primary-background-charcoal px-[24px] py-[24px] -mt-[80px]">
-                <div className="flex flex-col sm:flex-row justify-center items-end gap-4 sm:gap-6">
-                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                    <span className="text-2xl font-normal leading-3xl text-text-muted font-[Montserrat] mt-[128px] mb-[10px]">
-                      Terms and Condition
-                    </span>
-                    <a 
-                      href="/privacy-policy" 
-                      className="text-2xl font-normal leading-3xl text-text-muted font-[Montserrat] mb-[8px] hover:text-accent-primary transition-colors"
-                    >
-                      Privacy Policy
-                    </a>
-                  </div>
-                  <span className="text-2xl font-normal leading-3xl text-text-muted font-[Montserrat] ml-auto">
-                    © 2026 BOVOX.ai - AI-bot All Right Reserved
-                  </span>
-                </div>
-              </div>
-            </div>
+        {/* Join Now Button */}
+        <button className="bg-[#ff6a00] hover:bg-[#ff8400] text-white font-bold py-3 px-10 rounded-full shadow-lg shadow-orange-600/30 transition-transform active:scale-95">
+          Join Now
+        </button>
+      </div>
 
-            {/* Large brand text */}
-            <div className="absolute right-0 bottom-[76px]">
-              <h2 className="text-hero font-bold leading-hero text-secondary-background-light font-[Montserrat]">
-                GRAPHOBOT
-              </h2>
-            </div>
-          </div>
+      {/* --- Middle Section: GRAPHOBOT --- */}
+      <div className="relative z-10 mt-10 md:mt-0">
+        <h1 className="text-[12vw] md:text-[10rem] leading-none font-black tracking-tighter opacity-90 select-none">
+          GRAPHOBOT
+        </h1>
+      </div>
+
+      {/* --- Character Image --- */}
+      {/* Positioned absolutely to sit on top of the text and bottom edge */}
+      <img 
+        src="https://via.placeholder.com/400x600/000000/FFFFFF?text=Robot+Character" 
+        alt="Robot"
+        className="absolute bottom-10 right-10 md:right-40 h-[300px] md:h-[500px] z-20 pointer-events-none object-contain"
+      />
+
+      {/* --- Bottom Section --- */}
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center mt-10 border-t border-white/5 pt-8 text-sm text-gray-500">
+        <div className="flex space-x-6 mb-4 md:mb-0">
+          <a href="#" className="hover:underline underline-offset-4">Terms and Condition</a>
+          <a href="#" className="hover:underline underline-offset-4">Privacy Policy</a>
         </div>
+        <p>
+          © 2026 BOVOX.ai - AI-bot All Right Reserved
+        </p>
       </div>
     </footer>
   );
