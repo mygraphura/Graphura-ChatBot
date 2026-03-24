@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="relative w-full min-h-[500px] bg-[#050505] text-white overflow-hidden px-10 md:px-20 py-12 flex flex-col justify-between font-sans border-t border-orange-500/20">
+  <footer className="relative w-[1637px] bg-[#050505] text-white overflow-hidden px-10 md:px-20 py-2 flex flex-col justify-between font-sans border-t border-orange-500/50">
       
       {/* --- Background Effects --- */}
       {/* Top right orange glow */}
@@ -38,19 +38,19 @@ const Footer = () => {
       </div>
 
       {/* --- Middle Section: GRAPHOBOT --- */}
-      <div className="relative z-10 mt-10 md:mt-0">
-        <h1 className="text-[12vw] md:text-[10rem] leading-none font-black tracking-tighter opacity-90 select-none">
+      <div className="relative z-10 mt-10 md:mt-0 flex items-center justify-center">
+        <h1 className="text-[10vw] md:text-[8rem] leading-none font-black tracking-tighter opacity-90 select-none">
           GRAPHOBOT
         </h1>
       </div>
 
       {/* --- Character Image --- */}
       {/* Positioned absolutely to sit on top of the text and bottom edge */}
-      <img 
+      {/* <img 
         src="https://via.placeholder.com/400x600/000000/FFFFFF?text=Robot+Character" 
         alt="Robot"
         className="absolute bottom-10 right-10 md:right-40 h-[300px] md:h-[500px] z-20 pointer-events-none object-contain"
-      />
+      /> */}
 
       {/* --- Bottom Section --- */}
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center mt-10 border-t border-white/5 pt-8 text-sm text-gray-500">
