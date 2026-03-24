@@ -3,7 +3,8 @@ import footer_robot from "../../assets/78efc838-aab4-438b-a63d-8ebf53f0bcea copy
 import footer_robot from "../../assets/78efc838-aab4-438b-a63d-8ebf53f0bcea copy 2.png";
 const Footer = () => {
   return (
-    <footer className="relative w-full max-w-[1400px] mx-auto bg-[#050505] h-[454px] text-white overflow-hidden  px-10 md:px-20 py-2 flex flex-col justify-between font-sans border-t border-orange-500/50 rounded-t-[60px]">
+  <footer className="relative w-[1637px] bg-[#050505] text-white overflow-hidden px-10 md:px-20 py-2 flex flex-col justify-between font-sans border-t border-orange-500/50">
+      
       {/* --- Background Effects --- */}
       {/* Top right orange glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/20 blur-[120px] rounded-full -mr-40 -mt-40 pointer-events-none" />
@@ -43,19 +44,17 @@ const Footer = () => {
       {/* --- Middle Section: GRAPHOBOT --- */}
       <div className="relative z-10 mt-10 md:mt-0 flex items-center justify-center">
         <h1 className="text-[10vw] md:text-[8rem] leading-none font-black tracking-tighter opacity-90 select-none">
-      <div className="relative z-10 mt-10 md:mt-0 flex items-center justify-center">
-        <h1 className="text-[10vw] md:text-[8rem] leading-none font-black tracking-tighter opacity-90 select-none">
           GRAPHOBOT
         </h1>
       </div>
 
       {/* --- Character Image --- */}
       {/* Positioned absolutely to sit on top of the text and bottom edge */}
-      <img
-        src={footer_robot}
+      {/* <img 
+        src="https://via.placeholder.com/400x600/000000/FFFFFF?text=Robot+Character" 
         alt="Robot"
-        className="absolute bottom-25 right-10 md:right-45 h-[200px] md:h-[300px] z-20 pointer-events-none object-contain"
-      />
+        className="absolute bottom-10 right-10 md:right-40 h-[300px] md:h-[500px] z-20 pointer-events-none object-contain"
+      /> */}
 
       {/* --- Bottom Section --- */}
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center mt-10 border-t border-white/5 pt-8 text-sm text-gray-500">

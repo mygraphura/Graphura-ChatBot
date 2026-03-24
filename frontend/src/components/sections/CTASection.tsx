@@ -1,67 +1,64 @@
-import { Link } from "react-router-dom";
+// //import Button from '../../components/ui/Button';
 
-const CTASection = () => {
-  return (
-    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-20 bg-black">
-      <div className="w-full max-w-[1100px] relative min-h-[300px] sm:min-h-[350px] rounded-[32px] sm:rounded-[48px] overflow-hidden border border-white/10 flex flex-col items-center justify-center bg-black group/container">
-        
-        {/* Background Glows and Effects */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Main central glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-orange-600/15 blur-[100px] rounded-full opacity-60 group-hover/container:opacity-80 transition-opacity duration-700" />
+// const CallToActionSection = () => {
+//   return (
+//     <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-20 bg-white">
+//       <div className="mx-[292px] max-w-[856px] w-full">
+//         <div 
+//           className="w-full h-[270px] rounded-9xl px-[56px] py-[66px] relative"
+//           style={{
+//             backgroundImage: "url('/images/img_rectangle_1430106636.png')",
+//             backgroundSize: 'cover',
+//             backgroundPosition: 'center',
+//             backgroundRepeat: 'no-repeat'
+//           }}
+//         >
+//           {/* Overlay */}
+//           <div className="absolute inset-0 bg-primary-background-overlay rounded-9xl" />
           
-          {/* Subtle mesh/waves effect using CSS gradients */}
-          <div className="absolute inset-0 opacity-20"
-               style={{
-                 backgroundImage: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.8) 100%), 
-                                  linear-gradient(45deg, transparent 48%, rgba(234, 88, 12, 0.1) 50%, transparent 52%),
-                                  linear-gradient(-45deg, transparent 48%, rgba(234, 88, 12, 0.05) 50%, transparent 52%)`,
-                 backgroundSize: '100% 100%, 60px 60px, 60px 60px'
-               }}
-          />
+//           {/* Content */}
+//           <div className="relative z-10 flex flex-col items-center gap-6 text-center h-full justify-center">
+//             <h2 className="text-[20px] sm:text-[28px] md:text-[35px] lg:text-9xl font-bold leading-[24px] sm:text-[32px] md:leading-[40px] lg:leading-9xl text-text-white font-[Montserrat] max-w-[600px]">
+//               <span className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-6xl font-normal leading-9xl font-[Montserrat]">
+//                 Step Into the Future of
+//               </span>
+//               <br />
+//               <span className="text-[24px] sm:text-[32px] md:text-[36px] lg:text-9xl font-semibold leading-9xl font-[Montserrat]">
+//                 Customer Interaction
+//               </span>
+//             </h2>
 
-          {/* Wispy flow effect (simulated with multiple gradients) */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-30 mix-blend-screen overflow-hidden">
-             <div className="absolute top-[20%] left-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent rotate-[-15deg] blur-3xl animate-pulse" />
-             <div className="absolute bottom-[20%] right-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600/10 via-transparent to-transparent rotate-[15deg] blur-3xl" />
-          </div>
-        </div>
+//             {/* <Button
+//               text="Try Now"
+//               text_font_size="text-xl"
+//               text_font_family="Inter"
+//               text_font_weight="font-medium"
+//               text_line_height="leading-3xl"
+//               text_color="text-text-white"
+//               fill_background_color="bg-accent-primary"
+//               border_border="0px solid transparent"
+//               border_border_radius="rounded-2xl"
+//               border_border_image="linear-gradient(180deg, #ffffff14 0%, #ffffff7f 100%)"
+//               padding="t-[6px] r-[34px] b-[6px] l-[22px]"
+//               layout_gap="10px"
+//               layout_align_self="auto"
+//               layout_width="auto"
+//               margin="0px"
+//               position="relative"
+//               variant="primary"
+//               size="md"
+//               onClick={() => {}}
+//               effect_box_shadow="0px -2px 7px #ffb85451"
+//               className="flex items-center"
+//             > */}
+//               {/* <span>Try Now</span>
+//               <img src="/images/img_vector.svg" alt="" className="w-[12px] h-[8px] ml-2" />
+//             </Button> */}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 py-12 gap-8 sm:gap-10">
-          <div className="flex flex-col gap-3 sm:gap-4">
-            <span className="text-white/70 text-lg sm:text-xl md:text-2xl font-medium tracking-tight font-[Montserrat]">
-              Step Into the Future of
-            </span>
-            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight font-[Montserrat] leading-tight">
-              Customer Interaction
-            </h2>
-          </div>
-
-          <Link to="/chat">
-            <button className="group flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-lg sm:text-xl transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] active:scale-95 hover:-translate-y-1">
-              <span>Try Now</span>
-              <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="3" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  className="text-white group-hover:text-orange-600 transition-colors group-hover:translate-x-0.5"
-                >
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
-              </div>
-            </button>
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default CTASection;
+// export default CallToActionSection;

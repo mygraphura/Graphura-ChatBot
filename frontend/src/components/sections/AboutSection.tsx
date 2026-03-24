@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button';
 import FeaturesSection from './FeaturesSection';
 import PricingSection from './PricingSection';
-import CTASection from './CTASection';
-import CTASection from './CTASection';
+//import CTASection from './CTASection';
 import GlowImage from '../../assets/Group 2087323989.png';
 import ChatImage1 from '../../assets/image 16.png';
 import ChatImage2 from '../../assets/image 17.png';
@@ -16,8 +15,8 @@ import RobotAvatar from '../../assets/robot-small.png';
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-black flex justify-center relative z-20 ">
-      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[20px] md:rounded-t-[25px] pt-[80px] sm:pt-[120px] pb-20 -mt-[150px] sm:-mt-[300px] relative overflow-hidden">
+    <section className="w-full bg-black flex justify-center relative z-20">
+      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] pt-[120px] pb-20 -mt-[300px] relative overflow-hidden">
 
         {/* ✅ Glow INSIDE the box */}
         <img
@@ -206,14 +205,10 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* OTHER SECTIONS */}
-          <FeaturesSection />
-          <PricingSection />
-          <CTASection />
-          {/* OTHER SECTIONS */}
-          <FeaturesSection />
-          <PricingSection />
-          <CTASection />
+        {/* OTHER SECTIONS */}
+        <FeaturesSection />
+        <PricingSection />
+        {/*<CTASection />*/}
         </div>
       </div>
     </section>
