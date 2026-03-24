@@ -84,6 +84,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+    
 
       {/* --- Middle Section: GRAPHOBOT --- */}
       <div className="relative z-10 flex items-center justify-center">
