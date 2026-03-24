@@ -21,7 +21,6 @@ const Footer = () => {
       </div>
 
       {/* --- Top Section --- */}
-
       <div className="relative z-10 flex justify-between items-start ">
         {/* Navigation Links */}
         <nav className="flex flex-col space-y-4 text-gray-400 font-medium ">
@@ -38,6 +37,7 @@ const Footer = () => {
           Join Now
         </button>
       </div>
+    
 
 
       {/* --- Middle Section: GRAPHOBOT --- */}
