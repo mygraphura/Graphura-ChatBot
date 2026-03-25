@@ -20,22 +20,22 @@ const FeaturesSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col lg:flex-row items-end justify-center gap-15">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-8 md:gap-12 lg:gap-15 px-4 w-full max-w-7xl mx-auto">
           
-        {/* LEFT CARD */}
-        <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
-    </div>
+          {/* LEFT CARD */}
+          <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-full max-w-[340px] h-auto sm:h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+            <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full object-contain" />
+          </div>
 
-    {/* CENTER CARD */}
-    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
-    </div>
+          {/* CENTER CARD */}
+          <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-full max-w-[340px] h-auto sm:h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+            <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full object-contain" />
+          </div>
 
-    {/* RIGHT CARD */}
-    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
-    </div>
+          {/* RIGHT CARD */}
+          <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-full max-w-[340px] h-auto sm:h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+            <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full object-contain" />
+          </div>
         </div>
 
       </div>
