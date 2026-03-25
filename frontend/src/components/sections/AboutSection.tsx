@@ -19,7 +19,7 @@ const AboutSection = () => {
         <img
           src={GlowImage}
           alt=""
-          className="absolute right-[-100px] top-[10%] w-[800px] sm:w-[1000px] opacity-105 pointer-events-none z-0"
+          className="absolute right-[-100px] top-[10%] w-[600px] sm:w-[800px] md:w-[1000px] opacity-105 pointer-events-none z-0"
         />
 
         {/* CENTER CONTAINER */}
@@ -29,22 +29,22 @@ const AboutSection = () => {
           <div className="relative mt-1">
 
             {/* CONTENT */}
-            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 sm:gap-16 lg:gap-12">
 
               {/* LEFT SIDE */}
-              <div className="w-full lg:w-[46%] flex flex-col gap-6">
+              <div className="w-full lg:w-[46%] flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
 
-                <h2 className="text-[32px] sm:text-[42px] md:text-[50px] lg:text-[56px] font-semibold leading-tight text-white">
+                <h2 className="text-[28px] sm:text-[42px] md:text-[50px] lg:text-[56px] font-semibold leading-tight text-white max-w-[600px]">
                   <span className="text-orange-500 font-[Montserrat]">AI</span>
                   <span className="font-[Montserrat]"> That Works for Your </span>
                   <span className="text-orange-500 font-[Montserrat]">Business</span>
                 </h2>
 
-                <p className="text-[16px] sm:text-[18px] md:text-[20px] text-white/80 leading-relaxed">
+                <p className="text-[15px] sm:text-[18px] md:text-[20px] text-white/80 leading-relaxed max-w-[550px]">
                   We help companies integrate powerful AI chatbots into their platforms, enabling automated support, smarter engagement, and seamless customer experiences.
                 </p>
 
-                <p className="text-[16px] sm:text-[18px] md:text-[20px] text-white/80">
+                <p className="text-[15px] sm:text-[18px] md:text-[20px] text-white/80">
                   Making conversations faster, smarter, and available
                   <span className="text-orange-500"> 24/7</span>
                 </p>
