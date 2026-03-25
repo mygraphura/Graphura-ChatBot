@@ -37,7 +37,7 @@ const Footer = () => {
           Join Now
         </button>
       </div>
-    
+
 
 
       {/* --- Middle Section: GRAPHOBOT --- */}
