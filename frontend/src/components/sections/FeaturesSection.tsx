@@ -20,53 +20,22 @@ const FeaturesSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col lg:flex-row items-end justify-center gap-10">
+        <div className="flex flex-col lg:flex-row items-end justify-center gap-15">
+          
+        {/* LEFT CARD */}
+        <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
+    </div>
 
-          {/* LEFT CARD */}
-          <div className="bg-[#0d0d0d] rounded-[28px] p-6 w-[260px] h-[380px] text-center border border-white/10 flex flex-col justify-between">
-            <img src={Card1} alt="" className="rounded-[20px]" />
-            
-            <div>
-              <p className="text-white/60 text-lg">Instant</p>
-              <h3 className="text-white text-2xl font-semibold">Intelligence</h3>
-            </div>
+    {/* CENTER CARD */}
+    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
+    </div>
 
-            <div className="flex justify-between text-sm text-white/50">
-              <span>Fast Responses</span>
-              <span>AI Powered</span>
-            </div>
-          </div>
-
-          {/* CENTER CARD (BIGGER + LIFTED) */}
-          <div className="bg-[#111] rounded-[32px] p-6 w-[300px] h-[430px] text-center border border-white/20 shadow-[0_0_60px_#ff7a0025] flex flex-col justify-between -translate-y-6">
-            <img src={Card2} alt="" className="rounded-[20px]" />
-            
-            <div>
-              <p className="text-white/60 text-lg">Smart</p>
-              <h3 className="text-white text-3xl font-semibold">Conversation</h3>
-            </div>
-
-            <div className="flex justify-between text-sm text-white/50">
-              <span>Context Aware</span>
-              <span>Human-Like Chat</span>
-            </div>
-          </div>
-
-          {/* RIGHT CARD */}
-          <div className="bg-[#0d0d0d] rounded-[28px] p-6 w-[260px] h-[380px] text-center border border-white/10 flex flex-col justify-between">
-            <img src={Card3} alt="" className="rounded-[20px]" />
-            
-            <div>
-              <p className="text-white/60 text-lg">AI</p>
-              <h3 className="text-white text-2xl font-semibold">Automation</h3>
-            </div>
-
-            <div className="flex justify-between text-sm text-white/50">
-              <span>Task Automation</span>
-              <span>24/7 Support</span>
-            </div>
-          </div>
-
+    {/* RIGHT CARD */}
+    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
+    </div>
         </div>
 
       </div>
