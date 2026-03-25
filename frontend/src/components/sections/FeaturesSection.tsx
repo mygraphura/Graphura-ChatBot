@@ -50,37 +50,27 @@ const FeaturesSection = () => {
           <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-orange-500 font-[Montserrat] leading-tight">
             COMMUNICATE
           </h2>
-        </motion.div>
-        
-        {/* Cards Container with Staggering */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }} // Triggers when 20% of the container is visible
-          className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10 lg:gap-15"
-        >
-          {/* LEFT CARD - Intelligence */}
-          <motion.div 
-            variants={cardVariants("left")}
-            className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
-          >
-            <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
-          </motion.div>
-          {/* CENTER CARD - Conversation */}
-          <motion.div 
-            variants={cardVariants("up")}
-            className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
-          >
-            <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
-          </motion.div>
-          <motion.div 
-            variants={cardVariants("right")}
-            className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
-          >
-            <img src={Card2} alt="Card 3" className="rounded-[24px] w-full" />
-          </motion.div>
-        </motion.div>
+        </div>
+
+        {/* Cards */}
+        <div className="flex flex-col lg:flex-row items-end justify-center gap-15">
+          
+        {/* LEFT CARD */}
+        <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
+    </div>
+
+    {/* CENTER CARD */}
+    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
+    </div>
+
+    {/* RIGHT CARD */}
+    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
+      <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
+    </div>
+        </div>
+
       </div>
 
 </section>
