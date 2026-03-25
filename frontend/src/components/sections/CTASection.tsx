@@ -1,5 +1,7 @@
 
 
+import { Link } from "react-router-dom";
+
 const CTASection = () => {
   return (
     <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-20 bg-black">
@@ -38,24 +40,26 @@ const CTASection = () => {
             </h2>
           </div>
 
-          <button className="group flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-lg sm:text-xl transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] active:scale-95 hover:-translate-y-1">
-            <span>Try Now</span>
-            <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="3" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="text-white group-hover:text-orange-600 transition-colors group-hover:translate-x-0.5"
-              >
-                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-              </svg>
-            </div>
-          </button>
+          <Link to="/chat">
+            <button className="group flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-bold text-lg sm:text-xl transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.3)] hover:shadow-[0_0_40px_rgba(234,88,12,0.5)] active:scale-95 hover:-translate-y-1">
+              <span>Try Now</span>
+              <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
+                <svg 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="3" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  className="text-white group-hover:text-orange-600 transition-colors group-hover:translate-x-0.5"
+                >
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </section>
