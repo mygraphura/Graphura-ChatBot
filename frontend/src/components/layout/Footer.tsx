@@ -2,11 +2,11 @@
 import footer_robot from "../../assets/78efc838-aab4-438b-a63d-8ebf53f0bcea copy 2.png";
 const Footer = () => {
   return (
-  <footer className="relative w-full max-w-[1400px] mx-auto bg-[#050505] h-[454px] text-white overflow-hidden  px-10 md:px-20 py-2 flex flex-col justify-between font-sans border-t border-orange-500/50 rounded-t-[60px]">
+    <footer className="relative w-full max-w-[1400px] mx-auto bg-[#050505] h-[454px] text-white overflow-hidden  px-10 md:px-20 py-2 flex flex-col justify-between font-sans border-t border-orange-500/50 rounded-t-[60px]">
       {/* --- Background Effects --- */}
       {/* Top right orange glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/20 blur-[120px] rounded-full -mr-40 -mt-40 pointer-events-none" />
-      
+
       {/* Diagonal Light Streaks (SVG Pattern) */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg width="100%" height="100%">
@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       {/* --- Top Section --- */}
-      
+
       <div className="relative z-10 flex justify-between items-start ">
         {/* Navigation Links */}
         <nav className="flex flex-col space-y-4 text-gray-400 font-medium ">
@@ -36,7 +36,7 @@ const Footer = () => {
           Join Now
         </button>
       </div>
-    
+
 
       {/* --- Middle Section: GRAPHOBOT --- */}
       <div className="relative z-10 mt-10 md:mt-0 flex items-center justify-center">
@@ -47,8 +47,8 @@ const Footer = () => {
 
       {/* --- Character Image --- */}
       {/* Positioned absolutely to sit on top of the text and bottom edge */}
-      <img 
-        src={footer_robot} 
+      <img
+        src={footer_robot}
         alt="Robot"
         className="absolute bottom-25 right-10 md:right-45 h-[200px] md:h-[300px] z-20 pointer-events-none object-contain"
       />
