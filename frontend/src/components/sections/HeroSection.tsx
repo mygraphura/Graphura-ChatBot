@@ -4,7 +4,7 @@ import RobotImage from "../../assets/Group 2087324067.png";
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen bg-black flex justify-center items-start px-4 pt-10">
+    <section className="w-full min-h-screen bg-black flex justify-center items-start px-4">
 
       {/* CENTER BOX */}
       <div className="relative w-full max-w-[1442px] min-h-[789px] sm:min-h-[550px] md:min-h-[700px] lg:min-h-[750px] overflow-hidden bg-black">
