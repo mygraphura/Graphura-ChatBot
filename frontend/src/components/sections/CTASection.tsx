@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const CTASection = () => {
           {/* Main central glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-orange-600/15 blur-[100px] rounded-full opacity-60 group-hover/container:opacity-80 transition-opacity duration-700" />
           
-          {/* Subtle mesh/waves effect using CSS gradients */}
+          {/* Subtle mesh/waves effect */}
           <div className="absolute inset-0 opacity-20"
                style={{
                  backgroundImage: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.8) 100%), 
@@ -22,7 +22,7 @@ const CTASection = () => {
                }}
           />
 
-          {/* Wispy flow effect (simulated with multiple gradients) */}
+          {/* Wispy flow effect */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-30 mix-blend-screen overflow-hidden">
              <div className="absolute top-[20%] left-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent rotate-[-15deg] blur-3xl animate-pulse" />
              <div className="absolute bottom-[20%] right-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600/10 via-transparent to-transparent rotate-[15deg] blur-3xl" />
