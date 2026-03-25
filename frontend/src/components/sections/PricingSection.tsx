@@ -10,7 +10,7 @@ const PricingSection = () => {
   };
 
   return (
-    <section className="w-full py-[140px] flex justify-center relative">
+    <section id="pricing" className="w-full py-[140px] flex justify-center relative">
       <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Heading */}
@@ -115,6 +115,7 @@ const PricingSection = () => {
             </div>
           </div>
 
+          </div>
         </div>
       </div>
     </section>

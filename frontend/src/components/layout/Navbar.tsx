@@ -24,7 +24,7 @@ const Navbar = () => {
             <a href="/about" className="text-sm sm:text-base font-medium text-white hover:text-orange-500 transition-colors">
               About us
             </a>
-            <a href="/pricing" className="text-sm sm:text-base font-medium text-white hover:text-orange-500 transition-colors">
+            <a href="/#pricing" className="text-sm sm:text-base font-medium text-white hover:text-orange-500 transition-colors">
               Pricing
             </a>
             <a href="/contact" className="text-sm sm:text-base font-medium text-white hover:text-orange-500 transition-colors">

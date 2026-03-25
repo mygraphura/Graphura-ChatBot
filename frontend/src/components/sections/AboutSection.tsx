@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button';
 import FeaturesSection from './FeaturesSection';
 import PricingSection from './PricingSection';
