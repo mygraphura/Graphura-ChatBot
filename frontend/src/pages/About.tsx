@@ -1,3 +1,23 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import aboutHeroHead from "../assets/about-hero-head.png";
+import teamMarcus from "../assets/team-marcus.png";
+import teamElena from "../assets/team-elena.png";
+import teamJulian from "../assets/team-julian.png";
+
+const values = [
+  { icon: "❤️", title: "Radical Trust", desc: "Privacy is not a feature; it is the absolute foundation of our architecture." },
+  { icon: "🧠", title: "Cognitive Symbiosis", desc: "Enhancing human decision-making through intuitive, real-time feedback loops." },
+  { icon: "🌍", title: "Inclusive Growth", desc: "Democratizing high-level intelligence for every scale of ambition." },
+  { icon: "⚡", title: "Elegant Precision", desc: "Removing the friction between thought and execution through refined AI." },
+];
+
+const team = [
+  { name: "Kartik Yadav", role: "Developer", image: teamMarcus },
+  { name: "Mandira Datta", role: "Developer (Team Lead)", image: teamElena },
+  { name: "Shri Ram", role: "Design Director,CEO,etc.", image: teamJulian },
+];
+
 const About = () => {
   return (
     <div className="relative min-h-screen bg-[#0f0f0f] text-white overflow-x-hidden z-10">
