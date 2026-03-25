@@ -42,10 +42,10 @@ const PricingSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col lg:flex-row justify-center items-stretch gap-18">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-12 lg:gap-18 px-4">
 
           {/* BASIC */}
-          <div className="w-[330px] min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <div className="w-full max-w-[330px] min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
 
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Basic</h3>
@@ -54,7 +54,7 @@ const PricingSection = () => {
               </p>
             </div>
 
-            <div className="p-6 flex flex-col justify-between flex-1">
+            <div className="p-6 flex flex-col justify-between flex-1 text-center md:text-left">
               <ul className="space-y-3 text-white/70 text-sm">
                 <li>✔ Unlimited transfer with priority processing</li>
                 <li>✔ Unlimited transfer with priority processing</li>
@@ -74,7 +74,7 @@ const PricingSection = () => {
           </div>
 
           {/* STANDARD (Highlighted) */}
-          <div className="w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative">
+          <div className="w-full max-w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative md:-translate-y-4">
 
             {/* Badge */}
             <span className="absolute top-4 right-4 bg-orange-500 text-xs px-3 py-1 rounded-full">
@@ -88,7 +88,7 @@ const PricingSection = () => {
               </p>
             </div>
 
-            <div className="p-6 flex flex-col justify-between flex-1">
+            <div className="p-6 flex flex-col justify-between flex-1 text-center md:text-left">
               <ul className="space-y-3 text-white/70 text-sm">
                 <li>✔ Unlimited transfer with priority processing</li>
                 <li>✔ Unlimited transfer with priority processing</li>
@@ -108,7 +108,7 @@ const PricingSection = () => {
           </div>
 
           {/* BUSINESS */}
-          <div className="w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <div className="w-full max-w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
 
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Business</h3>
@@ -117,7 +117,7 @@ const PricingSection = () => {
               </p>
             </div>
 
-            <div className="p-6 flex flex-col justify-between flex-1">
+            <div className="p-6 flex flex-col justify-between flex-1 text-center md:text-left">
               <ul className="space-y-3 text-white/70 text-sm">
                 <li>✔ Unlimited transfer with priority processing</li>
                 <li>✔ Unlimited transfer with priority processing</li>
