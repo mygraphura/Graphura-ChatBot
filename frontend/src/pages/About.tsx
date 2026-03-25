@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import aboutHeroHead from "@/assets/about-hero-head.png";
-import teamMarcus from "@/assets/team-marcus.png";
-import teamElena from "@/assets/team-elena.png";
-import teamJulian from "@/assets/team-julian.png";
+import aboutHeroHead from "../assets/about-hero-head.png";
+import teamMarcus from "../assets/team-marcus.png";
+import teamElena from "../assets/team-elena.png";
+import teamJulian from "../assets/team-julian.png";
 
 const values = [
   { icon: "❤️", title: "Radical Trust", desc: "Privacy is not a feature; it is the absolute foundation of our architecture." },
