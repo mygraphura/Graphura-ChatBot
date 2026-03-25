@@ -46,20 +46,20 @@ const PricingSection = () => {
         {/* Cards */}
         <div className="flex flex-col lg:flex-row justify-center items-stretch gap-18">
 
+        {/* Cards Container */}
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8 lg:gap-12">
+          
           {/* BASIC */}
           <div className="w-[330px] min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Basic</h3>
-              <p className="text-white text-4xl font-semibold mt-2">
-                ${isYearly ? "9.99" : "12.99"}
-              </p>
+              <p className="text-white text-4xl font-semibold mt-2">${isYearly ? "9.99" : "12.99"}</p>
             </div>
-
             <div className="p-6 flex flex-col justify-between flex-1">
               <ul className="space-y-3 text-white/70 text-sm">
                 <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Custom AI Model Access</li>
+                <li>✔ 24/7 Standard Support</li>
               </ul>
               <button 
                 onClick={() => handleGetStarted("Basic", isYearly ? "9.99" : "12.99")}
@@ -77,16 +77,13 @@ const PricingSection = () => {
             </span>
             <div className="bg-gradient-to-b from-orange-600/50 to-transparent p-6">
               <h3 className="text-white text-xl">Standard</h3>
-              <p className="text-white text-4xl font-semibold mt-2">
-                ${isYearly ? "19.99" : "24.99"}
-              </p>
+              <p className="text-white text-4xl font-semibold mt-2">${isYearly ? "19.99" : "24.99"}</p>
             </div>
-
             <div className="p-6 flex flex-col justify-between flex-1">
               <ul className="space-y-3 text-white/70 text-sm">
-                <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Everything in Basic</li>
+                <li>✔ Priority API Access</li>
+                <li>✔ Advanced Analytics Dashboard</li>
               </ul>
               <button 
                 onClick={() => handleGetStarted("Standard", isYearly ? "19.99" : "24.99")}
@@ -101,16 +98,13 @@ const PricingSection = () => {
           <div className="w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Business</h3>
-              <p className="text-white text-4xl font-semibold mt-2">
-                ${isYearly ? "49.99" : "59.99"}
-              </p>
+              <p className="text-white text-4xl font-semibold mt-2">${isYearly ? "49.99" : "59.99"}</p>
             </div>
-
             <div className="p-6 flex flex-col justify-between flex-1">
               <ul className="space-y-3 text-white/70 text-sm">
-                <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
-                <li>✔ Unlimited transfer with priority processing</li>
+                <li>✔ Multi-user Team License</li>
+                <li>✔ Enterprise Security Features</li>
+                <li>✔ Dedicated Account Manager</li>
               </ul>
               <button 
                 onClick={() => handleGetStarted("Business", isYearly ? "49.99" : "59.99")}
