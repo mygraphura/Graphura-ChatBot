@@ -137,7 +137,7 @@ const About = () => {
       {/* Story */}
       <section className="relative z-10 py-24 border-t border-[#2f2f2f]/60 text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <motion.div initial={{ y: 20, opacity: 0 }}>
+          <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}>
             <h2 className="text-4xl font-bold mb-8 relative inline-block">
               Our Story
 
