@@ -64,17 +64,18 @@ const FeaturesSection = () => {
             COMMUNICATE
           </h2>
         </motion.div>
+        </motion.div>
 
-        {/* Cards Container with Staggering */}
+        {/* Cards container with stagger animation */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }} // Triggers when 20% of the container is visible
-          className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10 lg:gap-15"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-col lg:flex-row items-end justify-center gap-15"
         >
           
-          {/* LEFT CARD - Intelligence */}
+          {/* LEFT CARD */}
           <motion.div 
             variants={cardVariants("left")}
             className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
@@ -82,7 +83,7 @@ const FeaturesSection = () => {
             <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
           </motion.div>
 
-          {/* CENTER CARD - Conversation */}
+          {/* CENTER CARD */}
           <motion.div 
             variants={cardVariants("up")}
             className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
@@ -90,7 +91,7 @@ const FeaturesSection = () => {
             <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
           </motion.div>
 
-          {/* RIGHT CARD - Automation */}
+          {/* RIGHT CARD */}
           <motion.div 
             variants={cardVariants("right")}
             className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"

@@ -19,7 +19,7 @@ const PricingSection = () => {
   });
 
   return (
-    <section className="w-full py-[140px] flex justify-center relative overflow-hidden">
+    <section id="pricing" className="w-full py-[140px] flex justify-center relative">
       <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Heading - Fades in from top */}
@@ -152,8 +152,9 @@ const PricingSection = () => {
                 Get Started
               </button>
             </div>
-          </motion.div>
+          </div>
 
+          </div>
         </div>
       </div>
       
