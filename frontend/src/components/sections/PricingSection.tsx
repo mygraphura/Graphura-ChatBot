@@ -22,8 +22,11 @@ const PricingSection = () => {
         <div className="flex justify-center mb-16">
           <div className="bg-[#1a1a1a] rounded-full p-1 flex">
 
+
             <button
               onClick={() => setIsYearly(false)}
+              className={`px-6 py-2 rounded-full text-sm transition ${!isYearly ? "bg-orange-500 text-white" : "text-white/60"
+                }`}
               className={`px-6 py-2 rounded-full text-sm transition ${!isYearly ? "bg-orange-500 text-white" : "text-white/60"
                 }`}
             >
@@ -34,6 +37,8 @@ const PricingSection = () => {
               onClick={() => setIsYearly(true)}
               className={`px-6 py-2 rounded-full text-sm transition ${isYearly ? "bg-orange-500 text-white" : "text-white/60"
                 }`}
+              className={`px-6 py-2 rounded-full text-sm transition ${isYearly ? "bg-orange-500 text-white" : "text-white/60"
+                }`}
             >
               Yearly
             </button>
@@ -42,10 +47,10 @@ const PricingSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-12 lg:gap-18 px-4">
+        <div className="flex flex-col lg:flex-row justify-center items-stretch gap-18">
 
           {/* BASIC */}
-          <div className="w-full max-w-[330px] min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <div className="w-[330px] min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
 
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Basic</h3>
@@ -67,6 +72,12 @@ const PricingSection = () => {
   hover:-translate-y-1 hover:scale-105 
   hover:shadow-[0_10px_20px_rgba(234,88,12,0.3)] 
   active:scale-95">
+              <button className="mt-6 bg-[#2a2a2a] border border-white/30 text-white py-2 rounded-full 
+  transition-all duration-300 ease-out 
+  hover:bg-orange-600 hover:border-transparent 
+  hover:-translate-y-1 hover:scale-105 
+  hover:shadow-[0_10px_20px_rgba(234,88,12,0.3)] 
+  active:scale-95">
                 Get Started
               </button>
             </div>
@@ -74,7 +85,7 @@ const PricingSection = () => {
           </div>
 
           {/* STANDARD (Highlighted) */}
-          <div className="w-full max-w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative md:-translate-y-4">
+          <div className="w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative">
 
             {/* Badge */}
             <span className="absolute top-4 right-4 bg-orange-500 text-xs px-3 py-1 rounded-full">
@@ -101,6 +112,12 @@ const PricingSection = () => {
   hover:-translate-y-1 hover:scale-105 
   hover:shadow-[0_10px_20px_rgba(234,88,12,0.3)] 
   active:scale-95">
+              <button className="mt-6 bg-[#2a2a2a] border border-white/30 text-white py-2 rounded-full 
+  transition-all duration-300 ease-out 
+  hover:bg-orange-600 hover:border-transparent 
+  hover:-translate-y-1 hover:scale-105 
+  hover:shadow-[0_10px_20px_rgba(234,88,12,0.3)] 
+  active:scale-95">
                 Get Started
               </button>
             </div>
@@ -108,7 +125,7 @@ const PricingSection = () => {
           </div>
 
           {/* BUSINESS */}
-          <div className="w-full max-w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <div className="w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
 
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-6">
               <h3 className="text-white text-xl">Business</h3>
@@ -124,6 +141,12 @@ const PricingSection = () => {
                 <li>✔ Unlimited transfer with priority processing</li>
               </ul>
 
+              <button className="mt-6 bg-[#2a2a2a] border border-white/30 text-white py-2 rounded-full 
+  transition-all duration-300 ease-out 
+  hover:bg-orange-600 hover:border-transparent 
+  hover:-translate-y-1 hover:scale-105 
+  hover:shadow-[0_10px_20px_rgba(234,88,12,0.3)] 
+  active:scale-95">
               <button className="mt-6 bg-[#2a2a2a] border border-white/30 text-white py-2 rounded-full 
   transition-all duration-300 ease-out 
   hover:bg-orange-600 hover:border-transparent 
