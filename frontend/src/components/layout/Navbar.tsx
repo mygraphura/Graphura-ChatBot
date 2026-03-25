@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import Button from "../../components/ui/Button";
 
 const Navbar = () => {
@@ -37,13 +38,14 @@ const Navbar = () => {
           </div>
 
           {/* Button */}
-          <Button
-            text="Join Now"
-            variant="primary"
-            size="md"
-            className="border-0 border-transparent scale-90 sm:scale-100"
-            onClick={() => { }}
-          />
+          <Link to="/chat">
+            <Button
+              text="Join Now"
+              variant="primary"
+              size="md"
+              className="border-0 border-transparent scale-90 sm:scale-100"
+            />
+          </Link>
         </div>
       </div>
     </div>
