@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { Link } from "react-router-dom";
 
 const CTASection = () => {
@@ -27,7 +25,8 @@ const CTASection = () => {
              <div className="absolute top-[20%] left-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent rotate-[-15deg] blur-3xl animate-pulse" />
              <div className="absolute bottom-[20%] right-[-10%] w-[120%] h-[60%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600/10 via-transparent to-transparent rotate-[15deg] blur-3xl" />
           </div>
-        </div>
+          {/* WISPY FLOW EFFECT ... moved inside previous div */}
+          </div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 py-12 gap-8 sm:gap-10">
