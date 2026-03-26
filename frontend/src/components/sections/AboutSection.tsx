@@ -50,10 +50,12 @@ const AboutSection = () => {
                   <span className="text-orange-500"> 24/7</span>
                 </p>
 
-                <Button className="w-fit flex items-center gap-2">
-                  <span>Try Now</span>
-                  <img src="/images/img_vector.svg" alt="" className="w-[8px] h-[6px]" />
-                </Button>
+                <Link to="/chat">
+                  <Button className="w-fit flex items-center gap-2">
+                    <span>Try Now</span>
+                    <img src="/images/img_vector.svg" alt="" className="w-[8px] h-[6px]" />
+                  </Button>
+                </Link>
 
               </div>
 

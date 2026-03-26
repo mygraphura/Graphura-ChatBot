@@ -16,73 +16,64 @@ const FeaturesSection = () => {
   };
 
   const cardVariants = (direction: "left" | "right" | "up"): Variants => ({
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 50 : 0 
+      y: direction === "up" ? 50 : 0
     },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
+    visible: {
+      opacity: 1,
+      x: 0,
       y: 0,
-      transition: { 
-        duration: 0.8, 
+      transition: {
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1] // Custom "OutQuart" easing for smooth arrival
-      } 
+      }
     }
   });
 
   return (
     <section className="w-full py-[140px] flex justify-center relative overflow-hidden bg-transparent">
-      <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Heading - Fades in from top */}
-        <motion.div 
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }} // Repeatedly animates
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-white font-[Montserrat] leading-tight">
-            TRANSFORM THE WAY YOU
-          </h2>
-          <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-orange-500 font-[Montserrat] leading-tight">
-            COMMUNICATE
-          </h2>
-        </div>
+  <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Cards */}
-        <div className="flex flex-col lg:flex-row items-end justify-center gap-15">
-          
-        {/* LEFT CARD */}
-        <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-white">
+        TRANSFORM THE WAY YOU
+      </h2>
+      <h2 className="text-[32px] sm:text-[42px] md:text-[56px] font-semibold text-orange-500">
+        COMMUNICATE
+      </h2>
+    </motion.div>
 
-    {/* CENTER CARD */}
-    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
-    </div>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex flex-col lg:flex-row items-end justify-center gap-10"
+    >
+      <motion.div variants={cardVariants("left")}>
+        <img src={Card1} alt="Card 1" className="rounded-[24px]" />
+      </motion.div>
 
-    {/* RIGHT CARD */}
-    <div className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer">
-      <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
-    </div>
-        </div>
+      <motion.div variants={cardVariants("up")}>
+        <img src={Card3} alt="Card 2" className="rounded-[24px]" />
+      </motion.div>
 
-          {/* RIGHT CARD - Automation */}
-          <motion.div 
-            variants={cardVariants("right")}
-            className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
-          >
-            <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
-          </motion.div>
-          
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+      <motion.div variants={cardVariants("right")}>
+        <img src={Card2} alt="Card 3" className="rounded-[24px]" />
+      </motion.div>
+    </motion.div>
+
+  </div> {/* ✅ THIS WAS MISSING */}
+
+</section>
+  )}
 
 export default FeaturesSection;
