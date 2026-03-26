@@ -16,19 +16,19 @@ const FeaturesSection = () => {
   };
 
   const cardVariants = (direction: "left" | "right" | "up"): Variants => ({
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 50 : 0 
+      y: direction === "up" ? 50 : 0
     },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
+    visible: {
+      opacity: 1,
+      x: 0,
       y: 0,
-      transition: { 
-        duration: 0.8, 
+      transition: {
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1] // Custom "OutQuart" easing for smooth arrival
-      } 
+      }
     }
   });
 
@@ -51,7 +51,7 @@ const FeaturesSection = () => {
             COMMUNICATE
           </h2>
         </motion.div>
-
+        
         {/* Cards Container with Staggering */}
         <motion.div 
           variants={containerVariants}
@@ -60,7 +60,6 @@ const FeaturesSection = () => {
           viewport={{ once: false, amount: 0.2 }} // Triggers when 20% of the container is visible
           className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-10 lg:gap-15"
         >
-          
           {/* LEFT CARD - Intelligence */}
           <motion.div 
             variants={cardVariants("left")}
@@ -68,7 +67,6 @@ const FeaturesSection = () => {
           >
             <img src={Card1} alt="Brain Icon" className="rounded-[24px] w-full" />
           </motion.div>
-
           {/* CENTER CARD - Conversation */}
           <motion.div 
             variants={cardVariants("up")}
@@ -76,19 +74,16 @@ const FeaturesSection = () => {
           >
             <img src={Card3} alt="Robot Hand" className="rounded-[24px] w-full" />
           </motion.div>
-
-          {/* RIGHT CARD - Automation */}
           <motion.div 
             variants={cardVariants("right")}
             className="group bg-[#0f0f0f] rounded-[32px] p-6 w-[340px] h-[505px] text-center border border-white/10 flex flex-col justify-between shadow-lg transition-all duration-300 ease-out hover:-translate-y-4 hover:scale-[1.02] hover:border-orange-500/40 hover:shadow-[0_0_40px_rgba(234,88,12,0.15)] cursor-pointer"
           >
-            <img src={Card2} alt="AI Logo" className="rounded-[24px] w-full" />
+            <img src={Card2} alt="Card 3" className="rounded-[24px] w-full" />
           </motion.div>
-          
         </motion.div>
       </div>
-    </section>
-  );
-};
+
+</section>
+  )}
 
 export default FeaturesSection;
