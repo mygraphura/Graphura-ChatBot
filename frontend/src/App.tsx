@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import Chat from './pages/Chat';
 import Pricing from './pages/Pricing';
 import Checkout from './pages/Checkout';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 // Scroll to top on every route change
 function ScrollToTop() {
@@ -27,6 +29,8 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
       </Routes>
     </BrowserRouter>
   );
