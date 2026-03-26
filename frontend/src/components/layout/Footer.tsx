@@ -85,7 +85,6 @@ const Footer = () => {
         </div>
       </div>
 
-
       {/* --- Middle Section: GRAPHOBOT --- */}
       <div className="relative z-10 flex items-center justify-center">
         <h1 className="text-[14vw] sm:text-[10vw] md:text-[8rem] leading-none font-black tracking-tighter opacity-90 select-none">
