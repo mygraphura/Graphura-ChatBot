@@ -36,7 +36,7 @@ const Navbar = () => {
 
           {/* Mobile: Hamburger + Logo */}
           <div className="md:hidden flex items-center gap-3">
-            <button 
+            <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-white p-1"
               aria-label="Toggle menu"
@@ -59,7 +59,7 @@ const Navbar = () => {
             <span className="absolute inset-0 rounded-full bg-orange-500/40 blur-lg group-hover:bg-orange-500/60 transition-all duration-300 scale-90 sm:scale-100" />
             <span className="relative flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-lg shadow-orange-500/25 transition-all duration-300 hover:scale-105 active:scale-95">
               Get Started
-              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </span>
           </Link>
         </div>
