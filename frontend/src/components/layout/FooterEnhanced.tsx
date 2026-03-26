@@ -102,8 +102,8 @@ const FooterEnhanced = () => {
       {/* --- Bottom Section --- */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center mt-6 border-t border-white/5 pt-4 sm:pt-6 text-xs sm:text-sm text-gray-500 gap-3">
         <div className="flex space-x-4 sm:space-x-6">
-          <Link to="/" className="hover:underline underline-offset-4">Terms and Condition</Link>
-          <Link to="/" className="hover:underline underline-offset-4">Privacy Policy</Link>
+          <Link to="/terms-conditions" className="hover:underline underline-offset-4">Terms and Condition</Link>
+          <Link to="/privacy-policy" className="hover:underline underline-offset-4">Privacy Policy</Link>
         </div>
         <p className="text-center">
           © 2026 BOVOX.ai - AI-bot All Right Reserved

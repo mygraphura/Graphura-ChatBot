@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="relative z-10 w-full h-full flex flex-col">
 
           {/* Navbar */}
-          <div className="w-full flex justify-center pt-4 sm:pt-6 translate-x-[10%] sm:translate-x-[15%] md:translate-x-[15%] lg:translate-x-[20%]">
+          <div className="w-full flex justify-center pt-4 sm:pt-6 translate-x-[5%] sm:translate-x-[10%] md:translate-x-[15%] lg:translate-x-[18%]">
             <Navbar />
           </div>
 
