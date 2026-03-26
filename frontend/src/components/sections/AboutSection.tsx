@@ -12,7 +12,7 @@ import RobotAvatar from '../../assets/robot-small.png';
 const AboutSection = () => {
   return (
     <section className="w-full bg-black flex justify-center relative z-20">
-      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] pt-[120px] pb-20 -mt-[300px] relative overflow-hidden">
+      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] pt-[120px] pb-20 -mt-[296px] relative overflow-hidden">
 
         {/* ✅ Glow INSIDE the box */}
         <img
@@ -25,7 +25,7 @@ const AboutSection = () => {
         <div className="w-full relative px-4 sm:px-6 lg:px-8">
 
           {/* INNER BOX */}
-          <div className="relative bg-transparent rounded-[24px] lg:-mt-[129px] px-6 sm:px-10 lg:px-14 py-40 overflow-hidden">
+          <div className="relative mt-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] sm:rounded-[48px] lg:-mt-[125px] px-6 sm:px-10 lg:px-14 py-40 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
 
 
 
