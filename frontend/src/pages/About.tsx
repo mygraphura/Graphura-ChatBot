@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import FooterEnhanced from "../components/layout/FooterEnhanced";
 import aboutHeroHead from "../assets/about-hero-head.png";
 import teamMarcus from "../assets/team-marcus.png";
 import teamElena from "../assets/team-elena.png";
@@ -40,26 +41,26 @@ const About = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[520px]">
         <div className="flex items-center gap-1 rounded-full bg-[#1a1a1a]/70 backdrop-blur-2xl border border-[#2f2f2f]/60 px-2 py-2">
 
-          <Link to="/" className="px-4 py-2 text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
+          <Link to="/" className="hidden sm:block px-3 sm:px-4 py-2 text-xs sm:text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
             Home
           </Link>
 
-          <span className="px-4 py-2 text-sm text-white font-semibold rounded-full bg-[#2a2a2a]">
+          <span className="px-3 sm:px-4 py-2 text-xs sm:text-sm text-white font-semibold rounded-full bg-[#2a2a2a]">
             About
           </span>
 
-          <Link to="/#pricing" className="px-4 py-2 text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
+          <Link to="/pricing" className="px-3 sm:px-4 py-2 text-xs sm:text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
             Pricing
           </Link>
 
-          <Link to="/#contact" className="px-4 py-2 text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
+          <Link to="/contact" className="px-3 sm:px-4 py-2 text-xs sm:text-sm text-[#a1a1a1] hover:text-white rounded-full hover:bg-[#2a2a2a] transition">
             Contact
           </Link>
 
-          <Link to="/chat" className="ml-2 px-5 py-2 text-sm font-semibold rounded-full 
+          <Link to="/chat" className="ml-1 sm:ml-2 px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold rounded-full 
           bg-orange-500 hover:bg-orange-600 transition shadow-md hover:shadow-orange-500/30">
             Get Started
           </Link>
@@ -82,7 +83,7 @@ const About = () => {
               Humanity First
             </p>
 
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight">
               The Soul of <br />
               <span className="text-orange-500 italic">Intelligence.</span>
             </h1>
@@ -259,9 +260,7 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-[#2f2f2f]/60 py-8 text-center text-[#a1a1a1]">
-        © 2026 Graphobot AI
-      </footer>
+      <FooterEnhanced />
 
     </div>
   );
