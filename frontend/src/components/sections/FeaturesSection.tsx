@@ -16,19 +16,19 @@ const FeaturesSection = () => {
   };
 
   const cardVariants = (direction: "left" | "right" | "up"): Variants => ({
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 50 : 0 
+      y: direction === "up" ? 50 : 0
     },
-    visible: { 
-      opacity: 1, 
-      x: 0, 
+    visible: {
+      opacity: 1,
+      x: 0,
       y: 0,
-      transition: { 
-        duration: 0.8, 
+      transition: {
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1] // Custom "OutQuart" easing for smooth arrival
-      } 
+      }
     }
   });
 
@@ -88,7 +88,8 @@ const FeaturesSection = () => {
         </motion.div>
       </div>
 
-</section>
-  )}
+    </section>
+  );
+};
 
 export default FeaturesSection;

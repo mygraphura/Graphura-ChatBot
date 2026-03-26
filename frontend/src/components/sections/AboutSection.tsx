@@ -1,5 +1,5 @@
-//import { Link } from 'react-router-dom';
-import Button from '../../components/ui/Button';
+import { Link } from 'react-router-dom';
+
 import FeaturesSection from './FeaturesSection';
 import PricingSection from './PricingSection';
 import CTASection from './CTASection';
@@ -50,10 +50,15 @@ const AboutSection = () => {
                   <span className="text-orange-500"> 24/7</span>
                 </p>
 
-                <Button className="w-fit flex items-center gap-2">
-                  <span>Try Now</span>
-                  <img src="/images/img_vector.svg" alt="" className="w-[8px] h-[6px]" />
-                </Button>
+                <Link to="/chat" className="group relative w-fit">
+                  <span className="absolute inset-0 rounded-full bg-orange-500/40 blur-lg group-hover:bg-orange-500/60 transition-all duration-300" />
+                  <span className="relative flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg shadow-orange-500/25 transition-all duration-300 hover:scale-105 active:scale-95">
+                    Try Now
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </Link>
 
               </div>
 
