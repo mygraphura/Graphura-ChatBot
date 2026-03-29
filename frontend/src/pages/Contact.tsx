@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/layout/Navbar";
-import FooterEnhanced from "../components/layout/FooterEnhanced";
+import Footer from "../components/layout/Footer";
 
 const socialLinks = [
   { 
@@ -201,7 +201,7 @@ const Contact = () => {
         </div>
       </main>
 
-      <FooterEnhanced />
+      <Footer />
     </div>
   );
 };
