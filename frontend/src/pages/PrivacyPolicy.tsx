@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
-import FooterEnhanced from "../components/layout/FooterEnhanced";
+import Footer from "../components/layout/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 
 const sections = [
@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
         </div>
       </main>
 
-      <FooterEnhanced />
+      <Footer />
     </div>
   );
 };

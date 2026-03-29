@@ -1,6 +1,6 @@
 import PricingSection from "../components/sections/PricingSection";
 import Navbar from "../components/layout/Navbar";
-import FooterEnhanced from "../components/layout/FooterEnhanced";
+import Footer from "../components/layout/Footer";
 
 const Pricing = () => {
     return (
@@ -9,7 +9,7 @@ const Pricing = () => {
                 <Navbar />
             </div>
             <PricingSection />
-            <FooterEnhanced />
+            <Footer />
         </div>
     )
 }

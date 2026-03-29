@@ -1,14 +1,14 @@
 import HeroSection from "../components/sections/HeroSection";
 import AboutSection from "../components/sections/AboutSection";
 
-import FooterEnhanced from "../components/layout/FooterEnhanced";
+import Footer from "../components/layout/Footer";
 
 const Home = () => {
   return (
     <div className="bg-black">
       <HeroSection />
       <AboutSection />
-      <FooterEnhanced />
+      <Footer />
     </div>
   );
 };

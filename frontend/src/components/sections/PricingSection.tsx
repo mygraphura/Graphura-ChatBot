@@ -132,7 +132,6 @@ const PricingSection = () => {
 
         </div>
       </div>
-      </div>
     </section>
   );
 };
