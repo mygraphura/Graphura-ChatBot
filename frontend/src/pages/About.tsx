@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import FooterEnhanced from "../components/layout/FooterEnhanced";
+import Footer from "../components/layout/Footer";
 import aboutHeroHead from "../assets/about-hero-head.png";
 import teamMarcus from "../assets/team-marcus.png";
 import teamElena from "../assets/team-elena.png";
@@ -15,7 +15,7 @@ const values = [
 
 const team = [
   { name: "Kartik Yadav", role: "Developer", image: teamMarcus },
-  { name: "Mandira Datta", role: "Developer (Team Lead)", image: teamElena },
+  { name: "Riya", role: "Developer", image: teamElena },
   { name: "Shri Ram", role: "Design Director,CEO,etc.", image: teamJulian },
 ];
 
@@ -260,7 +260,7 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <FooterEnhanced />
+      <Footer />
 
     </div>
   );
