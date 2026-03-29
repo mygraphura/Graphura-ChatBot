@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Button from '../../components/ui/Button';
+
 import FeaturesSection from './FeaturesSection';
 import PricingSection from './PricingSection';
 import CTASection from './CTASection';
@@ -12,7 +12,7 @@ import RobotAvatar from '../../assets/robot-small.png';
 const AboutSection = () => {
   return (
     <section className="w-full bg-black flex justify-center relative z-20">
-      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] pt-[120px] pb-20 -mt-[300px] relative overflow-hidden">
+      <div className="w-full max-w-[1448px] min-h-screen bg-black rounded-t-[150px] md:rounded-t-[25px] pt-[120px] pb-20 -mt-[296px] relative overflow-hidden">
 
         {/* ✅ Glow INSIDE the box */}
         <img
@@ -25,7 +25,7 @@ const AboutSection = () => {
         <div className="w-full relative px-4 sm:px-6 lg:px-8">
 
           {/* INNER BOX */}
-          <div className="relative bg-transparent rounded-[24px] lg:-mt-[129px] px-6 sm:px-10 lg:px-14 py-40 overflow-hidden">
+          <div className="relative mt-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] sm:rounded-[48px] lg:-mt-[125px] px-6 sm:px-10 lg:px-14 py-40 overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
 
 
 
@@ -50,11 +50,14 @@ const AboutSection = () => {
                   <span className="text-orange-500"> 24/7</span>
                 </p>
 
-                <Link to="/chat">
-                  <Button className="w-fit flex items-center gap-2">
-                    <span>Try Now</span>
-                    <img src="/images/img_vector.svg" alt="" className="w-[8px] h-[6px]" />
-                  </Button>
+                <Link to="/chat" className="group relative w-fit">
+                  <span className="absolute inset-0 rounded-full bg-orange-500/40 blur-lg group-hover:bg-orange-500/60 transition-all duration-300" />
+                  <span className="relative flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg shadow-orange-500/25 transition-all duration-300 hover:scale-105 active:scale-95">
+                    Try Now
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
                 </Link>
 
               </div>
