@@ -31,13 +31,12 @@ const CTASection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 py-12 gap-6 sm:gap-8">
-          
-          <div className="flex flex-col gap-2 sm:gap-3">
-            <span className="text-[#d1d5db] text-lg sm:text-xl md:text-2xl font-medium tracking-wide font-[Montserrat]">
+        <div className="relative z-10 flex flex-col items-center text-center px-6 py-12 gap-8 sm:gap-10">
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <span className="text-white/70 text-lg sm:text-xl md:text-2xl font-medium tracking-tight font-[Montserrat]">
               Step Into the Future of
             </span>
-            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-[Montserrat] leading-tight drop-shadow-lg">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight font-[Montserrat] leading-tight">
               Customer Interaction
             </h2>
           </div>
