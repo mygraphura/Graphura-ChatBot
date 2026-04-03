@@ -13,8 +13,9 @@ app = FastAPI(
 )
 
 # PATH SAFETY 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # /backend
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+FRONTEND_DIR = os.path.join(PROJECT_ROOT, "frontend", "dist")
 
 # INCLUDE ROUTERS
 app.include_router(chatbot_router, prefix="/chat", tags=["Chatbot"])
