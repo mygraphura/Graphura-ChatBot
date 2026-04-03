@@ -1,0 +1,72 @@
+{
+    "tickets": [
+        {
+            "ticket_id": "GRPH-2850CE6B",
+            "question": "yes, escalate please",
+            "role": "visitor",
+            "status": "closed",
+            "confidence": 0,
+            "created_at": "2026-02-28T16:41:47.748433"
+        },
+        {
+            "ticket_id": "GRPH-2059BC6E",
+            "question": "how far is the moon?",
+            "role": "visitor",
+            "intern_id": null,
+            "email": "safal@gmail.com",
+            "status": "open",
+            "confidence": 21.22,
+            "created_at": "2026-02-28T19:31:34.211491"
+        },
+        {
+            "ticket_id": "GRPH-D6C7CAE0",
+            "question": "can you give me hr email",
+            "role": "visitor",
+            "intern_id": null,
+            "email": "xyz@gmail.com",
+            "status": "open",
+            "confidence": 66.29,
+            "created_at": "2026-03-04T13:13:53.246286"
+        },
+        {
+            "ticket_id": "GRPH-89373D06",
+            "question": "do you know how far is the sun?",
+            "role": "visitor",
+            "intern_id": null,
+            "email": "safal@gmail.com",
+            "status": "open",
+            "confidence": 22.65,
+            "created_at": "2026-03-04T14:45:21.154731"
+        },
+        {
+            "ticket_id": "GRPH-88987B8B",
+            "question": "how do i leave this internship early?",
+            "role": "intern",
+            "intern_id": "GRAPHURA/26/01/485",
+            "email": null,
+            "status": "closed",
+            "confidence": 59.01,
+            "created_at": "2026-03-04T14:53:52.971610"
+        },
+        {
+            "ticket_id": "GRPH-0C63C3EA",
+            "question": "whos gona win ipl",
+            "role": "visitor",
+            "intern_id": null,
+            "email": "safal@gmail.com",
+            "status": "closed",
+            "confidence": 15.82,
+            "created_at": "2026-03-09T13:58:11.923868"
+        },
+        {
+            "ticket_id": "GRPH-DCD0B00F",
+            "question": "can graphura help me with my startup?",
+            "role": "visitor",
+            "intern_id": null,
+            "email": "safalsharma@gmail.com",
+            "status": "open",
+            "confidence": 83.41,
+            "created_at": "2026-03-12T17:31:43.962219"
+        }
+    ]
+}

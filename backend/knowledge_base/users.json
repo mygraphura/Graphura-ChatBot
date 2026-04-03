@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "admin@graphura.ai",
+      "password": "$2b$12$6Q1Bq0zJqB6Hj1gXKXnK3Oa4A6zR2hA0v7sN5r5C0kC9n5T2Q3b3y",
+      "role": "admin"
+    },
+    {
+      "email": "hr@graphura.ai",
+      "password": "$2b$12$uVhV1v5vQeF4sDkP6u9X3uE6s1s7hQK4o9XyYkJpQk0k5m7t7Rk8C",
+      "role": "hr"
+    }
+  ]
+}
