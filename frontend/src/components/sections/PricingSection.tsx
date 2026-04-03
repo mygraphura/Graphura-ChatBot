@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const PricingSection = () => {
   const [isYearly, setIsYearly] = useState(true);
+  const navigate = useNavigate();
 
   // Animation Variants
   const cardVariants = (i: number): Variants => ({
@@ -19,12 +20,22 @@ const PricingSection = () => {
     },
   });
 
+  const handleGetStarted = (plan: string, price: string) => {
+    navigate("/checkout", { state: { plan, price } });
+  };
+
   return (
     <section id="pricing" className="w-full py-16 sm:py-24 md:py-[140px] flex justify-center relative">
       <div className="w-full max-w-[1442px] px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Heading */}
-        <div className="text-center mb-10 sm:mb-16">
+        <motion.div 
+          className="text-center mb-10 sm:mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <p className="text-white/60 text-sm sm:text-lg mb-2">
             FROM QUESTION TO SOLUTION
           </p>
@@ -63,7 +74,13 @@ const PricingSection = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-6 sm:gap-8 lg:gap-12">
           
           {/* BASIC */}
-          <div className="w-full max-w-[330px] min-h-[400px] sm:min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <motion.div 
+            variants={cardVariants(0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full max-w-[330px] min-h-[400px] sm:min-h-[470px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col"
+          >
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-5 sm:p-6">
               <h3 className="text-white text-lg sm:text-xl">Basic</h3>
               <p className="text-white text-3xl sm:text-4xl font-semibold mt-2">₹{isYearly ? "799" : "999"}<span className="text-sm sm:text-base font-normal text-white/50">/{isYearly ? "yr" : "mo"}</span></p>
@@ -86,7 +103,13 @@ const PricingSection = () => {
           </motion.div>
 
           {/* STANDARD (Highlighted) */}
-          <div className="w-full max-w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative">
+          <motion.div 
+            variants={cardVariants(1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full max-w-[330px] min-h-[400px] bg-[#111] rounded-[24px] border border-white/50 shadow-[0_0_60px_#ff7a0025] overflow-hidden flex flex-col relative"
+          >
             <span className="absolute top-4 right-4 bg-orange-500 text-xs px-3 py-1 rounded-full">
               Best seller
             </span>
@@ -110,7 +133,13 @@ const PricingSection = () => {
           </motion.div>
 
           {/* BUSINESS */}
-          <div className="w-full max-w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col">
+          <motion.div 
+            variants={cardVariants(2)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full max-w-[330px] min-h-[400px] bg-[#0d0d0d] rounded-[24px] border border-white/50 overflow-hidden flex flex-col"
+          >
             <div className="bg-gradient-to-b from-orange-700/40 to-transparent p-5 sm:p-6">
               <h3 className="text-white text-lg sm:text-xl">Business</h3>
               <p className="text-white text-3xl sm:text-4xl font-semibold mt-2">₹{isYearly ? "3,999" : "4,999"}<span className="text-sm sm:text-base font-normal text-white/50">/{isYearly ? "yr" : "mo"}</span></p>
@@ -128,7 +157,7 @@ const PricingSection = () => {
                 Get Started
               </button>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

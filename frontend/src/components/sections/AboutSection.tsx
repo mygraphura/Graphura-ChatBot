@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Button from '../ui/Button';
 
 import FeaturesSection from './FeaturesSection';
 import PricingSection from './PricingSection';
