@@ -1,0 +1,2639 @@
+{
+  "faq": [
+
+    {
+  "id": "q1",
+  "question": "What is Graphura and where is it located?",
+  "keywords": ["what is graphura", "where is graphura located", "about graphura"],
+  "answer": "Graphura India Private Limited is a branding, marketing, and custom software solutions company based in Gurugram, Haryana, serving primarily international clients."
+},
+{
+  "id": "q2",
+  "question": "Where can I find official internship information?",
+  "keywords": ["official internship information", "internship details website"],
+  "answer": "Official internship details are available on graphura.online and graphura.in and on the company’s LinkedIn and Instagram pages."
+},
+{
+  "id": "q3",
+  "question": "How can I apply for an internship at Graphura?",
+  "keywords": ["how to apply internship", "apply internship", "internship application"],
+  "answer": "Apply through the form posted on the official website or through listed internship/job portals where Graphura advertises opportunities. Ensure your CV and portfolio are ready."
+},
+{
+  "id": "q4",
+  "question": "What is the official HR contact email?",
+  "keywords": ["hr email", "official email", "contact hr"],
+  "answer": "HR: hr@graphura.in. Official company email: official@graphura.in."
+},
+{
+  "id": "q5",
+  "question": "What should I do if I face onboarding issues?",
+  "keywords": ["onboarding issue", "onboarding confusion"],
+  "answer": "Contact your assigned Team Head first. If unresolved, escalate to HR at hr@graphura.in."
+},
+{
+  "id": "q6",
+  "question": "Where can I apply for leave?",
+  "keywords": ["apply leave link", "leave form link"],
+  "answer": "Apply for leaves from https://www.graphura.online/form/leave.html"
+},
+{
+  "id": "q7",
+  "question": "What is the internship duration?",
+  "keywords": ["internship duration", "how long internship"],
+  "answer": "Internships commonly run 3–6 months depending on the role. Specific duration will be mentioned in your offer details."
+},
+{
+  "id": "q8",
+  "question": "What internship domains are available at Graphura?",
+  "keywords": ["internship domains", "available domains"],
+  "answer": "Graphura offers internships across 14 domains including Digital Marketing, Graphic Design, Video Editing, UI/UX, Content Writing, Frontend, Backend, MERN/Full-Stack, Data Science & Analytics, Social Media Management, Sales & Marketing, Email & Outreach, Human Resources, and others."
+},
+{
+  "id": "q9",
+  "question": "Will interns work on real or live projects?",
+  "keywords": ["real projects", "live projects"],
+  "answer": "Yes — interns are assigned to live projects for real-world exposure."
+},
+{
+  "id": "q10",
+  "question": "Is the internship paid or unpaid?",
+  "keywords": ["is internship paid", "paid internship", "stipend"],
+  "answer": "The internship is primarily unpaid. Some domains or project-based contributions may have stipend provisions based on performance and sales."
+},
+{
+  "id": "q11",
+  "question": "Can the internship convert into a job opportunity?",
+  "keywords": ["internship convert job", "placement opportunity"],
+  "answer": "Exceptional interns may receive placement offers at Graphura. Every candidate is provided a placement opportunity."
+},
+{
+  "id": "q12",
+  "question": "What are the working hours and days?",
+  "keywords": ["working hours", "working days"],
+  "answer": "Graphura follows a 5-day week (Monday–Friday). Typical virtual timing is 5:00 PM – 9:00 PM. Sundays are off."
+},
+{
+  "id": "q13",
+  "question": "Are daily meetings conducted?",
+  "keywords": ["daily meetings"],
+  "answer": "No — daily meetings are not conducted. Meetings are scheduled in the Planner according to departments."
+},
+{
+  "id": "q14",
+  "question": "What happens if I am late to a meeting?",
+  "keywords": ["late to meeting"],
+  "answer": "Professional punctuality is expected. Repeated delays may lead to warnings as per disciplinary rules."
+},
+{
+  "id": "q15",
+  "question": "How many leaves are allowed during the internship?",
+  "keywords": ["leave entitlement", "how many leaves"],
+  "answer": "3-month internship: 10 days. 4-month internship: 12 days. 6-month internship: 25 days."
+},
+{
+  "id": "q16",
+  "question": "How do I apply for leave?",
+  "keywords": ["how to apply leave"],
+  "answer": "Apply 48 hours in advance with documents. Emergency leave requires immediate intimation. Use the official leave form."
+},
+{
+  "id": "q17",
+  "question": "What is considered unauthorized leave?",
+  "keywords": ["unauthorized leave"],
+  "answer": "3 consecutive days without approval is treated as unauthorized and may lead to termination."
+},
+{
+  "id": "q18",
+  "question": "What is the policy for sick or emergency leave?",
+  "keywords": ["sick leave", "emergency leave"],
+  "answer": "Yes — inform your senior immediately and submit documents if requested."
+},
+{
+  "id": "q19",
+  "question": "What happens if I exceed my leave quota?",
+  "keywords": ["exceed leave quota"],
+  "answer": "Exceeding quota may affect certificate eligibility or require extension."
+},
+{
+  "id": "q20",
+  "question": "Is there a notice period during internship?",
+  "keywords": ["notice period"],
+  "answer": "A 1-month notice period is required."
+},
+{
+  "id": "q21",
+  "question": "Who do I report to daily?",
+  "keywords": ["reporting hierarchy", "daily reporting"],
+  "answer": "Report to your Team Head for daily tasks. Hierarchy: Intern → Team Head → Team Leader → Manager. Only escalate to HR if unresolved."
+},
+{
+  "id": "q22",
+  "question": "Can I message seniors privately outside official channels?",
+  "keywords": ["private messaging seniors"],
+  "answer": "No — all official communication should happen within assigned official groups/email. Private messaging without permission is discouraged."
+},
+{
+  "id": "q23",
+  "question": "What if there is a grievance with my Team Head?",
+  "keywords": ["grievance with team head"],
+  "answer": "Follow hierarchy: raise the issue to the next level. If unresolved, escalate to HR (hr@graphura.in). Avoid informal gossip channels."
+},
+{
+  "id": "q24",
+  "question": "What are the expectations around deadlines?",
+  "keywords": ["deadline expectations"],
+  "answer": "Deadline commitment is non-negotiable—complete tasks on or before deadlines. Missing multiple deadlines may result in leave deductions or disciplinary action."
+},
+{
+  "id": "q25",
+  "question": "What happens if I miss deadlines?",
+  "keywords": ["miss deadlines policy"],
+  "answer": "Missing 2 consecutive deadlines may lead to a 1-day leave deduction; missing 3 or more deadlines can result in termination as per policy."
+},
+{
+  "id": "q26",
+  "question": "How is performance evaluated?",
+  "keywords": ["performance evaluation"],
+  "answer": "Performance is evaluated on task quality, deadline adherence, communication, teamwork, and contributions to projects. Top performers may receive LORs or placement offers."
+},
+{
+  "id": "q27",
+  "question": "How do I get feedback?",
+  "keywords": ["getting feedback"],
+  "answer": "Feedback is provided by your Team Head during reviews and project wrap-ups. Ask for periodic feedback from your reporting head if you want more guidance."
+},
+{
+  "id": "q28",
+  "question": "What is the file or assignment submission process?",
+  "keywords": ["assignment submission process"],
+  "answer": "Submit assignments via the official channel/platform specified by your Team Head (e.g., company Drive, project management tool, or email). Follow naming and versioning guidelines provided by your team."
+},
+{
+  "id": "q29",
+  "question": "Which interns are eligible for stipends?",
+  "keywords": ["stipend eligibility"],
+  "answer": "Some domains or specific project contributions (e.g., those that lead to a sale) may have stipend provisions. Stipends are performance/project-based and not guaranteed. Exact terms are shared per project."
+},
+{
+  "id": "q30",
+  "question": "How are project sales shared with interns?",
+  "keywords": ["sales sharing policy"],
+  "answer": "If an intern contributes to a client sale (e.g., a website sale), a percentage is shared among contributors — the split is decided based on contribution and Team Head agreement."
+},
+{
+  "id": "q31",
+  "question": "When and how are stipends or incentives paid?",
+  "keywords": ["stipend payment schedule"],
+  "answer": "Payment methods and schedules (if applicable) are communicated by HR/Accounts per project. Always request written confirmation for any stipend-related agreement."
+},
+{
+  "id": "q32",
+  "question": "Will I get a certificate after the internship?",
+  "keywords": ["internship certificate"],
+  "answer": "Yes — an ICC Certificate is provided upon successful completion."
+},
+{
+  "id": "q33",
+  "question": "How can I get a Letter of Recommendation (LOR)?",
+  "keywords": ["lor eligibility"],
+  "answer": "LORs are awarded to outstanding performers; demonstrate strong performance, reliability, and initiative to be considered."
+},
+{
+  "id": "q34",
+  "question": "How are placement or pre-placement offers handled?",
+  "keywords": ["placement offers", "ppo policy"],
+  "answer": "Exceptional interns may receive placement offers at Graphura; average performers may be referred to partner HR firms. But everyone will have the opportunity to get placement."
+},
+{
+  "id": "q35",
+  "question": "What are the professional conduct expectations?",
+  "keywords": ["professional conduct"],
+  "answer": "Maintain discipline, respect all team members, meet deadlines, and communicate professionally. Disrespect or unprofessional behaviour may lead to disciplinary measures."
+},
+{
+  "id": "q36",
+  "question": "Is there a dress code?",
+  "keywords": ["dress code policy"],
+  "answer": "Professional dress is required for official meetings. Follow the team’s instructions for meetings."
+},
+{
+  "id": "q37",
+  "question": "Can I post about Graphura on social media?",
+  "keywords": ["social media policy"],
+  "answer": "Do not post company-related content publicly without prior approval. Negative or unapproved posts are subject to disciplinary action."
+},
+{
+  "id": "q38",
+  "question": "Can I create unofficial groups using the company name?",
+  "keywords": ["unofficial groups"],
+  "answer": "No. Unapproved groups using the company name or logo are not permitted."
+},
+{
+  "id": "q39",
+  "question": "Can I share client data or company files outside Graphura?",
+  "keywords": ["confidentiality policy"],
+  "answer": "No — client or company data must not be shared externally. Breach of confidentiality may lead to legal action."
+},
+{
+  "id": "q40",
+  "question": "Who owns the work I create during the internship?",
+  "keywords": ["intellectual property"],
+  "answer": "Work produced for Graphura during the internship is company property. Interns should assume IP/rights belong to the company."
+},
+{
+  "id": "q41",
+  "question": "What tools will I use during the internship?",
+  "keywords": ["tools used"],
+  "answer": "Tools vary by domain (e.g., Adobe/Canva for design, code editors for developers, analytics tools for marketing). Team Heads will provide access and training."
+},
+{
+  "id": "q42",
+  "question": "Will Graphura provide software licenses or accounts?",
+  "keywords": ["software licenses"],
+  "answer": "The company provides access to required company tools/accounts for project work. Personal licenses may not be provided — check with your Team Head."
+},
+{
+  "id": "q43",
+  "question": "Can I work remotely?",
+  "keywords": ["remote internship"],
+  "answer": "The program is virtual. Follow the set timings, attend meetings, and maintain availability as required by your domain/team."
+},
+{
+  "id": "q44",
+  "question": "Are there training resources available?",
+  "keywords": ["training resources"],
+  "answer": "Yes — interns get hands-on tool exposure, workshops, and guidance during the program; check internal resources shared by your Team Head."
+},
+{
+  "id": "q45",
+  "question": "Can I reuse content from the web?",
+  "keywords": ["plagiarism policy"],
+  "answer": "All work must be original and plagiarism-free. Copying others’ work is prohibited and may lead to termination."
+},
+{
+  "id": "q46",
+  "question": "How are creative assignments judged?",
+  "keywords": ["assignment evaluation"],
+  "answer": "On originality, alignment with the brief, quality, and meeting deadlines. Seek clarifications before starting if the brief is unclear."
+},
+{
+  "id": "q47",
+  "question": "What is the Saturday Club Meeting?",
+  "keywords": ["club meeting"],
+  "answer": "A cross-domain session with guest speakers from diverse fields sharing experiences; debates for interns and every candidate can participate; and sometimes fun sessions are conducted. It’s part of the learning culture. Attendance is expected."
+},
+{
+  "id": "q48",
+  "question": "Are there workshops or guest lectures?",
+  "keywords": ["workshops", "guest lectures"],
+  "answer": "Yes — Graphura schedules sessions, workshops, and guest talks as part of the club and learning activities."
+},
+{
+  "id": "q49",
+  "question": "What actions can lead to termination?",
+  "keywords": ["termination policy"],
+  "answer": "Behavioural issues, repeated missed deadlines, unauthorized leave, serious misconduct, or breach of confidentiality can lead to immediate termination. Terminated candidates cannot reapply for 6 months."
+},
+{
+  "id": "q50",
+  "question": "Is there a warning system?",
+  "keywords": ["warning policy"],
+  "answer": "Yes — usually warnings are issued before major action, though serious violations may lead to immediate termination."
+},
+{
+  "id": "q51",
+  "question": "Will my college be informed if I am terminated?",
+  "keywords": ["college notification"],
+  "answer": "In cases of unauthorized prolonged absence or serious misconduct, Graphura may notify your college."
+},
+{
+  "id": "q52",
+  "question": "How do I file a grievance?",
+  "keywords": ["grievance process"],
+  "answer": "Raise it first with your senior or Team Head. If unresolved, escalate to HR (hr@graphura.in). Avoid informal or gossip channels."
+},
+{
+  "id": "q53",
+  "question": "What legal steps does Graphura take for serious violations?",
+  "keywords": ["legal action policy"],
+  "answer": "For breaches such as data leakage or serious misconduct, Graphura may initiate legal action (as described in the disciplinary policy)."
+},
+{
+  "id": "q54",
+  "question": "Where can I see Graphura’s public work or updates?",
+  "keywords": ["public updates"],
+  "answer": "Follow Graphura on LinkedIn, Instagram, Facebook, X, Reddit, YouTube etc for updates, tutorials, and examples of work. The website contains service descriptions and career pages."
+},
+{
+  "id": "q55",
+  "question": "Does Graphura post internship openings externally?",
+  "keywords": ["internship openings"],
+  "answer": "Yes — openings are posted on the official website, LinkedIn, and internship portals where Graphura lists roles."
+},
+{
+  "id": "q56",
+  "question": "How do I record my attendance?",
+  "keywords": ["attendance recording"],
+  "answer": "Follow the attendance process communicated by your Team Head (could be via official group check-in or a time-tracking tool). Confirm with your team."
+},
+{
+  "id": "q57",
+  "question": "Are reimbursements available for internship costs?",
+  "keywords": ["reimbursement policy"],
+  "answer": "Routine reimbursements aren’t standard for virtual internships; if any reimbursement is applicable it will be communicated per project and pre-approved. Always get written approval."
+},
+{
+  "id": "q58",
+  "question": "Can I work on personal projects during the internship?",
+  "keywords": ["personal projects"],
+  "answer": "Personal projects must not use company resources or conflict with your Graphura duties. Disclose any potential conflicts to your Team Head."
+},
+{
+  "id": "q59",
+  "question": "Will I get references after leaving?",
+  "keywords": ["references after internship"],
+  "answer": "Good performers may receive Letters of Recommendation or references from Team Heads—request these before exit and ensure your work record is clean."
+},
+{
+  "id": "q60",
+  "question": "What documents are required for onboarding?",
+  "keywords": ["onboarding documents"],
+  "answer": "Typically CV, college ID, and signed internship agreement (if applicable)."
+},
+{
+  "id": "q61",
+  "question": "As a design intern, what tools should I be familiar with?",
+  "keywords": ["design intern tools"],
+  "answer": "Familiarity with Canva and Adobe Creative Cloud (Photoshop, Illustrator, InDesign) is preferred; Team Heads may assign tool-specific guidance."
+},
+{
+  "id": "q62",
+  "question": "As a developer intern, what stack will I use?",
+  "keywords": ["developer tech stack"],
+  "answer": "Depending on placement — frontend, backend, MERN/full-stack — expect tools like React, Node, Express, MongoDB, and code editors. Team Heads provide project specifics."
+},
+{
+  "id": "q63",
+  "question": "As a marketing intern, what metrics will I work with?",
+  "keywords": ["marketing metrics"],
+  "answer": "Campaign KPIs, reach, engagement, CTR, conversions, SEO metrics, and analytics dashboards — you’ll gain hands-on exposure."
+},
+{
+  "id": "q64",
+  "question": "When and how will I receive my internship certificate?",
+  "keywords": ["certificate delivery"],
+  "answer": "Certificates (ICC) are issued after successful completion and meeting attendance/performance criteria. Delivery method (digital/PDF or hardcopy) will be communicated by HR."
+},
+{
+  "id": "q65",
+  "question": "How long after internship end do I get my LOR or certificate?",
+  "keywords": ["certificate timeline"],
+  "answer": "Typically after exit formalities are complete and performance checks are done. Confirm exact timelines with HR during exit."
+},
+{
+  "id": "q66",
+  "question": "Can I stay in touch after internship?",
+  "keywords": ["alumni connection"],
+  "answer": "Yes — Graphura encourages networking; outstanding interns may be kept in touch for future openings or offered PPOs. Follow company social accounts for alumni updates."
+},
+{
+  "id": "q67",
+  "question": "What if I lose access to an official account or tool?",
+  "keywords": ["lost tool access"],
+  "answer": "Report immediately to your Team Head and IT/HR so access can be restored. Do not try to access accounts beyond your permission."
+},
+{
+  "id": "q68",
+  "question": "Can I request change of domain mid-internship?",
+  "keywords": ["change domain mid internship"],
+  "answer": "Domain changes are not encouraged. If you want to do it, inform your Team Head and you will be notified about the procedure. In most cases, you may need to appear for the interview again."
+},
+{
+  "id": "q69",
+  "question": "Will Graphura run background or reference checks?",
+  "keywords": ["background check policy"],
+  "answer": "If converting to employment, standard pre-employment/reference checks may apply. For internships, ID/college verification is typical."
+},
+{
+  "id": "q70",
+  "question": "Where can I find help articles or tutorials from Graphura?",
+  "keywords": ["help articles", "tutorials"],
+  "answer": "Follow Graphura’s LinkedIn, Instagram, and website blog pages — they post creative tutorials and tips periodically."
+},
+{
+  "id": "q71",
+  "question": "What is the Intern Verification Portal?",
+  "keywords": ["verification portal"],
+  "answer": "The Intern Verification Portal is an official tool on the Graphura website where interns can securely check their internship status, performance records, and completion validity using their Unique Verification ID."
+},
+{
+  "id": "q72",
+  "question": "Where can I access the verification portal?",
+  "keywords": ["verification portal link"],
+  "answer": "You can access it on the official website at graphura.online/verify.html under the 'Intern Verification' section."
+},
+{
+  "id": "q73",
+  "question": "How is verification done?",
+  "keywords": ["verification process"],
+  "answer": "Verification is done only through your Unique Verification ID assigned at the time of certificate generation or post-verification by HR."
+},
+{
+  "id": "q74",
+  "question": "Should I share my Unique Verification ID with others?",
+  "keywords": ["share verification id"],
+  "answer": "Sharing your Unique Verification ID is not encouraged. Only share it when an institution, employer, or authorized person specifically asks for verification."
+},
+{
+  "id": "q75",
+  "question": "What information can I see on the verification portal?",
+  "keywords": ["verification portal details"],
+  "answer": "You can view your internship details such as your name, internship domain, internship duration, completion status, verification status, certificate ID (if issued), and performance summary."
+},
+{
+  "id": "q76",
+  "question": "Who can verify my internship through the portal?",
+  "keywords": ["who can verify internship"],
+  "answer": "Only individuals who have your Unique Verification ID can check your verification status. Without the ID, no one can access your information."
+},
+{
+  "id": "q77",
+  "question": "I completed my internship but my verification is not showing. What should I do?",
+  "keywords": ["verification not updated"],
+  "answer": "If your status is not updated, contact the HR team at hr@graphura.in with your registered email, name, and internship details for manual updating."
+},
+{
+  "id": "q78",
+  "question": "Can I check whether my internship certificate is genuine using the portal?",
+  "keywords": ["certificate authenticity"],
+  "answer": "Yes — enter your Unique Verification ID on the portal to confirm the authenticity of your certificate."
+},
+{
+  "id": "q79",
+  "question": "Will my college or employer need my Unique Verification ID for cross-verification?",
+  "keywords": ["college verification id"],
+  "answer": "Yes, if your college or employer wants to verify your internship, you must provide your Unique Verification ID. Only share it when required."
+},
+{
+  "id": "q80",
+  "question": "Can I update my details on the verification portal?",
+  "keywords": ["update verification details"],
+  "answer": "No, interns cannot update their own verification information. For changes or corrections, contact HR."
+},
+{
+  "id": "q81",
+  "question": "What is the Planner page on the website?",
+  "keywords": ["planner page"],
+  "answer": "The Planner is a centralized schedule dashboard where interns can check all upcoming meetings, domain sessions, workshops, deadlines, and weekly activities."
+},
+{
+  "id": "q82",
+  "question": "Where can I access the Planner?",
+  "keywords": ["planner link"],
+  "answer": "The Planner is available at www.graphura.online/planner.html on the official Graphura website."
+},
+{
+  "id": "q83",
+  "question": "What events are shown in the Planner?",
+  "keywords": ["planner events"],
+  "answer": "Daily meetings, domain-specific sessions, weekly club meetings, guest lectures, project deadlines, and special events or announcements."
+},
+{
+  "id": "q84",
+  "question": "How often is the Planner updated?",
+  "keywords": ["planner update frequency"],
+  "answer": "The Planner is updated regularly by the management/HR team whenever new meetings, events, or deadlines are added or modified."
+},
+{
+  "id": "q85",
+  "question": "Can I access the Planner without logging in?",
+  "keywords": ["planner login requirement"],
+  "answer": "The Planner is publicly visible, but full meeting details or internal notes may be accessible only to active interns."
+},
+{
+  "id": "q86",
+  "question": "What if I miss a meeting shown on the Planner?",
+  "keywords": ["miss planner meeting"],
+  "answer": "Missing scheduled meetings without approved leave may be counted as absence or lead to disciplinary action depending on your department policy."
+},
+{
+  "id": "q87",
+  "question": "Can I download or export the schedule from the Planner?",
+  "keywords": ["export planner schedule"],
+  "answer": "You can sync your phone calendar with it so that you can check it easily, or use the link available in your group description."
+},
+{
+  "id": "q88",
+  "question": "If I change domains, will my meeting schedule change in the Planner?",
+  "keywords": ["planner domain change"],
+  "answer": "The Planner is centralized so you can check every meeting at one place, so there is no need to update that."
+},
+{
+  "id": "q89",
+  "question": "Who maintains the Planner?",
+  "keywords": ["planner maintained by"],
+  "answer": "The Planner is maintained by the Graphura admin/HR team, with inputs from Team Heads and Managers."
+},
+{
+  "id": "q90",
+  "question": "Is the Planner available after I complete my internship?",
+  "keywords": ["planner after internship"],
+  "answer": "The Planner is active for current interns. Once your internship ends, you may not see future schedules but can still view public information."
+},
+{
+  "id": "q91",
+  "question": "I lost my Unique Verification ID. What do I do?",
+  "keywords": ["lost verification id"],
+  "answer": "Contact HR at hr@graphura.in with your registered email to retrieve your ID."
+},
+{
+  "id": "q92",
+  "question": "Can someone misuse my Unique Verification ID?",
+  "keywords": ["verification id misuse"],
+  "answer": "No personal information is exposed. The ID only shows internship verification details. Still, sharing your ID only when required is recommended."
+},
+{
+  "id": "q93",
+  "question": "Does the verification portal show my performance rating?",
+  "keywords": ["performance rating portal"],
+  "answer": "Yes — performance indicators or remarks may be shown depending on your department’s evaluation system."
+},
+{
+  "id": "q94",
+  "question": "Will the portal show if I was terminated?",
+  "keywords": ["termination status portal"],
+  "answer": "The portal only shows verified details. If you are terminated, the status will be shown as terminated."
+},
+{
+  "id": "q95",
+  "question": "Can I check my attendance through the verification portal?",
+  "keywords": ["attendance in portal"],
+  "answer": "No — attendance logs are handled internally. The portal only verifies internship authenticity and performance summaries."
+},
+{
+  "id": "q96",
+  "question": "When will my Unique Verification ID be generated?",
+  "keywords": ["verification id generation"],
+  "answer": "IDs are generated after successful completion, verification, and internal approval."
+},
+{
+  "id": "q97",
+  "question": "Can non-intern users access the Planner?",
+  "keywords": ["non intern planner access"],
+  "answer": "Yes, but they will only see the general schedule, not department-specific internal details."
+},
+{
+  "id": "q98",
+  "question": "Why is my Planner not showing updated meetings?",
+  "keywords": ["planner not updated"],
+  "answer": "Try refreshing the page. If still outdated, your Team Head may not have updated the details yet."
+},
+{
+  "id": "q99",
+  "question": "Will the Planner show national holidays or company holidays?",
+  "keywords": ["planner holidays"],
+  "answer": "Yes — major holidays or days with no meetings will usually be reflected."
+},
+{
+  "id": "q100",
+  "question": "Can I rely fully on the Planner for attendance and tasks?",
+  "keywords": ["planner reliability"],
+  "answer": "The Planner helps with scheduling, but you must still follow instructions from your Team Head and official HR communications."
+},
+{
+  "id": "q101",
+  "question": "What services does Graphura provide?",
+  "keywords": ["services offered"],
+  "answer": "Graphura provides branding, marketing, graphic design, video editing, website development, UI/UX, digital advertising, and complete brand-building solutions for businesses."
+},
+{
+  "id": "q102",
+  "question": "Do you work with startups or only established brands?",
+  "keywords": ["startup clients"],
+  "answer": "We work with startups, SMEs, and enterprise brands. Our services are flexible and customizable for all stages of business growth."
+},
+{
+  "id": "q103",
+  "question": "Do you provide customized branding packages?",
+  "keywords": ["custom branding"],
+  "answer": "Yes — every branding package is customized based on your industry, target audience, creative needs, and brand personality."
+},
+{
+  "id": "q104",
+  "question": "Do you build websites too?",
+  "keywords": ["website development"],
+  "answer": "Yes, we build modern, responsive, and SEO-friendly websites including portfolio sites, e-commerce solutions, landing pages, and custom web platforms."
+},
+{
+  "id": "q105",
+  "question": "Do you provide content writing as well?",
+  "keywords": ["content writing services"],
+  "answer": "Yes — Graphura provides website content, ad copies, captions, blogs, scripts, and marketing content depending on the project."
+},
+{
+  "id": "q106",
+  "question": "Can Graphura handle my company’s social media completely?",
+  "keywords": ["social media management"],
+  "answer": "Yes — we offer complete social media management, including strategy, content creation, posting, ad campaigns, and analytics."
+},
+{
+  "id": "q107",
+  "question": "Can I get a complete branding, website, and marketing solution from one place?",
+  "keywords": ["all in one branding"],
+  "answer": "Absolutely — we offer all-in-one brand transformation packages designed to build your brand from scratch."
+},
+{
+  "id": "q108",
+  "question": "Do you provide video ads or animated videos?",
+  "keywords": ["video production"],
+  "answer": "Yes — we create reels, product videos, promotional ads, explainer videos, motion graphics, and animated clips."
+},
+{
+  "id": "q109",
+  "question": "Do you create logos, brand identity, and brand guidelines?",
+  "keywords": ["logo design"],
+  "answer": "Yes — we provide professional brand identity packages including logo, color schemes, typography, visual strategy, and brand guidelines."
+},
+{
+  "id": "q110",
+  "question": "Do you help in running advertisements?",
+  "keywords": ["ads management"],
+  "answer": "Yes — we run and manage Meta (Facebook/Instagram), YouTube, and Google Ads along with analytical reporting."
+},
+{
+  "id": "q111",
+  "question": "Can you redesign my existing brand visuals?",
+  "keywords": ["brand revamp"],
+  "answer": "Yes — we offer brand revamp and modernization services while maintaining your core identity."
+},
+{
+  "id": "q112",
+  "question": "Do you work internationally?",
+  "keywords": ["international clients"],
+  "answer": "Yes — Graphura works with clients globally, especially in the international market."
+},
+{
+  "id": "q113",
+  "question": "Can I get a consultation call to understand what package suits me?",
+  "keywords": ["consultation call"],
+  "answer": "Yes — you can book a consultation call with our branding strategy team through our website or by contacting us directly."
+},
+{
+  "id": "q114",
+  "question": "Do you provide campaign strategy or only designs?",
+  "keywords": ["campaign strategy"],
+  "answer": "We provide full campaign strategy, design, and execution based on your goals."
+},
+{
+  "id": "q115",
+  "question": "Can you work with my internal marketing team?",
+  "keywords": ["collaborate with in house team"],
+  "answer": "Yes — we collaborate seamlessly with in-house teams to improve workflow and brand output."
+},
+{
+  "id": "q116",
+  "question": "What are your pricing packages?",
+  "keywords": ["pricing details"],
+  "answer": "Pricing depends on project scope. After understanding your requirements, we provide a transparent and customized quote."
+},
+{
+  "id": "q117",
+  "question": "Do you offer monthly retainers?",
+  "keywords": ["retainer packages"],
+  "answer": "Yes — we offer monthly retainer packages for brands needing continuous content or marketing support."
+},
+{
+  "id": "q118",
+  "question": "Can I get a detailed proposal for my project?",
+  "keywords": ["project proposal"],
+  "answer": "Absolutely — once we understand your brand needs, we prepare a detailed proposal including deliverables, timelines, and pricing."
+},
+{
+  "id": "q119",
+  "question": "Do you require advance payment?",
+  "keywords": ["advance payment"],
+  "answer": "Yes — most projects require a partial upfront payment to initiate work."
+},
+{
+  "id": "q120",
+  "question": "Do you sign contracts or MoUs?",
+  "keywords": ["service agreement"],
+  "answer": "Yes — for formal engagements, we provide a service agreement outlining scope, timelines, and responsibilities."
+},
+{
+  "id": "q121",
+  "question": "Can I negotiate pricing?",
+  "keywords": ["price negotiation"],
+  "answer": "Pricing is structured based on workload and resources, but we can discuss flexible packages depending on requirements."
+},
+{
+  "id": "q122",
+  "question": "Do you offer refunds?",
+  "keywords": ["refund policy"],
+  "answer": "Refunds depend on the project stage and agreement terms. Details are mentioned in the service contract."
+},
+{
+  "id": "q123",
+  "question": "How do I pay?",
+  "keywords": ["payment methods"],
+  "answer": "We accept payments through bank transfer, UPI, and other digital modes depending on region."
+},
+{
+  "id": "q124",
+  "question": "Do you provide EMI or installment options?",
+  "keywords": ["emi option"],
+  "answer": "For large projects, installment-based payment structures are available during milestone delivery."
+},
+{
+  "id": "q125",
+  "question": "Are taxes included in the package price?",
+  "keywords": ["tax inclusion"],
+  "answer": "Taxes are applied as applicable and will be mentioned clearly in the invoice."
+},
+{
+  "id": "q126",
+  "question": "Is there any hidden cost?",
+  "keywords": ["hidden charges"],
+  "answer": "No — all costs are communicated upfront in the proposal."
+},
+{
+  "id": "q127",
+  "question": "Can I get a sample or trial before placing an order?",
+  "keywords": ["trial sample"],
+  "answer": "We don’t provide trials, but you can check our portfolio and previous client work."
+},
+{
+  "id": "q128",
+  "question": "Can you work under an NDA?",
+  "keywords": ["nda agreement"],
+  "answer": "Yes — we respect privacy and can sign NDAs when required."
+},
+{
+  "id": "q129",
+  "question": "Will you give me the source files?",
+  "keywords": ["source files"],
+  "answer": "Yes — source files can be included depending on the package selected."
+},
+{
+  "id": "q130",
+  "question": "How soon can you start on my project?",
+  "keywords": ["project start time"],
+  "answer": "Once the proposal is approved and advance payment is completed, the project starts immediately."
+},
+{
+  "id": "q131",
+  "question": "How long does it take to complete a branding project?",
+  "keywords": ["branding timeline"],
+  "answer": "Depending on complexity, branding projects take 7–21 days typically."
+},
+{
+  "id": "q132",
+  "question": "How long does website development take?",
+  "keywords": ["website timeline"],
+  "answer": "A standard website takes 15–30 days; advanced systems require more time."
+},
+{
+  "id": "q133",
+  "question": "How many revisions will I get?",
+  "keywords": ["revision policy"],
+  "answer": "Revision limits depend on the selected package. We ensure you get exactly what your brand needs."
+},
+{
+  "id": "q134",
+  "question": "What if I don’t like the first draft?",
+  "keywords": ["first draft feedback"],
+  "answer": "We refine it based on your feedback until it aligns with your brand guidelines within the revision scope."
+},
+{
+  "id": "q135",
+  "question": "Do you follow a project timeline?",
+  "keywords": ["project milestones"],
+  "answer": "Yes — each project follows a structured timeline with milestones."
+},
+{
+  "id": "q136",
+  "question": "How will I receive my files?",
+  "keywords": ["file delivery"],
+  "answer": "Files are shared via Google Drive or secure cloud links."
+},
+{
+  "id": "q137",
+  "question": "Will I get all versions of the logo?",
+  "keywords": ["logo formats"],
+  "answer": "Yes — you receive multiple formats (PNG, JPG, PDF, SVG) and color variations."
+},
+{
+  "id": "q138",
+  "question": "Do you support multilingual designs?",
+  "keywords": ["multilingual design"],
+  "answer": "Yes — we can create designs in multiple languages based on your needs."
+},
+{
+  "id": "q139",
+  "question": "Can you manage my ads after delivering the creatives?",
+  "keywords": ["post delivery ad management"],
+  "answer": "Yes — we offer ad management as an add-on service."
+},
+{
+  "id": "q140",
+  "question": "Will you maintain my website after delivery?",
+  "keywords": ["website maintenance"],
+  "answer": "Yes — maintenance packages are available monthly or quarterly."
+},
+{
+  "id": "q141",
+  "question": "Can you design packaging as well?",
+  "keywords": ["packaging design"],
+  "answer": "Yes — packaging design is part of our brand identity services."
+},
+{
+  "id": "q142",
+  "question": "Do you deliver editable design files?",
+  "keywords": ["editable files"],
+  "answer": "Editable files can be included in higher-tier packages."
+},
+{
+  "id": "q143",
+  "question": "Can I track project progress?",
+  "keywords": ["project tracking"],
+  "answer": "Yes — we share progress through regular updates, milestones, and meetings."
+},
+{
+  "id": "q144",
+  "question": "What if my project needs urgent delivery?",
+  "keywords": ["urgent delivery"],
+  "answer": "We offer fast-track delivery at an additional charge."
+},
+{
+  "id": "q145",
+  "question": "Can I request old project files later?",
+  "keywords": ["old files request"],
+  "answer": "Yes — we maintain backup for a specific duration; you can request past files."
+},
+{
+  "id": "q146",
+  "question": "Do you work on festive or campaign-based designs?",
+  "keywords": ["festive campaigns"],
+  "answer": "Yes — we provide seasonal, festive, and promotional content."
+},
+{
+  "id": "q147",
+  "question": "Can I request multiple services together?",
+  "keywords": ["bundled services"],
+  "answer": "Yes — bundled packages are available for branding + website + marketing."
+},
+{
+  "id": "q148",
+  "question": "Do you provide monthly content buckets?",
+  "keywords": ["monthly content calendar"],
+  "answer": "Yes — monthly content and marketing calendars are provided under SMM packages."
+},
+{
+  "id": "q149",
+  "question": "Can I schedule meetings with your team during the project?",
+  "keywords": ["schedule meeting"],
+  "answer": "Yes — you can request meetings anytime based on your project requirements."
+},
+{
+  "id": "q150",
+  "question": "How do you handle feedback and approvals?",
+  "keywords": ["feedback process"],
+  "answer": "Feedback is taken through scheduled calls, WhatsApp groups, or email, and approvals are documented before final delivery."
+},
+{
+  "id": "q151",
+  "question": "What communication channels do you use?",
+  "keywords": ["communication channels"],
+  "answer": "We communicate via WhatsApp, email, Google Meet, and official communication channels."
+},
+{
+  "id": "q152",
+  "question": "How do I get support after project completion?",
+  "keywords": ["after project support"],
+  "answer": "You can reach us through support or account managers assigned to your project."
+},
+{
+  "id": "q153",
+  "question": "What is your response time?",
+  "keywords": ["response time"],
+  "answer": "Typical response time is 1–12 hours, depending on workload."
+},
+{
+  "id": "q154",
+  "question": "Do you provide 24/7 support?",
+  "keywords": ["24/7 support"],
+  "answer": "Support hours depend on your package; premium support includes extended hours."
+},
+{
+  "id": "q155",
+  "question": "Will my project data remain confidential?",
+  "keywords": ["data confidentiality"],
+  "answer": "Yes — all files and business information remain strictly confidential."
+},
+{
+  "id": "q156",
+  "question": "Can I hire Graphura for long-term brand management?",
+  "keywords": ["long term partnership"],
+  "answer": "Yes — long-term partnerships and retainers are available."
+},
+{
+  "id": "q157",
+  "question": "Do you use AI tools in your work?",
+  "keywords": ["ai tools usage"],
+  "answer": "We combine human creativity with advanced tools for the best results — always ensuring originality."
+},
+{
+  "id": "q158",
+  "question": "Do you outsource your work?",
+  "keywords": ["outsourcing"],
+  "answer": "No — our in-house experts handle all projects to maintain quality."
+},
+{
+  "id": "q159",
+  "question": "Will my brand have a dedicated manager?",
+  "keywords": ["dedicated manager"],
+  "answer": "Yes — for medium and large projects, a dedicated project manager is assigned."
+},
+{
+  "id": "q160",
+  "question": "Do you provide after-sales service?",
+  "keywords": ["after sales support"],
+  "answer": "Yes — depending on the agreement, you receive support for updates, edits, or maintenance."
+},
+{
+  "id": "q161",
+  "question": "How do I report any issues?",
+  "keywords": ["report issues"],
+  "answer": "You can report issues to your assigned manager or through official support channels."
+},
+{
+  "id": "q162",
+  "question": "What industries have you worked with?",
+  "keywords": ["industries served"],
+  "answer": "We’ve worked with food, tech, fashion, fitness, real estate, wellness, service-based, and product-based businesses."
+},
+{
+  "id": "q163",
+  "question": "Do you provide analytics for marketing campaigns?",
+  "keywords": ["marketing analytics"],
+  "answer": "Yes — monthly performance reports are included in SMM and ad management packages."
+},
+{
+  "id": "q164",
+  "question": "How will I receive final files?",
+  "keywords": ["final file delivery"],
+  "answer": "Through cloud delivery in high-quality export formats."
+},
+{
+  "id": "q165",
+  "question": "Do you offer SEO services?",
+  "keywords": ["seo services"],
+  "answer": "Yes — we provide on-page optimization, SEO-ready content, and website SEO setup."
+},
+{
+  "id": "q166",
+  "question": "Can Graphura improve my existing website?",
+  "keywords": ["website improvement"],
+  "answer": "Yes — we can redesign, upgrade, optimize, or restructure your existing site."
+},
+{
+  "id": "q167",
+  "question": "How do you ensure design originality?",
+  "keywords": ["design originality"],
+  "answer": "All work is created from scratch following brand guidelines — we do not use plagiarized content."
+},
+{
+  "id": "q168",
+  "question": "How do I start working with Graphura?",
+  "keywords": ["start project"],
+  "answer": "Simply contact us through the website, share your requirements, and our team will schedule a call and prepare a proposal."
+},
+{
+  "id": "q169",
+  "question": "How do you measure campaign success?",
+  "keywords": ["campaign success metrics"],
+  "answer": "Through engagement, reach, keywords, CTR, conversions, and ROI metrics depending on your objectives."
+},
+{
+  "id": "q170",
+  "question": "What makes Graphura different from other branding agencies?",
+  "keywords": ["unique value proposition"],
+  "answer": "Our focus on personalized strategies, international-level quality, fast delivery, and complete brand ecosystem solutions sets us apart."
+},
+
+
+
+
+
+
+
+
+{
+"question": "What is Graphura and where is it located?",
+"answer": "Graphura India Private Limited is a branding, marketing, and custom software solutions company based in Gurugram, Haryana, serving primarily international clients.",
+"keywords": ["graphura", "company info", "location", "gurugram", "about graphura"]
+},
+
+{
+"question": "Where can I find official information about the internship?",
+"answer": "Official internship details are available on https://www.graphura.online/internship.html or graphura.in and Graphura’s LinkedIn and Instagram pages.",
+"keywords": ["internship details", "official info", "internship website", "graphura internship"]
+},
+
+{
+"question": "How do I apply for an internship?",
+"answer": "You can apply through the official application form at https://www.graphura.online/apply.html. Ensure your resume and portfolio are ready before applying.",
+"keywords": ["apply internship", "internship application", "apply graphura", "internship form"]
+},
+
+{
+"question": "What are the official HR or support emails?",
+"answer": "HR email: hr@graphura.in. Official communication email: official@graphura.in. Use these emails for formal communication.",
+"keywords": ["hr email", "support email", "contact hr", "graphura email"]
+},
+
+{
+"question": "Who should I contact if onboarding is not clear?",
+"answer": "You should contact your assigned Team Head first. If the issue is not resolved, escalate to HR at hr@graphura.in following the official reporting hierarchy.",
+"keywords": ["onboarding issue", "reporting problem", "contact team head", "hr escalation"]
+},
+
+{
+"question": "From where can I apply for leave?",
+"answer": "You can apply for leave using the official leave form at https://www.graphura.online/form/leave.html.",
+"keywords": ["apply leave", "leave form", "leave link", "leave application"]
+},
+
+{
+"question": "How long are Graphura internships?",
+"answer": "Graphura internships typically run between 3 to 6 months depending on the domain and offer details.",
+"keywords": ["internship duration", "internship months", "graphura internship length"]
+},
+
+{
+"question": "Which internship domains are available at Graphura?",
+"answer": "Graphura offers internships in multiple domains including Digital Marketing, Graphic Design, UI/UX, Video Editing, Frontend Development, Backend Development, MERN Stack, Data Science, HR, Sales, and Email Outreach.",
+"keywords": ["internship domains", "departments", "available roles", "graphura domains"]
+},
+
+{
+"question": "Will interns work on real projects?",
+"answer": "Yes. Interns are assigned to live client projects to gain practical experience and hands-on exposure.",
+"keywords": ["real projects", "live projects", "client work", "intern tasks"]
+},
+
+{
+"question": "Is the Graphura internship paid?",
+"answer": "Most Graphura internships are unpaid. However, certain domains or performance-based contributions may include stipend provisions.",
+"keywords": ["stipend", "paid internship", "salary", "internship payment"]
+},
+
+{
+"question": "Can the internship convert into a job offer?",
+"answer": "Exceptional interns may receive placement opportunities or job offers based on performance and company requirements.",
+"keywords": ["job offer", "ppo", "placement", "internship to job"]
+},
+
+{
+"question": "What are the working days and hours?",
+"answer": "Graphura follows a 5-day work week from Monday to Friday. Typical virtual working hours are 5:00 PM to 9:00 PM. Sunday is off.",
+"keywords": ["working hours", "internship timing", "shift timing"]
+},
+
+{
+"question": "Are there daily meetings?",
+"answer": "No daily meetings are scheduled. A weekly club meeting is usually held on Saturday according to the planner.",
+"keywords": ["meetings", "weekly meeting", "planner meeting"]
+},
+
+{
+"question": "What happens if I am late to meetings?",
+"answer": "Professional punctuality is expected. Repeated delays may result in warnings according to company discipline policies.",
+"keywords": ["late policy", "meeting delay", "punctuality rule"]
+},
+
+{
+"question": "What is the leave entitlement for interns?",
+"answer": "Leave limits depend on internship duration: 3-month internship allows up to 10 days, 4-month internship allows up to 12 days, and 6-month internship allows up to 25 days.",
+"keywords": ["leave limit", "leave quota", "leave days"]
+},
+
+{
+"question": "How do I apply for leave officially?",
+"answer": "You must apply at least 48 hours in advance using the official leave form at https://www.graphura.online/form/leave.html. Leave is valid only after approval from your senior.",
+"keywords": ["apply leave", "leave approval", "leave request"]
+},
+
+{
+"question": "What counts as unauthorized leave?",
+"answer": "Three consecutive days of absence without prior approval is treated as unauthorized leave and may lead to termination and college notification.",
+"keywords": ["unauthorized leave", "absence rule", "termination policy"]
+},
+
+{
+"question": "Is sick or emergency leave allowed?",
+"answer": "Yes. Inform your senior immediately. Supporting documents may be required. Emergency leave becomes valid once acknowledged by your senior.",
+"keywords": ["sick leave", "emergency leave", "medical leave"]
+},
+
+{
+"question": "What happens if I exceed my leave quota?",
+"answer": "Exceeding the leave quota may make you ineligible for the internship certificate or require an internship extension.",
+"keywords": ["excess leave", "certificate issue", "leave extension"]
+},
+
+{
+"question": "What is the notice period for leaving the internship?",
+"answer": "A mandatory one month notice period is required for proper exit from the internship.",
+"keywords": ["notice period", "resign internship", "exit process"]
+},
+
+{
+"question": "How do interns record their attendance?",
+"answer": "Attendance procedures are instructed by your Team Head and may involve official group check-ins or time tracking tools.",
+"keywords": ["attendance", "check in", "reporting attendance"]
+},
+
+{
+"question": "Are reimbursements available for internship expenses?",
+"answer": "Routine reimbursements are not standard for virtual internships. Any reimbursement must be pre-approved in writing for specific projects.",
+"keywords": ["reimbursement", "expenses", "intern costs"]
+},
+
+{
+"question": "Can interns work on personal projects during the internship?",
+"answer": "Yes, but personal projects must not conflict with company duties or use company resources. Inform your Team Head about potential conflicts.",
+"keywords": ["personal project", "side work", "freelance rule"]
+},
+
+{
+"question": "Will interns get references after completing the internship?",
+"answer": "Strong performers may receive references or letters of recommendation from their Team Heads based on performance.",
+"keywords": ["reference", "lor", "recommendation"]
+},
+
+{
+"question": "Who do interns report to daily?",
+"answer": "Interns report directly to their Team Head for daily tasks. The official hierarchy is Intern → Team Head → Team Leader → Manager.",
+"keywords": ["reporting", "hierarchy", "team head"]
+},
+
+{
+"question": "Can interns message seniors privately?",
+"answer": "Official communication should happen within assigned groups, official emails, or approved channels. Private messaging without permission is discouraged.",
+"keywords": ["private message", "communication rule"]
+},
+
+{
+"question": "What if I have a grievance with my Team Head?",
+"answer": "Follow the official hierarchy and escalate the issue to the next reporting level. If unresolved, contact HR at hr@graphura.in.",
+"keywords": ["grievance", "complaint", "escalation"]
+},
+
+{
+"question": "How do I file a grievance officially?",
+"answer": "First discuss the issue with your Team Head or immediate senior. If unresolved, escalate to HR at hr@graphura.in with proper documentation.",
+"keywords": ["file complaint", "grievance process"]
+},
+
+{
+"question": "What communication channels are officially used?",
+"answer": "Official communication is conducted via WhatsApp groups, email, Google Meet, and other approved internal platforms.",
+"keywords": ["communication channels", "official tools", "company communication"]
+},
+
+{
+  "question": "What is the expected communication standard?",
+  "keywords": ["communication standard", "professional communication", "behavior rules"],
+  "answer": "Interns must maintain a professional tone, clarity, and respect in all communications. Avoid informal language in official groups and respond within reasonable timeframes."
+},
+{
+  "question": "Can I create unofficial groups using the company name?",
+  "keywords": ["unofficial group", "company name misuse", "unauthorized group"],
+  "answer": "No. Creating unofficial groups using the company name or logo without authorization is strictly prohibited."
+},
+{
+  "question": "Can I discuss internal issues publicly?",
+  "keywords": ["public complaint", "internal issue", "public discussion"],
+  "answer": "No. Internal matters must be resolved through official channels only. Public or unauthorized discussion may lead to disciplinary action."
+},
+{
+  "question": "Who maintains discipline and communication guidelines?",
+  "keywords": ["discipline authority", "hr role", "communication rules"],
+  "answer": "Team Heads and Management enforce communication standards, while HR oversees overall policy compliance."
+},
+{
+  "question": "What are the expectations around deadlines?",
+  "keywords": ["deadline policy", "task deadline", "time management"],
+  "answer": "Meeting deadlines is mandatory. All assigned tasks must be completed on or before the given deadline. Repeated delays may lead to disciplinary action."
+},
+{
+  "question": "What happens if I miss deadlines?",
+  "keywords": ["missed deadline", "late submission", "deadline penalty"],
+  "answer": "Missing two consecutive deadlines may result in a one-day leave deduction. Missing three or more deadlines may lead to termination as per company policy."
+},
+{
+  "question": "How is performance evaluated?",
+  "keywords": ["performance review", "evaluation criteria", "intern performance"],
+  "answer": "Performance is evaluated based on task quality, adherence to deadlines, communication skills, teamwork, and contributions to live projects."
+},
+{
+  "question": "How do I get feedback during the internship?",
+  "keywords": ["feedback process", "performance review", "improvement feedback"],
+  "answer": "Feedback is provided by your Team Head during reviews and project evaluations. Interns can also proactively request feedback."
+},
+{
+  "question": "What is the assignment submission process?",
+  "keywords": ["submission process", "file upload", "assignment submission"],
+  "answer": "Assignments must be submitted through the official channel specified by your Team Head such as Google Drive, project tools, or email. Follow proper naming and versioning guidelines."
+},
+{
+  "question": "How are creative assignments evaluated?",
+  "keywords": ["creative evaluation", "originality", "creative brief"],
+  "answer": "Creative assignments are evaluated based on originality, alignment with the brief, quality of execution, and timely submission."
+},
+{
+  "question": "Can I reuse content from the internet?",
+  "keywords": ["plagiarism", "copied content", "original work"],
+  "answer": "No. All submissions must be original and plagiarism-free. Copying or reusing content without proper modification may lead to disciplinary action or termination."
+},
+{
+  "question": "What are the criteria for top performer recognition?",
+  "keywords": ["top performer", "recognition criteria", "excellent performance"],
+  "answer": "Top performers demonstrate consistent quality work, leadership, proactive communication, teamwork, and strong deadline discipline."
+},
+{
+  "question": "Can poor performance affect my internship certificate?",
+  "keywords": ["certificate eligibility", "poor performance", "certificate issue"],
+  "answer": "Yes. Poor performance, repeated deadline failures, or disciplinary violations may affect eligibility for receiving the internship completion certificate."
+},
+{
+  "question": "Which interns are eligible for stipends?",
+  "keywords": ["stipend eligibility", "paid internship", "performance stipend"],
+  "answer": "Some domains or project contributions may include stipends. These are performance-based and not guaranteed for all interns."
+},
+{
+  "question": "Is the internship paid?",
+  "keywords": ["paid internship", "stipend details", "salary internship"],
+  "answer": "The internship is primarily unpaid. However, certain roles or projects may offer performance-based stipends depending on contributions."
+},
+{
+  "question": "How are project sales shared with interns?",
+  "keywords": ["sales incentive", "commission", "revenue share"],
+  "answer": "If an intern contributes to a successful client sale, a percentage may be shared among contributors. Distribution depends on contribution and Team Head approval."
+},
+{
+  "question": "When and how are stipends paid?",
+  "keywords": ["stipend payment", "incentive payout", "payment schedule"],
+  "answer": "Payment method and schedule are communicated by HR or Accounts depending on the project agreement. Always request written confirmation for stipend arrangements."
+},
+{
+  "question": "Can interns negotiate stipend terms?",
+  "keywords": ["negotiate stipend", "payment discussion", "stipend negotiation"],
+  "answer": "Stipend terms depend on domain and contribution. Any financial discussions must be formally approved by HR or management."
+},
+{
+  "question": "Are stipends fixed monthly?",
+  "keywords": ["monthly stipend", "fixed stipend", "stipend policy"],
+  "answer": "No. Stipends are usually performance-based or project-based unless a fixed amount is clearly mentioned in the agreement."
+},
+{
+  "question": "What should I do if there is a delay in stipend payment?",
+  "keywords": ["payment delay", "stipend issue", "incentive problem"],
+  "answer": "Contact HR or Accounts with written proof of the stipend agreement. Payment timelines depend on project closure and approval processes."
+},
+{
+  "question": "Do all internship domains include stipends?",
+  "keywords": ["domain stipend", "paid roles", "stipend availability"],
+  "answer": "No. Stipend eligibility varies depending on the internship domain and project requirements."
+},
+{
+  "question": "Will I receive a certificate after completing the internship?",
+  "keywords": ["internship certificate", "ICC certificate", "completion certificate"],
+  "answer": "Yes. An Internship Completion Certificate (ICC) is issued after successful completion and meeting performance and attendance requirements."
+},
+{
+  "question": "How can I get a Letter of Recommendation?",
+  "keywords": ["lor", "recommendation letter", "reference letter"],
+  "answer": "Letters of Recommendation are awarded to outstanding interns who demonstrate consistent performance, reliability, leadership, and proactive contributions."
+},
+{
+  "question": "How are placement or PPO offers given?",
+  "keywords": ["placement offer", "ppo", "job offer"],
+  "answer": "Exceptional interns may receive placement offers at Graphura. Other interns may also receive referrals or placement assistance based on performance."
+},
+{
+  "question": "When will I receive my internship certificate?",
+  "keywords": ["certificate delivery", "icc issue", "certificate timeline"],
+  "answer": "Certificates are issued after successful completion and internal verification. HR will communicate the delivery method such as digital PDF."
+},
+{
+  "question": "How long after completion will I receive my LOR or certificate?",
+  "keywords": ["lor timeline", "certificate timeline", "document delivery"],
+  "answer": "Certificates and LORs are typically issued after exit formalities and performance reviews are completed."
+},
+{
+  "question": "Can interns stay connected with Graphura after the internship?",
+  "keywords": ["alumni network", "future opportunity", "stay connected"],
+  "answer": "Yes. Graphura encourages interns to stay connected. Outstanding interns may be considered for future opportunities or collaborations."
+},
+{
+  "question": "Will terminated interns receive certificates?",
+  "keywords": ["termination certificate", "certificate eligibility termination"],
+  "answer": "No. Interns terminated due to policy violations or serious misconduct are not eligible for internship completion certificates."
+},
+{
+  "question": "Is attendance mandatory for receiving the internship certificate?",
+  "keywords": ["attendance requirement", "certificate rule", "meeting attendance"],
+  "answer": "Yes. Attendance and participation in meetings are important criteria for receiving the internship completion certificate."
+},
+
+{
+  "question": "What are the professional conduct expectations for interns?",
+  "keywords": ["conduct policy", "discipline", "professional behavior"],
+  "answer": "Interns must maintain discipline, respect team members, follow deadlines, and communicate professionally. Disrespectful or unprofessional behavior may lead to disciplinary action."
+},
+{
+  "question": "Is there a dress code for meetings?",
+  "keywords": ["dress code", "meeting attire", "professional clothing"],
+  "answer": "Professional attire is expected during official meetings. Follow instructions provided by your Team Head for virtual or formal sessions."
+},
+{
+  "question": "Can interns post about Graphura on social media?",
+  "keywords": ["social media policy", "public post", "posting about company"],
+  "answer": "Do not post company-related content publicly without prior approval. Unauthorized or negative posts may lead to disciplinary action."
+},
+{
+  "question": "What behavior can lead to disciplinary action?",
+  "keywords": ["misconduct", "policy violation", "termination reason"],
+  "answer": "Repeated misconduct, disrespectful behavior, harassment, policy violations, misuse of company data, or repeated deadline negligence may lead to warnings or termination."
+},
+{
+  "question": "Is harassment or discrimination tolerated in the internship?",
+  "keywords": ["harassment policy", "discrimination", "abusive conduct"],
+  "answer": "No. Any form of harassment, discrimination, or abusive conduct is strictly prohibited and may lead to immediate disciplinary action."
+},
+{
+  "question": "Are gossip or informal discussion groups allowed for official matters?",
+  "keywords": ["gossip channels", "informal communication", "rumor spreading"],
+  "answer": "No. Official matters must be discussed through approved communication channels. Gossip or rumor spreading is discouraged."
+},
+{
+  "question": "Can interns represent Graphura in public events or forums?",
+  "keywords": ["represent company", "public speaking", "company representation"],
+  "answer": "Representation in public events, forums, or media requires prior approval from management."
+},
+{
+  "question": "Can I share client data or company files outside Graphura?",
+  "keywords": ["client data", "confidential information", "data sharing"],
+  "answer": "No. Client data, internal documents, and project files must never be shared externally. Confidentiality violations may lead to termination and legal action."
+},
+{
+  "question": "Who owns the work created during the internship?",
+  "keywords": ["ownership", "intellectual property", "ip rights"],
+  "answer": "All work created for company projects during the internship is the intellectual property of Graphura India Private Limited."
+},
+{
+  "question": "Can I include internship work in my portfolio?",
+  "keywords": ["portfolio use", "showcase work", "project portfolio"],
+  "answer": "Yes, but only with approval from your Team Head and without exposing confidential client data."
+},
+{
+  "question": "What happens if someone leaks company data?",
+  "keywords": ["data leak", "security breach", "confidentiality violation"],
+  "answer": "Data leakage or unauthorized sharing is considered serious misconduct and may result in immediate termination and possible legal action."
+},
+{
+  "question": "Can I reuse client designs or project content for personal work?",
+  "keywords": ["reuse client design", "client asset use", "project reuse"],
+  "answer": "No. Client work and company assets cannot be reused, resold, or used for personal purposes."
+},
+{
+  "question": "Are login credentials and company accounts confidential?",
+  "keywords": ["password sharing", "account security", "login confidentiality"],
+  "answer": "Yes. Sharing company logins, passwords, or tool access with unauthorized individuals is strictly prohibited."
+},
+{
+  "question": "What should I do if I accidentally share confidential information?",
+  "keywords": ["accidental data leak", "report security issue"],
+  "answer": "Immediately inform your Team Head and HR so the issue can be handled quickly."
+},
+{
+  "question": "Does Graphura use confidentiality agreements or NDAs?",
+  "keywords": ["nda", "confidentiality agreement", "legal agreement"],
+  "answer": "Yes. Confidentiality agreements may apply to protect company and client information."
+},
+{
+  "question": "Can interns keep project files after the internship ends?",
+  "keywords": ["file retention", "post internship files"],
+  "answer": "No. Company project files remain company property and must not be retained after the internship ends unless officially permitted."
+},
+{
+  "question": "What tools are used during the internship?",
+  "keywords": ["tools used", "software platforms", "intern tools"],
+  "answer": "Tools vary by domain. Designers may use Canva or Adobe tools, developers use coding frameworks and editors, and marketers use analytics and campaign tools. Access is provided by your Team Head."
+},
+{
+  "question": "Does Graphura provide software licenses or accounts?",
+  "keywords": ["software license", "company accounts", "tool access"],
+  "answer": "Required company tools and accounts are provided for project work. Personal premium licenses are generally not provided unless specified."
+},
+{
+  "question": "Can interns use personal tools instead of company tools?",
+  "keywords": ["personal software", "tool approval"],
+  "answer": "Yes, if approved by your Team Head and compatible with project requirements while keeping company data secure."
+},
+{
+  "question": "Is the internship remote or office-based?",
+  "keywords": ["remote internship", "virtual internship"],
+  "answer": "The internship is conducted virtually. Interns must follow assigned timings, attend meetings, and remain professionally available."
+},
+{
+  "question": "Are training resources provided during the internship?",
+  "keywords": ["training", "workshops", "learning resources"],
+  "answer": "Yes. Interns receive hands-on project exposure, internal workshops, and guidance from their Team Heads."
+},
+{
+  "question": "What should I do if I lose access to a company tool or account?",
+  "keywords": ["lost account access", "tool login issue"],
+  "answer": "Immediately inform your Team Head or HR/IT support. Do not attempt unauthorized access recovery."
+},
+{
+  "question": "Can interns access company tools after the internship ends?",
+  "keywords": ["post internship access", "account removal"],
+  "answer": "No. Access to company systems and tools is revoked after internship completion unless officially extended."
+},
+{
+  "question": "Who grants access to tools and platforms?",
+  "keywords": ["tool permission", "account approval"],
+  "answer": "Access is granted by Team Heads, IT support, or authorized management depending on the project and domain."
+},
+{
+  "question": "Are internal company resources publicly accessible?",
+  "keywords": ["internal resources", "restricted access"],
+  "answer": "Most internal documents, drives, and project tools are restricted to active interns only."
+},
+{
+  "question": "What is the Intern Verification Portal?",
+  "keywords": ["verification portal", "intern verification", "certificate verification"],
+  "answer": "The Intern Verification Portal allows interns to verify their internship status, certificate authenticity, and performance summary using a Unique Verification ID."
+},
+{
+  "question": "Where can I access the Intern Verification Portal?",
+  "keywords": ["verify internship", "verification link"],
+  "answer": "The portal is available at https://www.graphura.online/verify.html."
+},
+{
+  "question": "How does internship verification work?",
+  "keywords": ["verification id", "certificate verification process"],
+  "answer": "Verification is done using a Unique Verification ID issued after internship completion and approval."
+},
+
+{
+  "question": "Should I share my Unique Verification ID with others?",
+  "keywords": ["verification id sharing", "verification privacy"],
+  "answer": "Share your Unique Verification ID only when required by an employer or institution for verification. Avoid sharing it publicly."
+},
+{
+  "question": "What details are visible on the verification portal?",
+  "keywords": ["portal details", "internship status", "certificate id"],
+  "answer": "The portal may display your name, internship domain, duration, completion status, verification status, certificate ID, and performance summary."
+},
+{
+  "question": "Who can verify my internship?",
+  "keywords": ["verify internship", "employer verification"],
+  "answer": "Anyone who has your Unique Verification ID can verify your internship details through the official verification portal."
+},
+{
+  "question": "My verification status is not updated. What should I do?",
+  "keywords": ["verification issue", "verification update"],
+  "answer": "Contact HR at hr@graphura.in using your registered email and provide your internship details for a manual update."
+},
+{
+  "question": "Can I check certificate authenticity on the portal?",
+  "keywords": ["certificate authenticity", "certificate verification"],
+  "answer": "Yes. Enter your Unique Verification ID on the verification portal to confirm the authenticity of your certificate."
+},
+{
+  "question": "Can interns update their details on the verification portal?",
+  "keywords": ["update portal details", "edit verification info"],
+  "answer": "No. Interns cannot edit portal information directly. Contact HR for corrections."
+},
+{
+  "question": "What should I do if I lose my Unique Verification ID?",
+  "keywords": ["lost verification id", "retrieve id"],
+  "answer": "Contact HR using your registered email to retrieve your verification ID."
+},
+{
+  "question": "Does the portal display performance ratings?",
+  "keywords": ["performance rating portal", "intern performance"],
+  "answer": "Yes. Performance indicators or remarks may be displayed depending on the department evaluation."
+},
+{
+  "question": "Will termination status appear on the portal?",
+  "keywords": ["termination status", "portal record"],
+  "answer": "Yes. If an internship ends due to termination, the portal may reflect the termination status instead of completion."
+},
+{
+  "question": "Can I check my attendance through the verification portal?",
+  "keywords": ["attendance portal", "attendance check"],
+  "answer": "No. Attendance logs are managed internally and are not displayed on the verification portal."
+},
+{
+  "question": "When is the Unique Verification ID generated?",
+  "keywords": ["verification id generation", "certificate approval"],
+  "answer": "The Unique Verification ID is generated after successful internship completion, internal verification, and HR approval."
+},
+{
+  "question": "What is the Planner page?",
+  "keywords": ["planner page", "schedule dashboard"],
+  "answer": "The Planner is a centralized schedule dashboard where interns can check meetings, sessions, workshops, deadlines, and weekly activities."
+},
+{
+  "question": "Where can I access the Planner?",
+  "keywords": ["planner link", "schedule page"],
+  "answer": "The Planner is available at https://www.graphura.online/planner.html on the official website."
+},
+{
+  "question": "What events appear in the Planner?",
+  "keywords": ["planner events", "meeting schedule"],
+  "answer": "The Planner displays meetings, domain sessions, club meetings, guest lectures, deadlines, and special announcements."
+},
+{
+  "question": "How often is the Planner updated?",
+  "keywords": ["planner update", "schedule changes"],
+  "answer": "The Planner is regularly updated by HR or Admin whenever meetings, deadlines, or events are added or modified."
+},
+{
+  "question": "Can the Planner be accessed without login?",
+  "keywords": ["planner access", "public planner"],
+  "answer": "Yes. The Planner may be publicly visible, but some internal details are restricted to active interns."
+},
+{
+  "question": "What happens if I miss a meeting listed in the Planner?",
+  "keywords": ["missed meeting", "absence meeting"],
+  "answer": "Missing scheduled meetings without approved leave may count as absence and could lead to disciplinary action."
+},
+{
+  "question": "Can I sync the Planner with my calendar?",
+  "keywords": ["planner sync", "calendar export"],
+  "answer": "Yes. You may sync the Planner with your phone calendar or access the schedule via the shared group link."
+},
+{
+  "question": "Will my schedule change if I change internship domains?",
+  "keywords": ["domain change schedule", "planner update"],
+  "answer": "The Planner is centralized. Domain-specific meetings and updates will automatically reflect if your role changes."
+},
+{
+  "question": "Who manages the Planner schedule?",
+  "keywords": ["planner admin", "schedule management"],
+  "answer": "The Planner is maintained by the Graphura Admin or HR team with input from Team Heads and managers."
+},
+{
+  "question": "Is the Planner available after internship completion?",
+  "keywords": ["planner access after internship"],
+  "answer": "The Planner is mainly for active interns. Access to internal updates may be restricted after completion."
+},
+{
+  "question": "Why is my Planner not showing updated meetings?",
+  "keywords": ["planner not updating", "schedule issue"],
+  "answer": "Try refreshing the page. If the issue continues, confirm with your Team Head whether updates were recently made."
+},
+{
+  "question": "Will holidays appear in the Planner?",
+  "keywords": ["holiday schedule", "planner holidays"],
+  "answer": "Yes. Major holidays or non-working days are usually reflected in the Planner schedule."
+},
+{
+  "question": "Can I rely only on the Planner for task updates?",
+  "keywords": ["planner tasks", "task tracking"],
+  "answer": "The Planner helps with schedules, but always follow instructions from your Team Head and official communications."
+},
+{
+  "question": "What services does Graphura provide?",
+  "keywords": ["graphura services", "branding services", "marketing services"],
+  "answer": "Graphura offers branding, marketing, graphic design, video editing, website development, UI/UX design, digital advertising, and complete brand-building solutions."
+},
+{
+  "question": "Does Graphura work with startups or only established brands?",
+  "keywords": ["startup services", "enterprise clients"],
+  "answer": "Graphura works with startups, SMEs, and enterprise brands, providing customized solutions for every stage of business growth."
+},
+{
+  "question": "Does Graphura offer customized branding packages?",
+  "keywords": ["custom branding", "brand strategy"],
+  "answer": "Yes. Branding packages are customized based on industry, target audience, and brand positioning requirements."
+},
+{
+  "question": "Does Graphura develop websites?",
+  "keywords": ["website development", "ecommerce website"],
+  "answer": "Yes. Graphura develops modern, responsive, and SEO-friendly websites including portfolio sites, e-commerce platforms, landing pages, and custom systems."
+},
+{
+  "question": "Does Graphura provide content writing services?",
+  "keywords": ["content writing", "copywriting services"],
+  "answer": "Yes. Services include website content, ad copy, captions, blogs, scripts, and marketing content aligned with brand voice."
+},
+{
+  "question": "Can Graphura manage my company’s social media?",
+  "keywords": ["social media management", "smm services"],
+  "answer": "Yes. Graphura provides social media management including strategy, content creation, posting, advertising campaigns, and analytics reporting."
+},
+
+{
+  "question": "Can I get branding, website development, and marketing in one package?",
+  "keywords": ["complete branding package", "all in one branding", "brand transformation"],
+  "answer": "Yes. Graphura offers integrated brand transformation packages covering branding, website development, and digital marketing under one solution."
+},
+{
+  "question": "Do you create video ads or animated content?",
+  "keywords": ["video ads", "animation", "reels", "motion graphics"],
+  "answer": "Yes. We create reels, promotional ads, explainer videos, motion graphics, animated content, and product videos."
+},
+{
+  "question": "Do you design logos and brand identities?",
+  "keywords": ["logo design", "brand identity", "brand guidelines"],
+  "answer": "Yes. We provide professional logo design, color systems, typography, visual strategy, and complete brand identity guidelines."
+},
+{
+  "question": "Do you run digital advertisements?",
+  "keywords": ["ads management", "google ads", "facebook ads"],
+  "answer": "Yes. We manage Meta (Facebook and Instagram), Google Ads, and YouTube advertising campaigns with performance tracking."
+},
+{
+  "question": "Can you redesign my existing brand?",
+  "keywords": ["rebranding", "brand redesign", "brand revamp"],
+  "answer": "Yes. We offer brand revamp and modernization services while maintaining your core brand identity."
+},
+{
+  "question": "Does Graphura work with international clients?",
+  "keywords": ["international clients", "global services"],
+  "answer": "Yes. Graphura works with clients globally and serves brands across multiple international markets."
+},
+{
+  "question": "Can I book a consultation call?",
+  "keywords": ["consultation call", "schedule meeting"],
+  "answer": "Yes. You can schedule a consultation through our website or contact our team directly."
+},
+{
+  "question": "Do you provide campaign strategy or only design services?",
+  "keywords": ["campaign strategy", "marketing strategy"],
+  "answer": "We provide complete campaign strategy along with design and execution based on business objectives."
+},
+{
+  "question": "Can Graphura collaborate with my internal marketing team?",
+  "keywords": ["collaboration", "in house team"],
+  "answer": "Yes. We often collaborate with internal marketing teams to improve brand output and campaign efficiency."
+},
+{
+  "question": "What are your pricing packages?",
+  "keywords": ["pricing", "package cost", "service price"],
+  "answer": "Pricing depends on project scope and deliverables. After understanding your requirements, we provide a customized quote."
+},
+{
+  "question": "Do you offer monthly retainer services?",
+  "keywords": ["monthly retainer", "ongoing marketing support"],
+  "answer": "Yes. We offer monthly retainer packages for brands requiring continuous marketing and content support."
+},
+{
+  "question": "Can I get a detailed project proposal?",
+  "keywords": ["project proposal", "scope document"],
+  "answer": "Yes. After reviewing your requirements, we provide a detailed proposal including scope, timelines, deliverables, and pricing."
+},
+{
+  "question": "Do you require advance payment to start a project?",
+  "keywords": ["advance payment", "upfront payment"],
+  "answer": "Yes. Most projects require a partial upfront payment before work begins."
+},
+{
+  "question": "Do you sign contracts or agreements with clients?",
+  "keywords": ["contract", "agreement", "mou"],
+  "answer": "Yes. We provide formal service agreements outlining project scope, timelines, deliverables, and responsibilities."
+},
+{
+  "question": "Can pricing be negotiated?",
+  "keywords": ["negotiate price", "discount"],
+  "answer": "Pricing depends on project requirements and resources. Flexible packages may be discussed during consultation."
+},
+{
+  "question": "Do you offer refunds?",
+  "keywords": ["refund policy", "cancellation policy"],
+  "answer": "Refund policies depend on the project stage and the signed agreement terms."
+},
+{
+  "question": "How can I make payment?",
+  "keywords": ["payment method", "upi payment", "bank transfer"],
+  "answer": "Payments can be made through bank transfer, UPI, or other digital payment methods depending on region."
+},
+{
+  "question": "Do you provide EMI or installment options?",
+  "keywords": ["emi", "installment payment"],
+  "answer": "For larger projects, milestone based or installment payment structures may be available."
+},
+{
+  "question": "Are taxes included in the pricing?",
+  "keywords": ["gst", "tax invoice"],
+  "answer": "Applicable taxes are clearly mentioned in the proposal and invoice."
+},
+{
+  "question": "Are there any hidden charges?",
+  "keywords": ["hidden charges", "extra cost"],
+  "answer": "No. All costs are transparently communicated before project initiation."
+},
+{
+  "question": "Can I request a trial before placing an order?",
+  "keywords": ["trial request", "sample work"],
+  "answer": "We do not offer trials. However, you can review our portfolio and past work before proceeding."
+},
+{
+  "question": "Can Graphura work under an NDA?",
+  "keywords": ["nda", "confidential agreement"],
+  "answer": "Yes. We respect client confidentiality and can sign Non Disclosure Agreements when required."
+},
+{
+  "question": "Will I receive source files for the project?",
+  "keywords": ["source files", "editable files"],
+  "answer": "Source files may be included depending on the selected package and agreement terms."
+},
+{
+  "question": "How soon can my project start?",
+  "keywords": ["project start time", "project kickoff"],
+  "answer": "Projects typically begin after proposal approval and advance payment confirmation."
+},
+{
+  "question": "How long does a branding project usually take?",
+  "keywords": ["branding timeline", "branding duration"],
+  "answer": "Branding projects typically take around 7 to 21 days depending on scope and revisions."
+},
+{
+  "question": "How long does website development take?",
+  "keywords": ["website development timeline", "website duration"],
+  "answer": "A standard website usually takes 15 to 30 days, while complex systems may require more time."
+},
+{
+  "question": "How many revisions are included in a project?",
+  "keywords": ["revision policy", "design changes"],
+  "answer": "Revision limits depend on the selected package and are defined in the project agreement."
+},
+{
+  "question": "What happens if I do not like the first draft?",
+  "keywords": ["design feedback", "draft revision"],
+  "answer": "We refine the design based on your feedback until it aligns with your vision within the revision scope."
+},
+{
+  "question": "Do projects follow a structured timeline?",
+  "keywords": ["project milestones", "execution stages"],
+  "answer": "Yes. Each project follows defined milestones and structured execution stages."
+},
+{
+  "question": "How will my final project files be delivered?",
+  "keywords": ["file delivery", "project files"],
+  "answer": "Final files are delivered securely through cloud links such as Google Drive."
+},
+
+{
+  "question": "Who is the developer of Graphura AI Chatbot?",
+  "keywords": ["developer name", "chatbot developer", "kamal yadav"],
+  "answer": "The official developer of the Graphura AI Chatbot is Kamal Yadav. He is responsible for architecture design, AI integration, deployment, maintenance, and technical upgrades."
+},
+{
+  "question": "What are Kamal Yadav’s responsibilities in the AI chatbot project?",
+  "keywords": ["developer role", "responsibilities"],
+  "answer": "Kamal Yadav oversees backend development, AI model integration, RAG implementation, database management, security configuration, deployment, monitoring, and performance optimization."
+},
+{
+  "question": "Who manages AI model updates and system upgrades?",
+  "keywords": ["model update", "system upgrade"],
+  "answer": "AI model updates, prompt refinement, infrastructure scaling, and technical improvements are managed by Kamal Yadav."
+},
+{
+  "question": "Who should be contacted for technical chatbot issues?",
+  "keywords": ["technical issue", "chatbot problem"],
+  "answer": "For technical issues related to the AI chatbot system, escalation should be directed to Kamal Yadav (Developer) through official internal communication channels."
+},
+{
+  "question": "Who has authority over chatbot technical decisions?",
+  "keywords": ["technical authority", "system control"],
+  "answer": "Technical architecture, infrastructure, and AI configuration decisions are handled by Kamal Yadav in coordination with management."
+},
+{
+  "question": "When do these Terms & Conditions apply?",
+  "keywords": ["terms acceptance", "agreement"],
+  "answer": "These Terms apply once you accept the internship offer or begin participating in the Graphura internship program."
+},
+{
+  "question": "Are these Terms legally binding?",
+  "keywords": ["legal binding", "agreement validity"],
+  "answer": "Yes. By accepting the Offer Letter or participating in the internship, you agree to be legally bound by these Terms."
+},
+{
+  "question": "What documents form the complete agreement?",
+  "keywords": ["entire agreement", "offer letter"],
+  "answer": "The Terms & Conditions together with the Offer Letter form the entire agreement between the Intern and Graphura."
+},
+{
+  "question": "Does this internship create an employment relationship?",
+  "keywords": ["employment status", "employee benefits"],
+  "answer": "No. The internship does not create an employer-employee relationship and does not entitle interns to employee benefits unless specified in the Offer Letter."
+},
+{
+  "question": "What kind of tasks can be assigned?",
+  "keywords": ["internship tasks", "responsibilities"],
+  "answer": "Tasks may include digital marketing, logo design, website development, content creation, or administrative support as per the Offer Letter."
+},
+{
+  "question": "Is training provided during the internship?",
+  "keywords": ["training support", "supervision"],
+  "answer": "Yes. Graphura provides reasonable supervision and learning support; however, the internship is primarily educational."
+},
+{
+  "question": "How long does the internship last?",
+  "keywords": ["internship duration"],
+  "answer": "The internship duration is specified in your Offer Letter and continues unless terminated earlier according to policy."
+},
+{
+  "question": "Can internship tenure be modified?",
+  "keywords": ["tenure change", "penalty"],
+  "answer": "Tenure change requests must be submitted within the first week. After that, reductions may attract a ₹500 penalty."
+},
+{
+  "question": "Can I extend my internship?",
+  "keywords": ["internship extension"],
+  "answer": "Yes. Internship extensions can be requested anytime through HR without penalty."
+},
+{
+  "question": "Am I entitled to overtime or bonus?",
+  "keywords": ["overtime", "bonus"],
+  "answer": "No. Interns are not entitled to overtime pay, bonuses, or additional compensation beyond the agreed stipend."
+},
+{
+  "question": "Who handles taxes on stipend?",
+  "keywords": ["tax deduction", "stipend tax"],
+  "answer": "The intern is responsible for applicable taxes. Graphura may deduct taxes as required by law."
+},
+{
+  "question": "Who owns the work I create during the internship?",
+  "keywords": ["ownership", "ip rights"],
+  "answer": "All Work Product created during the internship is the exclusive property of Graphura."
+},
+{
+  "question": "Can I use internship work in my portfolio?",
+  "keywords": ["portfolio usage"],
+  "answer": "Only with prior written consent from Graphura and without exposing confidential information."
+},
+{
+  "question": "Can I use Graphura’s ideas independently?",
+  "keywords": ["idea protection", "breach"],
+  "answer": "No. Unauthorized use of Graphura’s ideas is considered a material breach and may result in legal action."
+},
+{
+  "question": "How long does the confidentiality obligation last?",
+  "keywords": ["confidentiality duration"],
+  "answer": "Confidentiality obligations continue for 3 years after the internship termination."
+},
+{
+  "question": "What qualifies as confidential information?",
+  "keywords": ["client data", "non public info"],
+  "answer": "Confidential information includes client data, strategies, marketing plans, proprietary methods, and project details."
+},
+{
+  "question": "What happens to confidential data after termination?",
+  "keywords": ["return property", "termination duty"],
+  "answer": "After termination, interns must return or destroy all confidential data and company property."
+},
+{
+  "question": "What professional behavior is expected from interns?",
+  "keywords": ["conduct rules"],
+  "answer": "Interns must act professionally, avoid harassment, and comply with company policies and applicable laws."
+},
+{
+  "question": "Is client solicitation allowed during or after internship?",
+  "keywords": ["non solicitation"],
+  "answer": "No. Interns cannot solicit Graphura clients or employees during the internship and for one year after termination."
+},
+{
+  "question": "What laws must interns comply with?",
+  "keywords": ["compliance law"],
+  "answer": "Interns must comply with Indian laws including the IT Act 2000 and the Digital Personal Data Protection Act 2023."
+},
+{
+  "question": "Can Graphura terminate the internship without notice?",
+  "keywords": ["termination policy"],
+  "answer": "Yes. Graphura may terminate the internship without notice in cases of material breach, misconduct, policy violation, or operational reasons."
+},
+{
+  "question": "What is the resignation notice period for interns?",
+  "keywords": ["notice period"],
+  "answer": "Interns must provide 30 days written notice unless otherwise specified in the Offer Letter."
+},
+{
+  "question": "Is there a penalty for not serving the notice period?",
+  "keywords": ["resignation penalty"],
+  "answer": "Yes. Failure to serve the notice period or submit valid documentation may attract a ₹500 penalty."
+},
+{
+  "question": "What happens if the penalty is unpaid?",
+  "keywords": ["unpaid penalty"],
+  "answer": "Graphura may inform the candidate’s institution and may take legal action if the penalty remains unpaid."
+},
+{
+  "question": "Is Graphura liable for indirect damages?",
+  "keywords": ["limitation of liability"],
+  "answer": "No. Graphura is not liable for indirect or consequential damages."
+},
+{
+  "question": "What is the cap on Graphura's liability?",
+  "keywords": ["liability cap"],
+  "answer": "Graphura's liability is limited to the total stipend paid, if any."
+},
+{
+  "question": "How are disputes resolved?",
+  "keywords": ["arbitration", "dispute"],
+  "answer": "Disputes are resolved through arbitration in Haryana under the Arbitration and Conciliation Act 1996."
+},
+{
+  "question": "What happens during force majeure events?",
+  "keywords": ["force majeure"],
+  "answer": "Graphura is not liable for delays caused by events beyond its control such as natural disasters or internet outages."
+},
+{
+  "question": "Can the internship be terminated due to force majeure?",
+  "keywords": ["prolonged disruption"],
+  "answer": "Yes. If the force majeure event continues beyond 30 days, either party may terminate the internship."
+},
+{
+  "question": "Can Graphura amend the Terms and Conditions?",
+  "keywords": ["amendment policy"],
+  "answer": "Yes. Graphura may amend the Terms with 30 days written notice. Continued participation implies acceptance."
+},
+{
+  "question": "How are official notices sent?",
+  "keywords": ["official notice"],
+  "answer": "Official notices must be sent via official email or registered post as specified in the Terms."
+},
+{
+  "question": "Which clauses survive internship termination?",
+  "keywords": ["survival clause"],
+  "answer": "Clauses related to IP, Confidentiality, Non-Solicitation, Liability, Indemnification, and Dispute Resolution survive termination."
+},
+{
+  "question": "How many leave days are allowed in a 3 month internship?",
+  "keywords": ["3 month leave", "leave quota"],
+  "answer": "A maximum of 10 leave days are allowed during the 3 month internship program."
+},
+{
+  "question": "How many leave days are allowed in a 4 month internship?",
+  "keywords": ["4 month leave", "leave limit"],
+  "answer": "A maximum of 12 leave days are allowed during the 4 month internship program."
+},
+{
+  "question": "How many leave days are allowed in a 6 month internship?",
+  "keywords": ["6 month leave", "leave eligibility"],
+  "answer": "A maximum of 20 leave days are allowed during the 6 month internship program."
+},
+{
+  "question": "What happens if I exceed my leave quota?",
+  "keywords": ["excess leave", "certificate issue"],
+  "answer": "Exceeding the allotted leave quota may make you ineligible for ICC certification."
+},
+{
+  "question": "How do I apply for leave?",
+  "keywords": ["leave application", "48 hours rule"],
+  "answer": "Leave must be applied at least 48 hours in advance with supporting documents and approved through the official email official@graphura.in."
+},
+{
+  "question": "When is leave considered approved?",
+  "keywords": ["leave approval", "official mail"],
+  "answer": "Leave is considered approved only after confirmation from the company’s official email ID."
+},
+{
+  "question": "What is the emergency leave process?",
+  "keywords": ["emergency leave", "urgent leave"],
+  "answer": "For emergency leave, inform your senior immediately and keep official@graphura.in in CC. Leave is valid only after confirmation."
+},
+{
+  "question": "What is unauthorized leave?",
+  "keywords": ["unauthorized leave", "termination"],
+  "answer": "Absence without prior information or approval is considered unauthorized leave and may result in immediate termination."
+},
+{
+  "question": "What happens if I am repeatedly late to meetings?",
+  "keywords": ["late attendance", "leave deduction"],
+  "answer": "Being more than 5 minutes late for two consecutive days is treated as one leave day and deducted from your leave quota."
+},
+{
+  "question": "What happens if I miss deadlines twice consecutively?",
+  "keywords": ["missed deadline", "leave penalty"],
+  "answer": "Missing deadlines twice consecutively is treated as one leave day and deducted from your leave quota."
+},
+{
+  "question": "Is disrespect towards seniors allowed?",
+  "keywords": ["disrespect", "misconduct"],
+  "answer": "No. Disrespect towards seniors or employees in meetings, messages, or any form will not be tolerated."
+},
+{
+  "question": "Can interns create unofficial groups in the company name?",
+  "keywords": ["unofficial group", "company misuse"],
+  "answer": "No. Creating unofficial groups, forums, or communities using the company name is strictly prohibited."
+},
+{
+  "question": "What is the rule for meeting punctuality?",
+  "keywords": ["meeting delay", "punctuality"],
+  "answer": "Interns must join meetings on time. Delays beyond 5 minutes are not entertained."
+},
+{
+  "question": "What happens after repeated meeting delays?",
+  "keywords": ["meeting warning", "termination"],
+  "answer": "After three warnings for repeated meeting delays, termination may occur."
+},
+{
+  "question": "Is professional attire mandatory during meetings?",
+  "keywords": ["dress code", "meeting etiquette"],
+  "answer": "Yes. Proper attire and professional behavior are mandatory during official meetings."
+},
+{
+  "question": "What happens if I miss deadlines three times?",
+  "keywords": ["repeated delay", "termination"],
+  "answer": "Missing deadlines three or more times may result in termination."
+},
+{
+  "question": "Can I submit copied or plagiarized work?",
+  "keywords": ["plagiarism", "copied work"],
+  "answer": "No. All submissions must be original and plagiarism free."
+},
+{
+  "question": "Can I share company or client data externally?",
+  "keywords": ["confidentiality breach", "client data"],
+  "answer": "No. Sharing or misusing company or client information may result in legal action."
+},
+{
+  "question": "Can I use company tools for personal work?",
+  "keywords": ["misuse resources", "company tools"],
+  "answer": "No. Company tools and platforms must be used strictly for official purposes only."
+},
+{
+  "question": "Can I post company information on social media?",
+  "keywords": ["social media policy", "reputation"],
+  "answer": "No. Company related information cannot be shared on personal social media without prior approval."
+},
+{
+  "question": "How should grievances be raised?",
+  "keywords": ["grievance process", "complaint"],
+  "answer": "Concerns should be raised with designated seniors or HR rather than through informal channels."
+},
+{
+  "question": "Is there a warning system for interns?",
+  "keywords": ["warning system"],
+  "answer": "Yes. In most cases interns receive warnings before strict disciplinary action is taken."
+},
+{
+  "question": "Can termination happen immediately?",
+  "keywords": ["immediate termination"],
+  "answer": "Yes. Immediate termination may occur for misconduct, repeated delays, or unauthorized leave."
+},
+{
+  "question": "Can legal action be taken for violations?",
+  "keywords": ["legal action", "violation"],
+  "answer": "Yes. For serious violations Graphura may initiate legal action within 15 days."
+},
+{
+  "question": "What is Graphura?",
+  "keywords": ["graphura", "company info"],
+  "answer": "Graphura is a digital services and professional training organization operating under Graphura India Private Limited that provides creative services and structured internship programs."
+},
+{
+  "question": "What services does Graphura provide?",
+  "keywords": ["services", "marketing", "internships"],
+  "answer": "Graphura provides graphic design, branding, marketing, SEO, website development, and structured internship programs for skill development."
+},
+{
+  "question": "Is Graphura a registered company?",
+  "keywords": ["registered company"],
+  "answer": "Yes. Graphura operates under the legally registered entity Graphura India Private Limited."
+},
+{
+  "question": "Where is Graphura located?",
+  "keywords": ["company location"],
+  "answer": "Graphura primarily operates through a remote infrastructure allowing interns and team members to work from different cities across India."
+},
+{
+  "question": "Where is the Graphura head office?",
+  "keywords": ["head office"],
+  "answer": "The registered head office operates under Graphura India Private Limited in India managing HR operations, documentation, and corporate processes."
+},
+
+{
+  "question": "Is Graphura work from home based?",
+  "keywords": ["remote internship", "work from home"],
+  "answer": "Yes. Most internship programs follow a remote work model where interns collaborate digitally through online meetings and task submissions."
+},
+{
+  "question": "What is Graphura’s official website?",
+  "keywords": ["website", "graphura online"],
+  "answer": "Graphura’s official website is https://graphura.online where interns can apply for internships, access the portal, verify certificates, and view company information."
+},
+{
+  "question": "Does Graphura have a LinkedIn page?",
+  "keywords": ["linkedin page"],
+  "answer": "Yes. Graphura maintains an official LinkedIn page where internship opportunities, updates, and company announcements are posted."
+},
+{
+  "question": "How can I verify a Graphura internship?",
+  "keywords": ["verify internship", "certificate verification"],
+  "answer": "Internship verification can be done using the intern unique ID, offer letter, official certificate, HR email verification, or the internship portal verification system."
+},
+{
+  "question": "Is Graphura AICTE approved?",
+  "keywords": ["aicte approval"],
+  "answer": "Graphura internships are industry based training programs. Acceptance by AICTE depends on the recognition policies of individual colleges."
+},
+{
+  "question": "Is Graphura internship valid for college submission?",
+  "keywords": ["college internship", "internship validity"],
+  "answer": "Many colleges accept internships from registered companies. However final acceptance depends on the rules of the specific college or university."
+},
+{
+  "question": "What internship domains does Graphura offer?",
+  "keywords": ["internship domains"],
+  "answer": "Graphura offers internships in HR, Digital Marketing, Graphic Design, Video Editing, Web Development, Data Analytics, Business Development, Content Writing, UI UX Design, and Social Media Management."
+},
+{
+  "question": "Is Graphura a private limited company?",
+  "keywords": ["private limited"],
+  "answer": "Yes. Graphura operates as Graphura India Private Limited with a formal corporate structure including directors and shareholders."
+},
+{
+  "question": "What is the legal name of the company?",
+  "keywords": ["company legal name"],
+  "answer": "The official legal name of the company is Graphura India Private Limited."
+},
+{
+  "question": "What is the HR email ID?",
+  "keywords": ["hr email"],
+  "answer": "The official HR email is hr@graphura.online. It can be used for certificates, internship verification, resignation requests, and HR queries."
+},
+{
+  "question": "What is the HR contact number?",
+  "keywords": ["hr contact"],
+  "answer": "HR contact numbers are usually shared during onboarding. For official matters email communication is preferred."
+},
+{
+  "question": "How can I contact HR urgently?",
+  "keywords": ["urgent hr help"],
+  "answer": "First contact your Team Leader and then send an email to HR explaining the issue clearly."
+},
+{
+  "question": "What are HR working hours?",
+  "keywords": ["hr working hours"],
+  "answer": "HR working hours are typically Monday to Saturday from 10:00 AM to 6:00 PM IST."
+},
+{
+  "question": "Who should I contact for certificate issues?",
+  "keywords": ["certificate issue"],
+  "answer": "Certificate issues should be reported to HR with your intern name, intern ID, issue description, and screenshot if necessary."
+},
+{
+  "question": "Who should I contact for technical issues?",
+  "keywords": ["technical problem"],
+  "answer": "Technical issues should be reported to the technical support team or the HR department."
+},
+{
+  "question": "Where should I send my resignation email?",
+  "keywords": ["resignation email"],
+  "answer": "Resignation emails should be sent to the official HR email address."
+},
+{
+  "question": "How do I escalate an issue?",
+  "keywords": ["escalation process"],
+  "answer": "The escalation hierarchy is Intern → Team Leader → HR → Management."
+},
+{
+  "question": "When does placement take place?",
+  "keywords": ["placement timing"],
+  "answer": "Placement opportunities are generally conducted after internship completion and announced by HR."
+},
+{
+  "question": "Is placement guaranteed after the internship?",
+  "keywords": ["guaranteed placement"],
+  "answer": "No. Placement depends on performance evaluation, company requirements, and interview results."
+},
+{
+  "question": "How do I register for placement?",
+  "keywords": ["placement registration"],
+  "answer": "Eligible interns must complete the placement registration form shared by HR."
+},
+{
+  "question": "What are the placement eligibility criteria?",
+  "keywords": ["placement eligibility"],
+  "answer": "Criteria usually include internship completion, task submissions, good performance score, and attendance compliance."
+},
+{
+  "question": "Is placement performance based?",
+  "keywords": ["performance placement"],
+  "answer": "Yes. Placement decisions depend significantly on intern performance evaluation."
+},
+{
+  "question": "What is a PPO?",
+  "keywords": ["ppo meaning"],
+  "answer": "A Pre Placement Offer (PPO) is a job offer given to top performing interns before the formal placement process."
+},
+{
+  "question": "How many rounds are there in placement?",
+  "keywords": ["placement rounds"],
+  "answer": "Typical placement includes resume screening, interview round, and final evaluation."
+},
+{
+  "question": "Will HR inform shortlisted candidates?",
+  "keywords": ["shortlisted candidates"],
+  "answer": "Yes. HR informs shortlisted candidates through email or official communication channels."
+},
+{
+  "question": "How can I check my performance?",
+  "keywords": ["performance dashboard"],
+  "answer": "Interns can check their performance through the intern dashboard available in the internship portal."
+},
+{
+  "question": "How is intern performance evaluated?",
+  "keywords": ["performance evaluation"],
+  "answer": "Evaluation is based on attendance, task completion, media tasks, participation, and team collaboration."
+},
+{
+  "question": "Who reviews intern performance?",
+  "keywords": ["performance review"],
+  "answer": "Performance is reviewed by Team Leaders, Department Heads, and the HR department."
+},
+{
+  "question": "Will low performance affect certificates?",
+  "keywords": ["certificate eligibility"],
+  "answer": "Yes. If minimum performance criteria are not met certificate eligibility may be affected."
+},
+{
+  "question": "Does performance affect placement?",
+  "keywords": ["placement performance"],
+  "answer": "Yes. Placement decisions are heavily influenced by performance evaluation."
+},
+{
+  "question": "What is a media task?",
+  "keywords": ["media task"],
+  "answer": "A media task is an activity where interns share internship activities or related content on social media platforms."
+},
+{
+  "question": "Is a media task compulsory?",
+  "keywords": ["compulsory task"],
+  "answer": "In many internship programs media tasks are required as part of participation and engagement tracking."
+},
+{
+  "question": "What happens if I miss a media task?",
+  "keywords": ["missed task"],
+  "answer": "Missing media tasks may reduce your performance score and impact evaluation."
+},
+{
+  "question": "Where do I submit media proof?",
+  "keywords": ["media proof"],
+  "answer": "Media proof must be uploaded on the internship portal as instructed."
+},
+{
+  "question": "If I delete my media post will it affect certification?",
+  "keywords": ["deleted media"],
+  "answer": "Yes. If the post is removed before verification it may affect evaluation and certification."
+},
+{
+  "question": "What is the resignation notice period?",
+  "keywords": ["notice period"],
+  "answer": "The notice period is usually 30 days depending on the internship policy."
+},
+{
+  "question": "Is the notice period compulsory?",
+  "keywords": ["compulsory notice"],
+  "answer": "Yes, unless HR grants special permission."
+},
+{
+  "question": "Can I resign immediately?",
+  "keywords": ["immediate resignation"],
+  "answer": "Immediate resignation may require HR approval."
+},
+{
+  "question": "Will I receive a certificate after resignation?",
+  "keywords": ["certificate after exit"],
+  "answer": "Yes, if internship requirements and performance criteria are fulfilled."
+},
+{
+  "question": "What is the exit process for resignation?",
+  "keywords": ["exit process"],
+  "answer": "Submit resignation, serve the notice period, complete tasks, HR verification, and then receive exit documents."
+},
+{
+  "question": "When will I receive my internship certificate?",
+  "keywords": ["certificate issue"],
+  "answer": "Certificates are issued after internship completion and performance verification."
+},
+{
+  "question": "What are the certificate eligibility criteria?",
+  "keywords": ["certificate eligibility"],
+  "answer": "Eligibility requires internship completion, task submissions, and meeting the minimum performance score."
+},
+{
+  "question": "How can I download my certificate?",
+  "keywords": ["download certificate"],
+  "answer": "Certificates can be downloaded from the intern portal certificate section."
+},
+{
+  "question": "Can certificate details be corrected?",
+  "keywords": ["certificate correction"],
+  "answer": "Yes. Contact HR with the correct information to request a correction."
+},
+{
+  "question": "Can I receive a Letter of Recommendation?",
+  "keywords": ["lor"],
+  "answer": "Yes. Letters of Recommendation are usually given to high performing interns with excellent evaluation and participation."
+},
+{
+  "question": "When is the internship induction conducted?",
+  "keywords": ["induction timing"],
+  "answer": "Induction is conducted at the beginning of the internship, usually within the first few days after interns receive their offer letter and onboarding instructions."
+},
+{
+  "question": "Is the induction session compulsory?",
+  "keywords": ["induction mandatory"],
+  "answer": "Yes. Induction is mandatory because it explains internship policies, task workflows, communication rules, and evaluation criteria."
+},
+{
+  "question": "What should I do if I miss the induction session?",
+  "keywords": ["missed induction"],
+  "answer": "Inform your Team Leader or HR immediately. You may be asked to watch the recording or attend the next session."
+},
+{
+  "question": "Are induction sessions recorded?",
+  "keywords": ["induction recording"],
+  "answer": "Yes. Induction sessions are usually recorded and may be shared for interns who faced technical issues or unavoidable circumstances."
+},
+{
+  "question": "How will I receive the induction meeting link?",
+  "keywords": ["induction link"],
+  "answer": "The link is shared through official communication channels such as email, intern communication groups, or the internship portal dashboard."
+},
+{
+  "question": "Is attendance recorded during induction?",
+  "keywords": ["induction attendance"],
+  "answer": "Yes. Attendance is usually recorded during induction sessions and interns must join with their registered name."
+},
+{
+  "question": "What topics are covered in the induction session?",
+  "keywords": ["induction topics"],
+  "answer": "Topics include company introduction, internship structure, reporting hierarchy, task process, attendance rules, performance evaluation, certification criteria, and communication channels."
+},
+{
+  "question": "When will my interview be scheduled?",
+  "keywords": ["interview schedule"],
+  "answer": "Interview schedules are shared after the application screening process through email, HR communication, or portal notification."
+},
+{
+  "question": "How will I receive the interview link?",
+  "keywords": ["interview link"],
+  "answer": "The interview link is usually sent through your registered email address or official internship communication groups."
+},
+{
+  "question": "What is the interview format?",
+  "keywords": ["interview format"],
+  "answer": "Most interviews are conducted online and may include introduction, academic discussion, skill evaluation, and domain related questions."
+},
+{
+  "question": "Is the interview HR based or technical?",
+  "keywords": ["hr interview"],
+  "answer": "It depends on the role. HR roles usually have HR interviews, technical roles have technical interviews, and marketing roles may have skill based interviews."
+},
+{
+  "question": "Can I reschedule the interview?",
+  "keywords": ["reschedule interview"],
+  "answer": "Yes. Rescheduling is possible in genuine cases such as exams or medical emergencies. Inform HR in advance."
+},
+{
+  "question": "What happens if I miss the interview?",
+  "keywords": ["missed interview"],
+  "answer": "Missing the interview without informing HR may be treated as non participation. However you may request rescheduling if you have a valid reason."
+},
+{
+  "question": "When will interview results be announced?",
+  "keywords": ["interview results"],
+  "answer": "Results are usually announced after the evaluation process is completed depending on the number of applicants and internal review."
+},
+{
+  "question": "Will I receive feedback after the interview?",
+  "keywords": ["interview feedback"],
+  "answer": "Individual feedback may not always be provided but selected candidates will receive confirmation from HR."
+},
+
+{
+  "question": "How do I get notified about daily meetings?",
+  "keywords": ["meeting notification"],
+  "answer": "Notifications are usually shared through official communication groups, portal notifications, HR announcements, or Team Leader messages."
+},
+{
+  "question": "Where is the meeting link shared?",
+  "keywords": ["meeting link"],
+  "answer": "Meeting links are generally shared through email, official groups, or intern dashboard announcements."
+},
+{
+  "question": "Why didn’t I receive a meeting notification?",
+  "keywords": ["meeting notification issue"],
+  "answer": "Possible reasons include incorrect contact details, technical email issues, not being added to the communication group, or spam filtering."
+},
+{
+  "question": "Can I get a meeting recording?",
+  "keywords": ["meeting recording"],
+  "answer": "If the meeting was recorded, the recording may be shared depending on company policy and meeting type."
+},
+{
+  "question": "How can I add a meeting to my calendar?",
+  "keywords": ["calendar meeting"],
+  "answer": "Open the meeting invitation and select the Add to Calendar option to save the reminder."
+},
+{
+  "question": "What happens if I join a meeting late?",
+  "keywords": ["late meeting"],
+  "answer": "Inform your Team Leader and continue participating. Frequent late attendance may affect performance evaluation."
+},
+{
+  "question": "Will I be marked absent if I miss the meeting?",
+  "keywords": ["missed meeting"],
+  "answer": "Yes. Missing a meeting without a valid reason may result in absent attendance."
+},
+{
+  "question": "I forgot my portal password. What should I do?",
+  "keywords": ["forgot password"],
+  "answer": "Use the password recovery option on the login page. A reset link will be sent to your registered email address."
+},
+{
+  "question": "What should I do if the portal is not working?",
+  "keywords": ["portal issue"],
+  "answer": "Check your internet connection, refresh the page, clear browser cache, or try another browser."
+},
+{
+  "question": "Why is my attendance not updating?",
+  "keywords": ["attendance issue"],
+  "answer": "Attendance issues may occur due to network interruptions, system delays, or incorrect login details."
+},
+{
+  "question": "Why is my dashboard not loading?",
+  "keywords": ["dashboard issue"],
+  "answer": "This may occur due to browser compatibility issues or server delays. Try refreshing or switching browsers."
+},
+{
+  "question": "Why is the certificate portal not opening?",
+  "keywords": ["certificate portal"],
+  "answer": "It may be due to server load, maintenance activity, or browser compatibility issues."
+},
+{
+  "question": "I cannot upload my task. What should I do?",
+  "keywords": ["task upload issue"],
+  "answer": "Check file size limits, supported file format, and internet connection before uploading."
+},
+{
+  "question": "Why did I not receive the verification email?",
+  "keywords": ["verification email"],
+  "answer": "Check your spam folder, verify your email address, and check email storage limits."
+},
+{
+  "question": "What is the company hierarchy at Graphura?",
+  "keywords": ["company hierarchy"],
+  "answer": "The hierarchy is Founder or Directors, followed by Senior Management, Head of Departments, Team Leaders, and then Interns."
+},
+{
+  "question": "What is the reporting structure in Graphura?",
+  "keywords": ["reporting structure"],
+  "answer": "Interns report to Team Leaders, who report to Department Heads, who report to senior management."
+},
+{
+  "question": "Who supervises interns?",
+  "keywords": ["intern supervisor"],
+  "answer": "Interns are primarily supervised by their Team Leaders."
+},
+{
+  "question": "Who monitors intern performance?",
+  "keywords": ["performance monitoring"],
+  "answer": "Performance is monitored by Team Leaders, Department Heads, and the HR department."
+},
+{
+  "question": "Who approves internship certificates?",
+  "keywords": ["certificate approval"],
+  "answer": "Certificates are approved by HR and company management after verification."
+},
+{
+  "question": "Who handles placement decisions?",
+  "keywords": ["placement decision"],
+  "answer": "Placement decisions are handled by HR and company management based on performance evaluation."
+},
+{
+  "question": "How is a Team Leader assigned?",
+  "keywords": ["team leader assignment"],
+  "answer": "Team Leaders are assigned based on department requirements and intern batch size."
+},
+{
+  "question": "What is the role of a Team Leader?",
+  "keywords": ["tl role"],
+  "answer": "Team Leaders assign tasks, guide interns, monitor performance, and provide feedback."
+},
+{
+  "question": "Who assigns daily tasks?",
+  "keywords": ["task assignment"],
+  "answer": "Daily tasks are assigned by the Team Leader or department coordinator."
+},
+{
+  "question": "Can the Team Leader approve leave?",
+  "keywords": ["leave approval"],
+  "answer": "Yes. Leave requests are usually approved by the Team Leader with HR coordination."
+},
+{
+  "question": "What should I do if my Team Leader is not responding?",
+  "keywords": ["tl not responding"],
+  "answer": "If your Team Leader is unavailable or not responding, contact HR for assistance."
+},
+{
+  "question": "Is a club meeting compulsory?",
+  "keywords": ["club meeting"],
+  "answer": "Club meetings may be mandatory depending on the internship program requirements."
+},
+{
+  "question": "What is a club meeting?",
+  "keywords": ["club meeting purpose"],
+  "answer": "A club meeting is a collaborative session where interns discuss ideas, share knowledge, and participate in activities related to their domain."
+},
+{
+  "question": "Is attendance marked in club meetings?",
+  "keywords": ["club attendance"],
+  "answer": "Yes. Attendance may be recorded during club meetings for participation tracking."
+},
+{
+  "question": "What happens if I miss a club meeting?",
+  "keywords": ["missed club meeting"],
+  "answer": "Missing multiple club meetings may affect participation records and performance evaluation."
+},
+{
+  "question": "Will missing club meetings affect certificates?",
+  "keywords": ["club meeting certificate"],
+  "answer": "Yes. Certificates may be affected if minimum participation requirements are not fulfilled."
+},
+{
+  "question": "How do I apply for leave for a club meeting?",
+  "keywords": ["club leave"],
+  "answer": "Inform your Team Leader or HR with a valid reason before the session."
+},
+{
+  "question": "Where is the club meeting link shared?",
+  "keywords": ["club meeting link"],
+  "answer": "Meeting links are shared through official communication groups or email notifications."
+},
+{
+  "question": "Can I join a club meeting late?",
+  "keywords": ["late meeting"],
+  "answer": "Yes, but repeated late attendance may affect participation evaluation."
+},
+{
+  "question": "Who manages the Sales and Marketing department at Graphura?",
+  "keywords": ["sales manager", "marketing manager"],
+  "answer": "The Sales and Marketing department is managed by Het Patel, who supervises marketing campaigns, sales outreach, and related business growth activities."
+},
+{
+  "question": "Who is the manager of Social Media Management?",
+  "keywords": ["social media manager"],
+  "answer": "The Social Media Management department is supervised by Astha Ma’am, who oversees social media strategies, posting schedules, and engagement monitoring."
+},
+{
+  "question": "Who manages the Human Resources department?",
+  "keywords": ["hr manager graphura"],
+  "answer": "The Human Resources department is managed by Fiza Patel, who supervises recruitment, onboarding, intern management, and HR operations."
+},
+{
+  "question": "Who manages the Content Writing department?",
+  "keywords": ["content writing manager"],
+  "answer": "The Content Writing department is supervised by Astha Ma’am, who manages content assignments, editing, and publishing tasks."
+},
+{
+  "question": "Who manages Video Editing and Digital Marketing interns?",
+  "keywords": ["video editing manager"],
+  "answer": "The Video Editing and Digital Marketing departments are supervised by Astha Ma’am, who manages creative content production and digital marketing activities."
+},
+{
+  "question": "Who manages the development departments?",
+  "keywords": ["technical manager", "developer lead"],
+  "answer": "The Front-End, Back-End, MERN Developer, and Full Stack development departments are supervised by Abdul Sir, who manages development tasks, code review, and technical project deployment."
+},
+{
+  "question": "Who manages the Graphic Design and UI UX department?",
+  "keywords": ["design manager"],
+  "answer": "The Graphic Design and UI UX Design departments are supervised by Het Patel, who ensures design quality, brand consistency, and creative task execution."
+},
+{
+  "question": "Who manages the Email Outreach department?",
+  "keywords": ["email outreach manager"],
+  "answer": "The Email Outreach department is supervised by Het Patel, who oversees outreach campaigns, client communication strategies, and lead generation activities."
+},
+{
+  "question": "Who manages the Data Analytics department?",
+  "keywords": ["data analytics manager"],
+  "answer": "The Data Analytics department is supervised by Samradhi Ma’am, who assigns data analysis tasks and reviews analytical reports and dashboards."
+}
+
+  ]
+}
