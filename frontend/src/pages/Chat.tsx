@@ -39,21 +39,39 @@ const Chat = () => {
     return "Evening";
   };
 
-  const sendMessage = (text: string) => {
+  const sendMessage = async (text: string) => {
     if (!text.trim()) return;
     const userMsg: Message = { id: Date.now(), text, sender: "user", time: getCurrentTime() };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("/chat/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, role: "intern" }), // defaulting to intern
+      });
+
+      if (!response.ok) throw new Error("Backend connection failed");
+
+      const data = await response.json();
       const botMsg: Message = {
         id: Date.now() + 1,
-        text: `Sure! 😊 Please provide more details about your request, and I'd be happy to assist!`,
+        text: data.response || "I'm sorry, I couldn't process that.",
         sender: "bot",
         time: getCurrentTime(),
       };
       setMessages((prev) => [...prev, botMsg]);
-    }, 1200);
+    } catch (error) {
+      console.error("Error connecting to chatbot:", error);
+      const errorMsg: Message = {
+        id: Date.now() + 1,
+        text: "I'm having trouble connecting to my brain! 🧠 Please make sure the backend is running.",
+        sender: "bot",
+        time: getCurrentTime(),
+      };
+      setMessages((prev) => [...prev, errorMsg]);
+    }
   };
 
   return (
