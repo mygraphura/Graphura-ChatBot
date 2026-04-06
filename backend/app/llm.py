@@ -6,21 +6,17 @@ import uuid
 from datetime import datetime
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from app.database import interns_collection, tickets_collection, login_logs_collection
 
 # Load Model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KB_PATH = os.path.join(BASE_DIR, "knowledge_base", "master_kb.json")
-INTERN_ID_PATH = os.path.join(BASE_DIR, "knowledge_base", "intern_ids.json")
-TICKET_PATH = os.path.join(BASE_DIR, "tickets", "tickets.json")
 
 # Loading KB
 with open(KB_PATH, "r", encoding="utf-8") as f:
     knowledge_base = json.load(f)["faq"]
-
-with open(INTERN_ID_PATH, "r", encoding="utf-8") as f:
-    VALID_INTERN_IDS = set(json.load(f)["intern_ids"])
 
 questions = [item["question"] for item in knowledge_base]
 answers = [item["answer"] for item in knowledge_base]
@@ -41,26 +37,9 @@ def normalize_text(text: str) -> str:
 
 
 def save_ticket(question, role, confidence, intern_id=None, email=None):
+    # This will be updated to use MongoDB later, for now we keep synchronous signature
+    # or better, we'll refactor this to be async too when we do tickets
     ticket_id = "GRPH-" + str(uuid.uuid4())[:8].upper()
-
-    new_ticket = {
-        "ticket_id": ticket_id,
-        "question": question,
-        "role": role,
-        "intern_id": intern_id,
-        "email": email,
-        "status": "open",
-        "confidence": confidence,
-        "created_at": datetime.utcnow().isoformat()
-    }
-
-    with open(TICKET_PATH, "r+", encoding="utf-8") as f:
-        data = json.load(f)
-        data["tickets"].append(new_ticket)
-        f.seek(0)
-        json.dump(data, f, indent=4)
-        f.truncate()
-
     return ticket_id
 
 
@@ -68,13 +47,22 @@ def is_valid_email(text):
     return re.match(r"[^@]+@[^@]+\.[^@]+", text)
 
 
-def generate_response(message: str, role: str):
+async def generate_response(message: str, role: str):
     message_clean = normalize_text(message)
 
-    #Intern Verification
+    # Intern Verification via MongoDB
     if role == "intern" and role not in verified_interns:
-        if message in VALID_INTERN_IDS:
+        intern = await interns_collection.find_one({"intern_id": message, "active": True})
+        if intern:
             verified_interns[role] = message
+
+            # Log the intern login
+            await login_logs_collection.insert_one({
+                "identifier": message,
+                "type": "intern",
+                "login_time": datetime.utcnow()
+            })
+
             return {
                 "response": "Intern ID verified successfully. You may now ask your queries.",
                 "confidence": 100
