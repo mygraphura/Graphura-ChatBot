@@ -5,6 +5,7 @@ from fastapi.responses import FileResponse
 
 from app.chatbot import router as chatbot_router
 from app.admin import router as admin_router
+from app.auth import router as auth_router
 
 #CREATE APP FIRST
 app = FastAPI(
@@ -20,6 +21,7 @@ FRONTEND_DIR = os.path.join(PROJECT_ROOT, "frontend", "dist")
 # INCLUDE ROUTERS
 app.include_router(chatbot_router, prefix="/chat", tags=["Chatbot"])
 app.include_router(admin_router, prefix="/admin", tags=["Admin"])
+app.include_router(auth_router, prefix="/auth", tags=["Auth"])
 
 # SERVE STATIC FILES
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")

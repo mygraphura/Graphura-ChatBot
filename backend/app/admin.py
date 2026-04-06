@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 import json
 import os
+from app.database import sessions_collection, interns_collection
+from datetime import datetime
 
 router = APIRouter()
 

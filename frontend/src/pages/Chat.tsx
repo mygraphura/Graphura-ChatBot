@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import robotSmall from "@/assets/robot-small.png";
@@ -25,7 +25,21 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [historyOpen, setHistoryOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginInput, setLoginInput] = useState("");
+  const [userName, setUserName] = useState("User");
   const hasMessages = messages.length > 0;
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("auth_token");
+    const storedName = localStorage.getItem("user_name");
+    if (token) {
+      setIsLoggedIn(true);
+      setUserName(storedName || "User");
+    }
+  }, []);
 
   const getCurrentTime = () => {
     const now = new Date();
@@ -39,17 +53,81 @@ const Chat = () => {
     return "Evening";
   };
 
+  const handleLogin = async () => {
+    if (!loginInput.trim() || isLoading) return;
+
+    setIsLoading(true);
+    try {
+      const isEmail = loginInput.includes("@");
+      const body = isEmail 
+        ? { email: loginInput, password: "DefaultPassword" } 
+        : { intern_id: loginInput };
+
+      console.log("Attempting login with:", body);
+
+      const response = await fetch("/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!response.ok) {
+        let errorMsg = "Login failed";
+        const contentType = response.headers.get("content-type");
+        
+        if (contentType && contentType.includes("application/json")) {
+          const errorData = await response.json();
+          errorMsg = errorData.detail || errorMsg;
+        } else {
+          // Response is likely plain text (e.g. "Internal Server Error")
+          if (response.status === 504 || response.status === 500) {
+            errorMsg = "Server took too long to respond. Please ensure your IP is whitelisted in MongoDB Atlas.";
+          } else {
+            errorMsg = `Server error (${response.status}). Please check your backend logs.`;
+          }
+        }
+        throw new Error(errorMsg);
+      }
+
+      const data = await response.json();
+      console.log("Login success!", data);
+      localStorage.setItem("auth_token", data.access_token);
+      localStorage.setItem("user_name", data.identifier);
+      setIsLoggedIn(true);
+      setUserName(data.identifier);
+    } catch (error: any) {
+      console.error("Login Error:", error);
+      alert(`${error.message}`);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleLogout = () => {
+    console.log("Logging out...");
+    localStorage.clear();
+    setIsLoggedIn(false);
+    setMessages([]);
+    // Force a reload to ensure all states are reset and we return to login view
+    window.location.reload();
+  };
+
   const sendMessage = async (text: string) => {
     if (!text.trim()) return;
     const userMsg: Message = { id: Date.now(), text, sender: "user", time: getCurrentTime() };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
 
+    const token = localStorage.getItem("auth_token");
+
     try {
       const response = await fetch("/chat/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, role: "intern" }), // defaulting to intern
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({ message: text, role: "visitor" }), 
       });
 
       if (!response.ok) throw new Error("Backend connection failed");
@@ -74,6 +152,41 @@ const Chat = () => {
     }
   };
 
+  if (!isLoggedIn) {
+    return (
+      <div className="h-screen flex flex-col items-center justify-center bg-background text-foreground px-4">
+        <motion.img src={robotSmall} alt="Bot" className="w-20 mb-6" animate={botFloat.animate} transition={botFloat.transition} />
+        <h2 className="text-2xl font-bold mb-4">Welcome to Graphura Support</h2>
+        <div className="w-full max-w-sm space-y-4">
+          <input
+            type="text"
+            value={loginInput}
+            onChange={(e) => setLoginInput(e.target.value)}
+            disabled={isLoading}
+            placeholder="Enter Intern ID or Email"
+            className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:outline-none disabled:opacity-50"
+            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
+          />
+          <button
+            onClick={handleLogin}
+            disabled={isLoading}
+            className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+          >
+            {isLoading ? (
+              <>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Connecting...
+              </>
+            ) : "Get Started"}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="h-screen flex bg-background text-foreground overflow-hidden">
       {/* Left Icon Sidebar */}
@@ -93,7 +206,7 @@ const Chat = () => {
           <button className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors" title="Share">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>
           </button>
-          <button className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors" title="Logout">
+          <button onClick={handleLogout} className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors" title="Logout">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
           </button>
         </div>
@@ -130,7 +243,7 @@ const Chat = () => {
                   transition={botFloat.transition}
                 />
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
-                  {getGreeting()}, <span className="text-gradient-orange">Shivam sir</span>
+                  {getGreeting()}, <span className="text-gradient-orange">{userName}</span>
                 </h2>
               </motion.div>
             </div>

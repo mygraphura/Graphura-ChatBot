@@ -12,8 +12,21 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss()],
     server: {
       proxy: {
-        '/chat': apiUrl,
-        '/admin': apiUrl,
+        '/auth': {
+          target: apiUrl,
+          changeOrigin: true,
+          secure: false,
+        },
+        '/chat': {
+          target: apiUrl,
+          changeOrigin: true,
+          secure: false,
+        },
+        '/admin': {
+          target: apiUrl,
+          changeOrigin: true,
+          secure: false,
+        },
       },
     },
     resolve: {
