@@ -33,7 +33,7 @@ async def chat(request: ChatRequest, authorization: str = Header(None)):
                 {"$set": {"last_active": datetime.utcnow()}}
             )
         except JWTError:
-            pass # Fallback to request role if token invalid
+            raise HTTPException(status_code=401, detail="Token expired or invalid")
 
     result = await generate_response(request.message, role)
 

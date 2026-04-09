@@ -16,6 +16,7 @@ sessions_collection = db.sessions
 async def check_db_connection():
     try:
         await client.admin.command('ping')
+        print("mongodb connected successfully")
         return True
     except Exception as e:
         print(f"Database connection error: {e}")

@@ -36,8 +36,18 @@ const Chat = () => {
     const token = localStorage.getItem("auth_token");
     const storedName = localStorage.getItem("user_name");
     if (token) {
-      setIsLoggedIn(true);
-      setUserName(storedName || "User");
+      // Basic JWT expiration check
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        if (payload.exp * 1000 < Date.now()) {
+          handleLogout();
+        } else {
+          setIsLoggedIn(true);
+          setUserName(storedName || "User");
+        }
+      } catch (e) {
+        handleLogout();
+      }
     }
   }, []);
 
@@ -59,8 +69,8 @@ const Chat = () => {
     setIsLoading(true);
     try {
       const isEmail = loginInput.includes("@");
-      const body = isEmail 
-        ? { email: loginInput, password: "DefaultPassword" } 
+      const body = isEmail
+        ? { email: loginInput, password: "DefaultPassword" }
         : { intern_id: loginInput };
 
       console.log("Attempting login with:", body);
@@ -74,7 +84,7 @@ const Chat = () => {
       if (!response.ok) {
         let errorMsg = "Login failed";
         const contentType = response.headers.get("content-type");
-        
+
         if (contentType && contentType.includes("application/json")) {
           const errorData = await response.json();
           errorMsg = errorData.detail || errorMsg;
@@ -108,8 +118,7 @@ const Chat = () => {
     localStorage.clear();
     setIsLoggedIn(false);
     setMessages([]);
-    // Force a reload to ensure all states are reset and we return to login view
-    window.location.reload();
+    // Removed reload to keep user on the same page with the popup
   };
 
   const sendMessage = async (text: string) => {
@@ -123,13 +132,17 @@ const Chat = () => {
     try {
       const response = await fetch("/chat/", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ message: text, role: "visitor" }), 
+        body: JSON.stringify({ message: text, role: "visitor" }),
       });
 
+      if (response.status === 401) {
+        handleLogout();
+        return;
+      }
       if (!response.ok) throw new Error("Backend connection failed");
 
       const data = await response.json();
@@ -152,43 +165,64 @@ const Chat = () => {
     }
   };
 
-  if (!isLoggedIn) {
-    return (
-      <div className="h-screen flex flex-col items-center justify-center bg-background text-foreground px-4">
-        <motion.img src={robotSmall} alt="Bot" className="w-20 mb-6" animate={botFloat.animate} transition={botFloat.transition} />
-        <h2 className="text-2xl font-bold mb-4">Welcome to Graphura Support</h2>
-        <div className="w-full max-w-sm space-y-4">
-          <input
-            type="text"
-            value={loginInput}
-            onChange={(e) => setLoginInput(e.target.value)}
-            disabled={isLoading}
-            placeholder="Enter Intern ID or Email"
-            className="w-full px-4 py-3 rounded-xl bg-secondary border border-border focus:outline-none disabled:opacity-50"
-            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
-          />
-          <button
-            onClick={handleLogin}
-            disabled={isLoading}
-            className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-          >
-            {isLoading ? (
-              <>
-                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Connecting...
-              </>
-            ) : "Get Started"}
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="h-screen flex bg-background text-foreground overflow-hidden">
+    <div className="h-screen flex bg-background text-foreground overflow-hidden relative">
+      {/* Login Overlay */}
+      <AnimatePresence>
+        {!isLoggedIn && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="w-full max-w-sm p-8 rounded-3xl bg-secondary/90 border border-white/10 shadow-2xl backdrop-blur-md flex flex-col items-center"
+            >
+              <motion.img 
+                src={robotSmall} 
+                alt="Bot" 
+                className="w-20 mb-6" 
+                animate={botFloat.animate} 
+                transition={botFloat.transition} 
+              />
+              <h2 className="text-2xl font-bold mb-6 text-center">Welcome to Graphura</h2>
+              <div className="w-full space-y-4">
+                <input
+                  type="text"
+                  value={loginInput}
+                  onChange={(e) => setLoginInput(e.target.value)}
+                  disabled={isLoading}
+                  placeholder="Enter Intern ID or Email"
+                  className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary/50 focus:outline-none disabled:opacity-50 transition-colors"
+                  onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
+                />
+                <button
+                  onClick={handleLogin}
+                  disabled={isLoading}
+                  className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                >
+                  {isLoading ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Connecting...
+                    </>
+                  ) : "Get Started"}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Content Wrapper (slightly blurred when not logged in) */}
+      <div className={`flex flex-1 min-w-0 transition-all duration-700 ${!isLoggedIn ? 'blur-md pointer-events-none' : ''}`}>
+
       {/* Left Icon Sidebar */}
       <div className="hidden sm:flex w-14 flex-col items-center py-6 gap-6 border-r border-border bg-secondary/50">
         <div className="flex-1 flex flex-col items-center gap-5 mt-4">
@@ -370,6 +404,7 @@ const Chat = () => {
           </>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 };
