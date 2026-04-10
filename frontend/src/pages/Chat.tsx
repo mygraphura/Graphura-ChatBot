@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import robotSmall from "@/assets/robot-small.png";
 
 interface Message {
@@ -22,6 +22,7 @@ const botFloat = {
 };
 
 const Chat = () => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [historyOpen, setHistoryOpen] = useState(false);
@@ -120,7 +121,7 @@ const Chat = () => {
     localStorage.clear();
     setIsLoggedIn(false);
     setMessages([]);
-    // Removed reload to keep user on the same page with the popup
+    navigate("/"); // Redirect to homepage when session is over
   };
 
   const sendMessage = async (text: string) => {
