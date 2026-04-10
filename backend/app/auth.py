@@ -4,14 +4,12 @@ import uuid
 from datetime import datetime, timedelta
 from fastapi import APIRouter, HTTPException, Depends, Header
 from pydantic import BaseModel
-from passlib.context import CryptContext
+import bcrypt
 from jose import jwt, JWTError
 from app.database import users_collection, interns_collection, login_logs_collection, sessions_collection
 from app.config import settings
 
 router = APIRouter()
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Load valid intern IDs
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,7 +30,23 @@ class LoginRequest(BaseModel):
     intern_id: str = None
 
 def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+    if not hashed_password:
+        return False
+    try:
+        # bcrypt requires bytes for both password and hash
+        return bcrypt.checkpw(
+            plain_password.encode('utf-8'), 
+            hashed_password.encode('utf-8') if isinstance(hashed_password, str) else hashed_password
+        )
+    except Exception as e:
+        print(f"Password verification error: {e}")
+        return False
+
+def get_password_hash(password):
+    # bcrypt generates a salt and hashes the password, returning bytes
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
+    return hashed.decode('utf-8')
 
 def create_access_token(data: dict):
     to_encode = data.copy()
@@ -76,7 +90,7 @@ async def unified_login(request: LoginRequest):
         
         if not user:
             # Auto-register as visitor
-            hashed_pw = pwd_context.hash(request.password or "DefaultPassword")
+            hashed_pw = get_password_hash(request.password or "DefaultPassword")
             await users_collection.insert_one({
                 "email": request.email,
                 "password": hashed_pw,
