@@ -48,6 +48,35 @@ def is_valid_email(text):
 
 
 async def generate_response(message: str, role: str):
+    # Detect multiple questions
+    # Split by '?' or '.' or 'and' (only if surrounded by spaces)
+    sub_queries = re.split(r'\?+\s*|(?:\s+\.?and\s+)|(?:\s*\.\s+)', message, flags=re.IGNORECASE)
+    sub_queries = [q.strip() for q in sub_queries if len(q.strip()) > 5]
+    
+    if len(sub_queries) > 1:
+        combined_responses = []
+        best_overall_confidence = 0
+        
+        for q in sub_queries:
+            resp = await process_single_query(q, role)
+            # Remove the "If unresolved..." footer if present to avoid repetition
+            clean_ans = resp['response'].split("\n\nIf unresolved")[0]
+            combined_responses.append(clean_ans)
+            best_overall_confidence = max(best_overall_confidence, resp['confidence'])
+        
+        # Combine with simple line breaks
+        final_response = "\n\n".join(combined_responses)
+        if best_overall_confidence < 70:
+            final_response += "\n\nIf unresolved, you may raise a support ticket."
+            
+        return {
+            "response": final_response,
+            "confidence": best_overall_confidence
+        }
+    else:
+        return await process_single_query(message, role)
+
+async def process_single_query(message: str, role: str):
     message_clean = normalize_text(message)
 
     # Intern Verification via MongoDB
@@ -55,14 +84,11 @@ async def generate_response(message: str, role: str):
         intern = await interns_collection.find_one({"intern_id": message, "active": True})
         if intern:
             verified_interns[role] = message
-
-            # Log the intern login
             await login_logs_collection.insert_one({
                 "identifier": message,
                 "type": "intern",
                 "login_time": datetime.utcnow()
             })
-
             return {
                 "response": "Intern ID verified successfully. You may now ask your queries.",
                 "confidence": 100
@@ -83,8 +109,8 @@ async def generate_response(message: str, role: str):
     # Visitor Email Collection
     if role == "visitor" and pending_email_collection.get(role):
         if is_valid_email(message):
-            last_question = conversation_memory[role]["last_question"]
-            confidence = conversation_memory[role]["confidence"]
+            last_question = conversation_memory.get(role, {}).get("last_question", "Unknown")
+            confidence = conversation_memory.get(role, {}).get("confidence", 0)
 
             ticket_id = save_ticket(
                 last_question,
@@ -92,9 +118,7 @@ async def generate_response(message: str, role: str):
                 confidence,
                 email=message
             )
-
             pending_email_collection[role] = False
-
             return {
                 "response": f"Ticket raised successfully.\nTicket ID: {ticket_id}",
                 "confidence": 100
