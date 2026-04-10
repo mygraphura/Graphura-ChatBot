@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import robotSmall from "@/assets/robot-small.png";
@@ -29,6 +29,15 @@ const Chat = () => {
   const [chatHistoryList, setChatHistoryList] = useState<any[]>([]);
   const hasMessages = messages.length > 0;
   const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   useEffect(() => {
     const token = localStorage.getItem("auth_token");
@@ -394,6 +403,7 @@ const Chat = () => {
                     </div>
                   </motion.div>
                 ))}
+                <div ref={messagesEndRef} />
               </AnimatePresence>
             </div>
           )}
