@@ -12,6 +12,7 @@ tickets_collection = db.tickets
 kb_collection = db.knowledge_base
 login_logs_collection = db.login_logs
 sessions_collection = db.sessions
+chats_collection = db.chat
 
 async def check_db_connection():
     try:

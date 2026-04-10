@@ -10,11 +10,7 @@ interface Message {
   time: string;
 }
 
-const chatHistory = [
-  { label: "Today", items: ["What's the best way to create", "What if we discovered that.."] },
-  { label: "Yesterday", items: ["Generate a 3D scene of rain", "Help me write a professional letter"] },
-  { label: "Previous 7 Days", items: ["Generate a 3D scene of rain", "Help me write a professional letter"] },
-];
+
 
 const botFloat = {
   animate: { y: [0, -8, 0] },
@@ -29,8 +25,9 @@ const Chat = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginInput, setLoginInput] = useState("");
   const [userName, setUserName] = useState("User");
+  const [chatId, setChatId] = useState<string | null>(null);
+  const [chatHistoryList, setChatHistoryList] = useState<any[]>([]);
   const hasMessages = messages.length > 0;
-
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -51,6 +48,83 @@ const Chat = () => {
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      fetchHistory();
+    }
+  }, [isLoggedIn]);
+
+  const fetchHistory = async () => {
+    const token = localStorage.getItem("auth_token");
+    try {
+      const response = await fetch("/chat/history", {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setChatHistoryList(data);
+      }
+    } catch (error) {
+      console.error("Error fetching history:", error);
+    }
+  };
+
+  const loadConversation = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    setIsLoading(true);
+    try {
+      const response = await fetch(`/chat/history/${id}`, {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setMessages(data);
+        setChatId(id);
+        setHistoryOpen(false);
+      }
+    } catch (error) {
+      console.error("Error loading conversation:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const deleteChat = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    if (!confirm("Are you sure you want to delete this chat permanently?")) return;
+    
+    try {
+      const response = await fetch(`/chat/history/${id}`, {
+        method: "DELETE",
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        if (chatId === id) {
+          setMessages([]);
+          setChatId(null);
+        }
+        fetchHistory();
+      }
+    } catch (error) {
+      console.error("Error deleting chat:", error);
+    }
+  };
+
+  const togglePin = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    try {
+      const response = await fetch(`/chat/history/${id}/pin`, {
+        method: "PATCH",
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        fetchHistory();
+      }
+    } catch (error) {
+      console.error("Error pinning chat:", error);
+    }
+  };
 
   const getCurrentTime = () => {
     const now = new Date();
@@ -121,6 +195,8 @@ const Chat = () => {
     localStorage.clear();
     setIsLoggedIn(false);
     setMessages([]);
+    setChatId(null);
+    setChatHistoryList([]);
     navigate("/"); // Redirect to homepage when session is over
   };
 
@@ -139,7 +215,11 @@ const Chat = () => {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ message: text, role: "visitor" }),
+        body: JSON.stringify({ 
+          message: text, 
+          role: "visitor",
+          chat_id: chatId 
+        }),
       });
 
       if (response.status === 401) {
@@ -149,6 +229,12 @@ const Chat = () => {
       if (!response.ok) throw new Error("Backend connection failed");
 
       const data = await response.json();
+      
+      if (data.chat_id && !chatId) {
+        setChatId(data.chat_id);
+        fetchHistory(); // Refresh history list when a new conversation starts
+      }
+
       const botMsg: Message = {
         id: Date.now() + 1,
         text: data.response || "I'm sorry, I couldn't process that.",
@@ -361,23 +447,55 @@ const Chat = () => {
         </div>
         <div className="px-4 pb-4">
           <button
-            onClick={() => { setMessages([]); setInput(""); }}
+            onClick={() => { setMessages([]); setChatId(null); setInput(""); }}
             className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all"
           >
             + New chat
           </button>
         </div>
         <div className="px-4 pb-4 space-y-4 flex-1">
-          {chatHistory.map((group) => (
-            <div key={group.label}>
-              <h4 className="text-xs font-semibold text-foreground mb-2">{group.label}</h4>
-              {group.items.map((item, i) => (
-                <button key={i} className="text-xs text-muted-foreground py-1.5 text-left w-full hover:text-foreground transition-colors truncate block">
-                  ◦ {item}
-                </button>
-              ))}
-            </div>
-          ))}
+          <div>
+            <h4 className="text-xs font-semibold text-foreground mb-4 px-1">History</h4>
+            {chatHistoryList.length === 0 ? (
+              <p className="text-xs text-muted-foreground italic px-1">No history yet</p>
+            ) : (
+              <div className="space-y-1">
+                {chatHistoryList.map((chat) => (
+                  <div key={chat.id} className="relative group flex items-center">
+                    <button 
+                      onClick={() => loadConversation(chat.id)}
+                      className={`text-xs py-2 px-3 text-left flex-1 transition-all rounded-xl truncate block ${chatId === chat.id ? 'bg-muted text-primary font-bold' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground'}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        {chat.pinned && <span className="text-[10px] text-primary">📌</span>}
+                        <span className="truncate">{chat.title}</span>
+                      </div>
+                    </button>
+                    
+                    {/* Action Menu (Ellipsis) */}
+                    <div className="absolute right-2 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                      <div className="flex bg-secondary shadow-lg border border-border rounded-lg p-1 gap-1">
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); togglePin(chat.id); }}
+                          className="p-1 hover:bg-muted rounded text-[10px]"
+                          title={chat.pinned ? "Unpin" : "Pin"}
+                        >
+                          📌
+                        </button>
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); deleteChat(chat.id); }}
+                          className="p-1 hover:bg-red-500/10 hover:text-red-500 rounded text-[10px]"
+                          title="Delete"
+                        >
+                          🗑️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </aside>
 
@@ -394,15 +512,26 @@ const Chat = () => {
               className="fixed right-0 top-0 bottom-0 w-[240px] bg-secondary border-l border-border z-40 flex flex-col p-4 gap-4 overflow-y-auto lg:hidden"
             >
               <button onClick={() => setHistoryOpen(false)} className="text-muted-foreground hover:text-foreground text-sm py-2 text-right">✕</button>
-              <button onClick={() => { setMessages([]); setInput(""); setHistoryOpen(false); }} className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">+ New chat</button>
-              {chatHistory.map((group) => (
-                <div key={group.label}>
-                  <h4 className="text-xs font-semibold text-foreground mb-2">{group.label}</h4>
-                  {group.items.map((item, i) => (
-                    <p key={i} className="text-xs text-muted-foreground py-1.5 truncate">◦ {item}</p>
-                  ))}
-                </div>
-              ))}
+              <button onClick={() => { setMessages([]); setChatId(null); setInput(""); setHistoryOpen(false); }} className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                + New chat
+              </button>
+              <div>
+                <h4 className="text-xs font-semibold text-foreground mb-2">History</h4>
+                {chatHistoryList.map((chat) => (
+                  <div key={chat.id} className="flex items-center group relative">
+                    <button 
+                      onClick={() => loadConversation(chat.id)}
+                      className={`text-xs py-2.5 px-3 text-left flex-1 truncate block ${chatId === chat.id ? 'text-primary font-bold bg-muted/50' : 'text-muted-foreground hover:bg-muted/50'}`}
+                    >
+                      {chat.pinned && "📌 "} {chat.title}
+                    </button>
+                    <div className="flex gap-2 pr-2">
+                      <button onClick={(e) => { e.stopPropagation(); togglePin(chat.id); }}>📌</button>
+                      <button onClick={(e) => { e.stopPropagation(); deleteChat(chat.id); }}>🗑️</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.aside>
           </>
         )}
