@@ -90,8 +90,10 @@ const Chat = () => {
           errorMsg = errorData.detail || errorMsg;
         } else {
           // Response is likely plain text (e.g. "Internal Server Error")
-          if (response.status === 504 || response.status === 500) {
+          if (response.status === 504) {
             errorMsg = "Server took too long to respond. Please ensure your IP is whitelisted in MongoDB Atlas.";
+          } else if (response.status === 500) {
+            errorMsg = "Internal Server Error. Please check the backend terminal logs for details.";
           } else {
             errorMsg = `Server error (${response.status}). Please check your backend logs.`;
           }
