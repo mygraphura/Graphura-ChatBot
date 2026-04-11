@@ -26,7 +26,6 @@ GREETINGS = ["hi", "hello", "hey", "yo"]
 
 # Memory
 conversation_memory = {}
-verified_interns = {}
 pending_email_collection = {}
 
 
@@ -47,7 +46,7 @@ def is_valid_email(text):
     return re.match(r"[^@]+@[^@]+\.[^@]+", text)
 
 
-async def generate_response(message: str, role: str):
+async def generate_response(message: str, role: str, user_id: str = None):
     # Detect multiple questions
     # Split by '?' or '.' or 'and' (only if surrounded by spaces)
     sub_queries = re.split(r'\?+\s*|(?:\s+\.?and\s+)|(?:\s*\.\s+)', message, flags=re.IGNORECASE)
@@ -58,7 +57,7 @@ async def generate_response(message: str, role: str):
         best_overall_confidence = 0
         
         for q in sub_queries:
-            resp = await process_single_query(q, role)
+            resp = await process_single_query(q, role, user_id)
             # Remove the "If unresolved..." footer if present to avoid repetition
             clean_ans = resp['response'].split("\n\nIf unresolved")[0]
             combined_responses.append(clean_ans)
@@ -74,30 +73,12 @@ async def generate_response(message: str, role: str):
             "confidence": best_overall_confidence
         }
     else:
-        return await process_single_query(message, role)
+        return await process_single_query(message, role, user_id)
 
-async def process_single_query(message: str, role: str):
+async def process_single_query(message: str, role: str, user_id: str = None):
     message_clean = normalize_text(message)
 
-    # Intern Verification via MongoDB
-    if role == "intern" and role not in verified_interns:
-        intern = await interns_collection.find_one({"intern_id": message, "active": True})
-        if intern:
-            verified_interns[role] = message
-            await login_logs_collection.insert_one({
-                "identifier": message,
-                "type": "intern",
-                "login_time": datetime.utcnow()
-            })
-            return {
-                "response": "Intern ID verified successfully. You may now ask your queries.",
-                "confidence": 100
-            }
-        else:
-            return {
-                "response": "Please provide your valid Intern ID to continue.",
-                "confidence": 100
-            }
+    # Replaced redundant verification check with direct ID usage
 
     # Greeting
     if message_clean in GREETINGS:
@@ -107,10 +88,11 @@ async def process_single_query(message: str, role: str):
         }
 
     # Visitor Email Collection
-    if role == "visitor" and pending_email_collection.get(role):
+    memo_key = user_id if user_id and user_id != "unknown" else role
+    if role == "visitor" and pending_email_collection.get(memo_key):
         if is_valid_email(message):
-            last_question = conversation_memory.get(role, {}).get("last_question", "Unknown")
-            confidence = conversation_memory.get(role, {}).get("confidence", 0)
+            last_question = conversation_memory.get(memo_key, {}).get("last_question", "Unknown")
+            confidence = conversation_memory.get(memo_key, {}).get("confidence", 0)
 
             ticket_id = save_ticket(
                 last_question,
@@ -118,7 +100,7 @@ async def process_single_query(message: str, role: str):
                 confidence,
                 email=message
             )
-            pending_email_collection[role] = False
+            pending_email_collection[memo_key] = False
             return {
                 "response": f"Ticket raised successfully.\nTicket ID: {ticket_id}",
                 "confidence": 100
@@ -131,19 +113,18 @@ async def process_single_query(message: str, role: str):
 
     # Escalation Trigger
     if any(word in message_clean.split() for word in ["raise", "ticket", "escalate"]):
-        if role not in conversation_memory:
+        if memo_key not in conversation_memory:
             return {"response": "No issue found to escalate.", "confidence": 100}
 
-        last_question = conversation_memory[role]["last_question"]
-        confidence = conversation_memory[role]["confidence"]
+        last_question = conversation_memory[memo_key]["last_question"]
+        confidence = conversation_memory[memo_key]["confidence"]
 
         if role == "intern":
-            intern_id = verified_interns.get(role)
             ticket_id = save_ticket(
                 last_question,
                 role,
                 confidence,
-                intern_id=intern_id
+                intern_id=user_id
             )
             return {
                 "response": f"Ticket raised successfully.\nTicket ID: {ticket_id}",
@@ -151,7 +132,7 @@ async def process_single_query(message: str, role: str):
             }
 
         if role == "visitor":
-            pending_email_collection[role] = True
+            pending_email_collection[memo_key] = True
             return {
                 "response": "Please provide your email address so HR can contact you.",
                 "confidence": 100
@@ -165,7 +146,7 @@ async def process_single_query(message: str, role: str):
     best_score = float(similarities[0][best_index])
     confidence_percentage = round(best_score * 100, 2)
 
-    conversation_memory[role] = {
+    conversation_memory[memo_key] = {
         "last_question": message,
         "confidence": confidence_percentage
     }

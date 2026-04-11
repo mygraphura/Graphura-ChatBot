@@ -30,6 +30,7 @@ const Chat = () => {
   const hasMessages = messages.length > 0;
   const [isLoading, setIsLoading] = useState(false);
   const [loginStep, setLoginStep] = useState<"choice" | "intern" | "email">("choice");
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -226,13 +227,9 @@ const Chat = () => {
 
   const handleLogout = () => {
     console.log("Logging out...");
+    setIsLoggingOut(true); // Prevent modal flicker
     localStorage.clear();
-    setIsLoggedIn(false);
-    setMessages([]);
-    setChatId(null);
-    setChatHistoryList([]);
-    setLoginStep("choice"); // Reset login step
-    navigate("/"); // Redirect to homepage when session is over
+    navigate("/"); 
   };
 
   const sendMessage = async (text: string) => {
@@ -293,7 +290,7 @@ const Chat = () => {
     <div className="h-screen flex bg-background text-foreground overflow-hidden relative">
       {/* Login Overlay */}
       <AnimatePresence>
-        {!isLoggedIn && (
+        {!isLoggedIn && !isLoggingOut && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

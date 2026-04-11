@@ -38,7 +38,7 @@ async def chat(request: ChatRequest, authorization: str = Header(None)):
         except JWTError:
             raise HTTPException(status_code=401, detail="Token expired or invalid")
 
-    result = await generate_response(request.message, role)
+    result = await generate_response(request.message, role, identifier)
 
     # Save to history if logged in
     if identifier != "unknown":

@@ -58,7 +58,7 @@ def create_access_token(data: dict):
 @router.post("/login")
 async def unified_login(request: LoginRequest):
     user_info = None
-    role = "user"
+    role = "visitor"
     identifier = None
 
     # Option 1: Intern Login
@@ -94,11 +94,11 @@ async def unified_login(request: LoginRequest):
             await users_collection.insert_one({
                 "email": request.email,
                 "password": hashed_pw,
-                "role": "user",
+                "role": "visitor",
                 "created_at": datetime.utcnow()
             })
             identifier = request.email
-            role = "user"
+            role = "visitor"
         else:
             if request.password and not verify_password(request.password, user["password"]):
                 # Allow DefaultPassword for convenience
@@ -106,7 +106,7 @@ async def unified_login(request: LoginRequest):
                     raise HTTPException(status_code=401, detail="Invalid email or password")
             
             identifier = user["email"]
-            role = user.get("role", "user")
+            role = user.get("role", "visitor")
 
         user_info = {"identifier": identifier, "role": role}
     
