@@ -29,6 +29,7 @@ const Chat = () => {
   const [chatHistoryList, setChatHistoryList] = useState<any[]>([]);
   const hasMessages = messages.length > 0;
   const [isLoading, setIsLoading] = useState(false);
+  const [loginStep, setLoginStep] = useState<"choice" | "intern" | "email">("choice");
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -177,8 +178,7 @@ const Chat = () => {
 
     setIsLoading(true);
     try {
-      const isEmail = loginInput.includes("@");
-      const body = isEmail
+      const body = loginStep === "email"
         ? { email: loginInput, password: "DefaultPassword" }
         : { intern_id: loginInput };
 
@@ -231,6 +231,7 @@ const Chat = () => {
     setMessages([]);
     setChatId(null);
     setChatHistoryList([]);
+    setLoginStep("choice"); // Reset login step
     navigate("/"); // Redirect to homepage when session is over
   };
 
@@ -312,32 +313,53 @@ const Chat = () => {
                 transition={botFloat.transition} 
               />
               <h2 className="text-2xl font-bold mb-6 text-center">Welcome to Graphura</h2>
-              <div className="w-full space-y-4">
-                <input
-                  type="text"
-                  value={loginInput}
-                  onChange={(e) => setLoginInput(e.target.value)}
-                  disabled={isLoading}
-                  placeholder="Enter Intern ID or Email"
-                  className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary/50 focus:outline-none disabled:opacity-50 transition-colors"
-                  onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
-                />
-                <button
-                  onClick={handleLogin}
-                  disabled={isLoading}
-                  className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-                >
-                  {isLoading ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Connecting...
-                    </>
-                  ) : "Get Started"}
-                </button>
-              </div>
+              
+              {loginStep === "choice" && (
+                <div className="w-full space-y-6">
+                  <p className="text-center text-muted-foreground">Are you an Intern?</p>
+                  <div className="flex gap-4">
+                    <button
+                      onClick={() => setLoginStep("intern")}
+                      className="flex-1 py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      onClick={() => setLoginStep("email")}
+                      className="flex-1 py-3 rounded-xl bg-muted text-foreground font-bold hover:bg-muted/80 transition-all"
+                    >
+                      No
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {(loginStep === "intern" || loginStep === "email") && (
+                <div className="w-full space-y-4">
+                  <input
+                    type={loginStep === "intern" ? "text" : "email"}
+                    value={loginInput}
+                    onChange={(e) => setLoginInput(e.target.value)}
+                    disabled={isLoading}
+                    placeholder={loginStep === "intern" ? "Enter Intern ID" : "Enter Email Address"}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary/50 focus:outline-none disabled:opacity-50 transition-colors"
+                    onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
+                  />
+                  <button
+                    onClick={handleLogin}
+                    disabled={isLoading}
+                    className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                  >
+                    {isLoading ? "Processing..." : loginStep === "intern" ? "Verify ID" : "Continue"}
+                  </button>
+                  <button
+                    onClick={() => { setLoginStep("choice"); setLoginInput(""); }}
+                    className="w-full text-xs text-muted-foreground hover:text-foreground transition-colors text-center"
+                  >
+                    ← Back to selection
+                  </button>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
