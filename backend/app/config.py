@@ -11,4 +11,4 @@ class Settings:
     SMTP_EMAIL = os.getenv("SMTP_EMAIL", "")
     SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
 
-settings = Settings()
+settings = Settings()

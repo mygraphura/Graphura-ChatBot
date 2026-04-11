@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import robotSmall from "@/assets/robot-small.png";
@@ -10,11 +10,7 @@ interface Message {
   time: string;
 }
 
-const chatHistory = [
-  { label: "Today", items: ["What's the best way to create", "What if we discovered that.."] },
-  { label: "Yesterday", items: ["Generate a 3D scene of rain", "Help me write a professional letter"] },
-  { label: "Previous 7 Days", items: ["Generate a 3D scene of rain", "Help me write a professional letter"] },
-];
+
 
 const botFloat = {
   animate: { y: [0, -8, 0] },
@@ -29,9 +25,46 @@ const Chat = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginInput, setLoginInput] = useState("");
   const [userName, setUserName] = useState("User");
+  const [chatId, setChatId] = useState<string | null>(null);
+  const [chatHistoryList, setChatHistoryList] = useState<any[]>([]);
   const hasMessages = messages.length > 0;
-
   const [isLoading, setIsLoading] = useState(false);
+  const [loginStep, setLoginStep] = useState<"choice" | "intern" | "email">("choice");
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const startListening = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("Voice recognition is not supported in your browser.");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-IN'; // Good for Hinglish/Indian English
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onerror = () => setIsListening(false);
+
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      setInput(transcript);
+    };
+
+    recognition.start();
+  };
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   useEffect(() => {
     const token = localStorage.getItem("auth_token");
@@ -52,6 +85,83 @@ const Chat = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      fetchHistory();
+    }
+  }, [isLoggedIn]);
+
+  const fetchHistory = async () => {
+    const token = localStorage.getItem("auth_token");
+    try {
+      const response = await fetch("/chat/history", {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setChatHistoryList(data);
+      }
+    } catch (error) {
+      console.error("Error fetching history:", error);
+    }
+  };
+
+  const loadConversation = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    setIsLoading(true);
+    try {
+      const response = await fetch(`/chat/history/${id}`, {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setMessages(data);
+        setChatId(id);
+        setHistoryOpen(false);
+      }
+    } catch (error) {
+      console.error("Error loading conversation:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const deleteChat = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    if (!confirm("Are you sure you want to delete this chat permanently?")) return;
+    
+    try {
+      const response = await fetch(`/chat/history/${id}`, {
+        method: "DELETE",
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        if (chatId === id) {
+          setMessages([]);
+          setChatId(null);
+        }
+        fetchHistory();
+      }
+    } catch (error) {
+      console.error("Error deleting chat:", error);
+    }
+  };
+
+  const togglePin = async (id: string) => {
+    const token = localStorage.getItem("auth_token");
+    try {
+      const response = await fetch(`/chat/history/${id}/pin`, {
+        method: "PATCH",
+        headers: { "Authorization": `Bearer ${token}` }
+      });
+      if (response.ok) {
+        fetchHistory();
+      }
+    } catch (error) {
+      console.error("Error pinning chat:", error);
+    }
+  };
+
   const getCurrentTime = () => {
     const now = new Date();
     return `${now.getHours() % 12 || 12}.${now.getMinutes().toString().padStart(2, "0")}${now.getHours() >= 12 ? "pm" : "am"}`;
@@ -69,8 +179,7 @@ const Chat = () => {
 
     setIsLoading(true);
     try {
-      const isEmail = loginInput.includes("@");
-      const body = isEmail
+      const body = loginStep === "email"
         ? { email: loginInput, password: "DefaultPassword" }
         : { intern_id: loginInput };
 
@@ -118,10 +227,9 @@ const Chat = () => {
 
   const handleLogout = () => {
     console.log("Logging out...");
+    setIsLoggingOut(true); // Prevent modal flicker
     localStorage.clear();
-    setIsLoggedIn(false);
-    setMessages([]);
-    navigate("/"); // Redirect to homepage when session is over
+    navigate("/"); 
   };
 
   const sendMessage = async (text: string) => {
@@ -139,7 +247,11 @@ const Chat = () => {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify({ message: text, role: "visitor" }),
+        body: JSON.stringify({ 
+          message: text, 
+          role: "visitor",
+          chat_id: chatId 
+        }),
       });
 
       if (response.status === 401) {
@@ -149,6 +261,12 @@ const Chat = () => {
       if (!response.ok) throw new Error("Backend connection failed");
 
       const data = await response.json();
+      
+      if (data.chat_id && !chatId) {
+        setChatId(data.chat_id);
+        fetchHistory(); // Refresh history list when a new conversation starts
+      }
+
       const botMsg: Message = {
         id: Date.now() + 1,
         text: data.response || "I'm sorry, I couldn't process that.",
@@ -172,7 +290,7 @@ const Chat = () => {
     <div className="h-screen flex bg-background text-foreground overflow-hidden relative">
       {/* Login Overlay */}
       <AnimatePresence>
-        {!isLoggedIn && (
+        {!isLoggedIn && !isLoggingOut && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -192,32 +310,53 @@ const Chat = () => {
                 transition={botFloat.transition} 
               />
               <h2 className="text-2xl font-bold mb-6 text-center">Welcome to Graphura</h2>
-              <div className="w-full space-y-4">
-                <input
-                  type="text"
-                  value={loginInput}
-                  onChange={(e) => setLoginInput(e.target.value)}
-                  disabled={isLoading}
-                  placeholder="Enter Intern ID or Email"
-                  className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary/50 focus:outline-none disabled:opacity-50 transition-colors"
-                  onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
-                />
-                <button
-                  onClick={handleLogin}
-                  disabled={isLoading}
-                  className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
-                >
-                  {isLoading ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Connecting...
-                    </>
-                  ) : "Get Started"}
-                </button>
-              </div>
+              
+              {loginStep === "choice" && (
+                <div className="w-full space-y-6">
+                  <p className="text-center text-muted-foreground">Are you an Intern?</p>
+                  <div className="flex gap-4">
+                    <button
+                      onClick={() => setLoginStep("intern")}
+                      className="flex-1 py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      onClick={() => setLoginStep("email")}
+                      className="flex-1 py-3 rounded-xl bg-muted text-foreground font-bold hover:bg-muted/80 transition-all"
+                    >
+                      No
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {(loginStep === "intern" || loginStep === "email") && (
+                <div className="w-full space-y-4">
+                  <input
+                    type={loginStep === "intern" ? "text" : "email"}
+                    value={loginInput}
+                    onChange={(e) => setLoginInput(e.target.value)}
+                    disabled={isLoading}
+                    placeholder={loginStep === "intern" ? "Enter Intern ID" : "Enter Email Address"}
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary/50 focus:outline-none disabled:opacity-50 transition-colors"
+                    onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
+                  />
+                  <button
+                    onClick={handleLogin}
+                    disabled={isLoading}
+                    className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+                  >
+                    {isLoading ? "Processing..." : loginStep === "intern" ? "Verify ID" : "Continue"}
+                  </button>
+                  <button
+                    onClick={() => { setLoginStep("choice"); setLoginInput(""); }}
+                    className="w-full text-xs text-muted-foreground hover:text-foreground transition-colors text-center"
+                  >
+                    ← Back to selection
+                  </button>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
@@ -308,6 +447,7 @@ const Chat = () => {
                     </div>
                   </motion.div>
                 ))}
+                <div ref={messagesEndRef} />
               </AnimatePresence>
             </div>
           )}
@@ -343,8 +483,8 @@ const Chat = () => {
               className="w-full pl-10 pr-12 py-3 rounded-xl bg-secondary border border-border text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
             />
             <button
-              onClick={() => sendMessage(input)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              onClick={startListening}
+              className={`absolute right-3 top-1/2 -translate-y-1/2 transition-colors ${isListening ? 'text-primary scale-125 animate-pulse' : 'text-muted-foreground hover:text-foreground'}`}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" y1="19" x2="12" y2="23" /><line x1="8" y1="23" x2="16" y2="23" />
@@ -361,23 +501,55 @@ const Chat = () => {
         </div>
         <div className="px-4 pb-4">
           <button
-            onClick={() => { setMessages([]); setInput(""); }}
+            onClick={() => { setMessages([]); setChatId(null); setInput(""); }}
             className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all"
           >
             + New chat
           </button>
         </div>
         <div className="px-4 pb-4 space-y-4 flex-1">
-          {chatHistory.map((group) => (
-            <div key={group.label}>
-              <h4 className="text-xs font-semibold text-foreground mb-2">{group.label}</h4>
-              {group.items.map((item, i) => (
-                <button key={i} className="text-xs text-muted-foreground py-1.5 text-left w-full hover:text-foreground transition-colors truncate block">
-                  ◦ {item}
-                </button>
-              ))}
-            </div>
-          ))}
+          <div>
+            <h4 className="text-xs font-semibold text-foreground mb-4 px-1">History</h4>
+            {chatHistoryList.length === 0 ? (
+              <p className="text-xs text-muted-foreground italic px-1">No history yet</p>
+            ) : (
+              <div className="space-y-1">
+                {chatHistoryList.map((chat) => (
+                  <div key={chat.id} className="relative group flex items-center">
+                    <button 
+                      onClick={() => loadConversation(chat.id)}
+                      className={`text-xs py-2 px-3 text-left flex-1 transition-all rounded-xl truncate block ${chatId === chat.id ? 'bg-muted text-primary font-bold' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground'}`}
+                    >
+                      <div className="flex items-center gap-2">
+                        {chat.pinned && <span className="text-[10px] text-primary">📌</span>}
+                        <span className="truncate">{chat.title}</span>
+                      </div>
+                    </button>
+                    
+                    {/* Action Menu (Ellipsis) */}
+                    <div className="absolute right-2 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                      <div className="flex bg-secondary shadow-lg border border-border rounded-lg p-1 gap-1">
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); togglePin(chat.id); }}
+                          className="p-1 hover:bg-muted rounded text-[10px]"
+                          title={chat.pinned ? "Unpin" : "Pin"}
+                        >
+                          📌
+                        </button>
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); deleteChat(chat.id); }}
+                          className="p-1 hover:bg-red-500/10 hover:text-red-500 rounded text-[10px]"
+                          title="Delete"
+                        >
+                          🗑️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </aside>
 
@@ -394,15 +566,26 @@ const Chat = () => {
               className="fixed right-0 top-0 bottom-0 w-[240px] bg-secondary border-l border-border z-40 flex flex-col p-4 gap-4 overflow-y-auto lg:hidden"
             >
               <button onClick={() => setHistoryOpen(false)} className="text-muted-foreground hover:text-foreground text-sm py-2 text-right">✕</button>
-              <button onClick={() => { setMessages([]); setInput(""); setHistoryOpen(false); }} className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">+ New chat</button>
-              {chatHistory.map((group) => (
-                <div key={group.label}>
-                  <h4 className="text-xs font-semibold text-foreground mb-2">{group.label}</h4>
-                  {group.items.map((item, i) => (
-                    <p key={i} className="text-xs text-muted-foreground py-1.5 truncate">◦ {item}</p>
-                  ))}
-                </div>
-              ))}
+              <button onClick={() => { setMessages([]); setChatId(null); setInput(""); setHistoryOpen(false); }} className="w-full py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                + New chat
+              </button>
+              <div>
+                <h4 className="text-xs font-semibold text-foreground mb-2">History</h4>
+                {chatHistoryList.map((chat) => (
+                  <div key={chat.id} className="flex items-center group relative">
+                    <button 
+                      onClick={() => loadConversation(chat.id)}
+                      className={`text-xs py-2.5 px-3 text-left flex-1 truncate block ${chatId === chat.id ? 'text-primary font-bold bg-muted/50' : 'text-muted-foreground hover:bg-muted/50'}`}
+                    >
+                      {chat.pinned && "📌 "} {chat.title}
+                    </button>
+                    <div className="flex gap-2 pr-2">
+                      <button onClick={(e) => { e.stopPropagation(); togglePin(chat.id); }}>📌</button>
+                      <button onClick={(e) => { e.stopPropagation(); deleteChat(chat.id); }}>🗑️</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.aside>
           </>
         )}
