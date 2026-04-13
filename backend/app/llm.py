@@ -22,7 +22,7 @@ questions = [item["question"] for item in knowledge_base]
 answers = [item["answer"] for item in knowledge_base]
 question_embeddings = model.encode(questions)
 
-GREETINGS = ["hi", "hello", "hey", "yo"]
+GREETINGS = ["hi", "hii", "hello", "hey", "yo"]
 
 # Memory
 conversation_memory = {}
@@ -81,7 +81,7 @@ async def process_single_query(message: str, role: str, user_id: str = None):
     # Replaced redundant verification check with direct ID usage
 
     # Greeting
-    if message_clean in GREETINGS:
+    if re.match(r"^hi+$", message_clean) or message_clean in GREETINGS:
         return {
             "response": "Hello! and Welcome to Graphura Support.",
             "confidence": 100
